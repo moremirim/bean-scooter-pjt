@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct accoiuntInfo {
+struct accauntInfo {
     var iD: String
     var password: String
     var userName: String
 }
+
+var accauntInfoArr : [accauntInfo] = []
+
+
