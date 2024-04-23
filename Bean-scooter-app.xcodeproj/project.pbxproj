@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7176FDA62BD67936005185F9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FDA52BD67936005185F9 /* MapController.swift */; };
+		719DA2F52BD875500076BA1F /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DA2F42BD875500076BA1F /* FloatingTabBar.swift */; };
 		8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084B2BD614C200598B16 /* AppDelegate.swift */; };
 		8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084D2BD614C200598B16 /* SceneDelegate.swift */; };
 		8D1108502BD614C200598B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084F2BD614C200598B16 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7176FDA52BD67936005185F9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		719DA2F42BD875500076BA1F /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
 		8D1108482BD614C200598B16 /* Bean-scooter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean-scooter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D11084B2BD614C200598B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D11084D2BD614C200598B16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				8D11084F2BD614C200598B16 /* ViewController.swift */,
 				7176FDA52BD67936005185F9 /* MapController.swift */,
+				719DA2F42BD875500076BA1F /* FloatingTabBar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				8D1108502BD614C200598B16 /* ViewController.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
+				719DA2F52BD875500076BA1F /* FloatingTabBar.swift in Sources */,
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stb-Xg-A4i">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-Yx-7Bw">
@@ -126,12 +126,12 @@
                         <constraints>
                             <constraint firstItem="A2K-V0-4BQ" firstAttribute="trailing" secondItem="Fxy-SR-NUY" secondAttribute="trailing" constant="16" id="6Lt-KR-96o"/>
                             <constraint firstAttribute="trailing" secondItem="j9c-Yx-7Bw" secondAttribute="trailing" constant="10" id="AD1-w9-pPF"/>
-                            <constraint firstItem="stb-Xg-A4i" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" id="Liu-gp-t1X"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="-59" id="Liu-gp-t1X"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" id="Ozk-cL-9wm"/>
                             <constraint firstItem="j9c-Yx-7Bw" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" constant="10" id="Png-KG-ISJ"/>
                             <constraint firstItem="Fxy-SR-NUY" firstAttribute="top" secondItem="j9c-Yx-7Bw" secondAttribute="bottom" constant="20" id="VyX-kg-M8V"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="trailing" secondItem="A2K-V0-4BQ" secondAttribute="trailing" id="bKQ-VG-GiY"/>
-                            <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" id="shs-02-wVD"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" constant="34" id="shs-02-wVD"/>
                             <constraint firstItem="j9c-Yx-7Bw" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="30" id="vk8-Ne-mFF"/>
                         </constraints>
                     </view>
