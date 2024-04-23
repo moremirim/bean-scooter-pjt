@@ -61,25 +61,21 @@ class HeelaVC: UIViewController {
         
         //입력된 id가 회원가입되어있을 경우, 텍스트필드 내용을 마이페이지로 보내고 다음화면으로 이동
         if let account = accauntInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
-            performSegue(withIdentifier: "YourSegueIdentifier", sender: account)
-                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "nextVC") else {return}
-                        self.present(nextVC, animated: true, completion: nil)
+
+            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "nextVC") as? NextViewController {
+                nextVC.myid = account.iD
+                nextVC.myname = account.userName
+                //self.present(nextVC, animated: true, completion: nil)
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            } else {
+                print("NextViewController를 인스턴스화할 수 없습니다.")
+            }
                     }
         //입력된 id 정보가 가입 안되어있을 경우 안내 알럿
         else {
             showAlert(message: "ID 또는 Password가 일치하지 않습니다.")
         }
   
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "YourSegueIdentifier" {
-            if let nextVC = segue.destination as? NextViewController,
-               let account = sender as? AccauntInfo {
-                nextVC.myid = account.iD
-                nextVC.mypw = account.passWord
-            }
-        }
     }
 
     
@@ -96,7 +92,8 @@ class HeelaVC: UIViewController {
     //회원가입페이지로 이동
     @IBAction func createAccountButton(_ sender: Any) {
         guard let SignupVC = self.storyboard?.instantiateViewController(identifier: "SignupVC") else {return}
-        self.present(SignupVC, animated: true, completion: nil)
+        //self.present(SignupVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(SignupVC, animated: true)
     }
     
     

@@ -8,12 +8,16 @@
 import Foundation
 import UIKit
 
-struct AccauntInfo {
+struct AccauntInfo: Codable {
     var iD: String
     var passWord: String
     var userName: String
 }
 
 var accauntInfoArr : [AccauntInfo] = []
+
+
+
+
 
 
