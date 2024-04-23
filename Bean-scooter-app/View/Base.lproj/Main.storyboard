@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1676" y="-66"/>
         </scene>
-        <!--View Controller-->
+        <!--Rent View Controller-->
         <scene sceneID="DY4-TN-Upc">
             <objects>
-                <viewController id="zCf-3X-2Tu" sceneMemberID="viewController">
+                <viewController id="zCf-3X-2Tu" customClass="RentViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFN-DA-kZt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2B-EW-4p1" userLabel="rentButton">
+                                <rect key="frame" x="285" y="711" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="didTapRentButton:" destination="zCf-3X-2Tu" eventType="touchUpInside" id="FOl-gC-0sb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r2L-dq-Hl3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-3q-kqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="-66"/>
+            <point key="canvasLocation" x="2501.5267175572517" y="-66.197183098591552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QQU-iV-VyN">
@@ -203,7 +212,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
