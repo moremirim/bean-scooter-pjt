@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
-struct accauntInfo {
+struct AccauntInfo {
     var iD: String
-    var password: String
+    var passWord: String
     var userName: String
 }
 
-var accauntInfoArr : [accauntInfo] = []
+var accauntInfoArr : [AccauntInfo] = []
 
 

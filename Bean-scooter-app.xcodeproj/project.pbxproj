@@ -13,6 +13,8 @@
 		8D1108532BD614C200598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108522BD614C200598B16 /* Base */; };
 		8D1108552BD614C300598B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108542BD614C300598B16 /* Assets.xcassets */; };
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
+		CAABBC802BD75A7B00D9FC3D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */; };
+		CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC812BD75F3600D9FC3D /* SignupVC.swift */; };
 		CAEE6C352BD63CFC0053A261 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */; };
 		CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		8D1108542BD614C300598B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1108572BD614C300598B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		CAABBC812BD75F3600D9FC3D /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heela'sVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				8D11084F2BD614C200598B16 /* ViewController.swift */,
+				CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */,
 				CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */,
+				CAABBC812BD75F3600D9FC3D /* SignupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1108502BD614C200598B16 /* ViewController.swift in Sources */,
+				CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */,
+				CAABBC802BD75A7B00D9FC3D /* NextViewController.swift in Sources */,
 				CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */,
 				CAEE6C352BD63CFC0053A261 /* AccountInfo.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,

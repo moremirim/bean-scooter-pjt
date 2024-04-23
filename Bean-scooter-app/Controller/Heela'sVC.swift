@@ -50,25 +50,38 @@ class HeelaVC: UIViewController {
     //Sign in 버튼
     @IBAction func signinButton(_ sender: Any) {
         //idTextField에 값이 입력되어있는지 확인
-        guard let id = idTextField.text else {
+        guard let idText = idTextField.text, !idText.isEmpty else {
             showAlert(message: "ID를 입력하세요.")
             return
         }
-        
-        //입력된 id가 회원가입되어있을 경우,
-        if accauntInfoArr.contains(where: { $0.iD == id }) {
-            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "nextVC") else {return}
-            self.present(nextVC, animated: true, completion: nil)
+        guard let pwText = pwTextField.text, !pwText.isEmpty else {
+            showAlert(message: "Password를 입력하세요.")
+            return
         }
-        //입력된 id 정보가 가입 안되어있을 경우,
+        
+        //입력된 id가 회원가입되어있을 경우, 텍스트필드 내용을 마이페이지로 보내고 다음화면으로 이동
+        if let account = accauntInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
+            performSegue(withIdentifier: "YourSegueIdentifier", sender: account)
+                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "nextVC") else {return}
+                        self.present(nextVC, animated: true, completion: nil)
+                    }
+        //입력된 id 정보가 가입 안되어있을 경우 안내 알럿
         else {
-            showAlert(message: "가입되지 않은 ID입니다.")
+            showAlert(message: "ID 또는 Password가 일치하지 않습니다.")
         }
-        
-        // 필드에 담긴 정보가 회원 배열에 있을경우, 마이페이지로 보내고 다음화면으로 이동, 없을경우 안내 알럿
-        
-    }//button
+  
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "YourSegueIdentifier" {
+            if let nextVC = segue.destination as? NextViewController,
+               let account = sender as? AccauntInfo {
+                nextVC.myid = account.iD
+                nextVC.mypw = account.passWord
+            }
+        }
+    }
+
     
     //알럿
     func showAlert(message: String) {
@@ -76,13 +89,14 @@ class HeelaVC: UIViewController {
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-    }//알럿
+    }
     
     
     
-    
+    //회원가입페이지로 이동
     @IBAction func createAccountButton(_ sender: Any) {
-        // 회원가입페이지로 이동
+        guard let SignupVC = self.storyboard?.instantiateViewController(identifier: "SignupVC") else {return}
+        self.present(SignupVC, animated: true, completion: nil)
     }
     
     
