@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7176FDA62BD67936005185F9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FDA52BD67936005185F9 /* MapController.swift */; };
 		8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084B2BD614C200598B16 /* AppDelegate.swift */; };
 		8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084D2BD614C200598B16 /* SceneDelegate.swift */; };
 		8D1108502BD614C200598B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084F2BD614C200598B16 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7176FDA52BD67936005185F9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		8D1108482BD614C200598B16 /* Bean-scooter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean-scooter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D11084B2BD614C200598B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D11084D2BD614C200598B16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,28 +60,12 @@
 			children = (
 				8D90B31C2BD62B0600D75E7D /* Controller */,
 				8D90B31B2BD62AFA00D75E7D /* View */,
-				8D90B3192BD62AD800D75E7D /* Model */,
 				8D11084B2BD614C200598B16 /* AppDelegate.swift */,
 				8D11084D2BD614C200598B16 /* SceneDelegate.swift */,
 				8D1108542BD614C300598B16 /* Assets.xcassets */,
 				8D1108592BD614C300598B16 /* Info.plist */,
-				8D90B31A2BD62AED00D75E7D /* New Group */,
 			);
 			path = "Bean-scooter-app";
-			sourceTree = "<group>";
-		};
-		8D90B3192BD62AD800D75E7D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8D90B31A2BD62AED00D75E7D /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		8D90B31B2BD62AFA00D75E7D /* View */ = {
@@ -95,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				8D11084F2BD614C200598B16 /* ViewController.swift */,
+				7176FDA52BD67936005185F9 /* MapController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				8D1108502BD614C200598B16 /* ViewController.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
