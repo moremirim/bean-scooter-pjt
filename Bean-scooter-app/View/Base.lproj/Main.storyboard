@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6B4-EL-OES">
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gan-qk-U6f">
+
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -83,42 +87,65 @@
             </objects>
             <point key="canvasLocation" x="927.48091603053433" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="C9f-Yp-d1C">
             <objects>
-                <viewController id="6B4-EL-OES" sceneMemberID="viewController">
+                <viewController id="6B4-EL-OES" customClass="MapViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iy7-NU-Irx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maps" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-ka-xKh">
-                                <rect key="frame" x="0.0" y="251" width="393" height="503"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-k8-ZP7">
-                                <rect key="frame" x="232" y="396" width="73" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stb-Xg-A4i">
-                                <rect key="frame" x="76" y="100" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stb-Xg-A4i">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중권님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Iy-zY-DOb">
-                                <rect key="frame" x="55" y="41" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-Yx-7Bw">
+                                <rect key="frame" x="10" y="89" width="373" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="646-13-uek"/>
+                                    <constraint firstAttribute="height" constant="56" id="UZG-8B-Lrv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6B4-EL-OES" id="Dyi-q8-FR8"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxy-SR-NUY">
+                                <rect key="frame" x="345" y="165" width="32" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="dXZ-MF-xxQ"/>
+                                    <constraint firstAttribute="height" constant="26" id="m03-uN-Xc6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" image="location.fill" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLocationButtonTapped" destination="6B4-EL-OES" eventType="touchUpInside" id="XbH-un-iVv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A2K-V0-4BQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A2K-V0-4BQ" firstAttribute="trailing" secondItem="Fxy-SR-NUY" secondAttribute="trailing" constant="16" id="6Lt-KR-96o"/>
+                            <constraint firstAttribute="trailing" secondItem="j9c-Yx-7Bw" secondAttribute="trailing" constant="10" id="AD1-w9-pPF"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="-59" id="Liu-gp-t1X"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" id="Ozk-cL-9wm"/>
+                            <constraint firstItem="j9c-Yx-7Bw" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" constant="10" id="Png-KG-ISJ"/>
+                            <constraint firstItem="Fxy-SR-NUY" firstAttribute="top" secondItem="j9c-Yx-7Bw" secondAttribute="bottom" constant="20" id="VyX-kg-M8V"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="trailing" secondItem="A2K-V0-4BQ" secondAttribute="trailing" id="bKQ-VG-GiY"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" constant="34" id="shs-02-wVD"/>
+                            <constraint firstItem="j9c-Yx-7Bw" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="30" id="vk8-Ne-mFF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="stb-Xg-A4i" id="020-Oh-Qbq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzf-yu-Vzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-66"/>
+            <point key="canvasLocation" x="1675.5725190839694" y="-2.1126760563380285"/>
         </scene>
         <!--Rent View Controller-->
         <scene sceneID="DY4-TN-Upc">
@@ -151,7 +178,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-3q-kqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
+            <point key="canvasLocation" x="2492" y="-2"/>
+
             <point key="canvasLocation" x="2501.5267175572517" y="-66.197183098591552"/>
+
         </scene>
         <!--HeelaVC-->
         <scene sceneID="QQU-iV-VyN">
@@ -386,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVO-Y6-5Oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="645"/>
+            <point key="canvasLocation" x="1676" y="769"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mZ9-Ea-GVO">
@@ -411,9 +442,8 @@
         <image name="BeanLogo" width="120" height="136"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="maps" width="375" height="812"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
-        <image name="pinIcon" width="122" height="171"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
