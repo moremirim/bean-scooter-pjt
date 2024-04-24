@@ -15,6 +15,14 @@
 		8D1108532BD614C200598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108522BD614C200598B16 /* Base */; };
 		8D1108552BD614C300598B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108542BD614C300598B16 /* Assets.xcassets */; };
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
+
+		8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D885BC72BD802C700924D71 /* RentViewController.swift */; };
+
+		CAABBC802BD75A7B00D9FC3D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */; };
+		CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC812BD75F3600D9FC3D /* SignupVC.swift */; };
+		CAEE6C352BD63CFC0053A261 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */; };
+		CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		8D1108542BD614C300598B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1108572BD614C300598B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+		8D885BC72BD802C700924D71 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RentViewController.swift; path = ../../RentViewController.swift; sourceTree = "<group>"; };
+
+		CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		CAABBC812BD75F3600D9FC3D /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heela'sVC.swift"; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,16 @@
 			path = "Bean-scooter-app";
 			sourceTree = "<group>";
 		};
+
+		8D90B3192BD62AD800D75E7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+
 		8D90B31B2BD62AFA00D75E7D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +108,16 @@
 		8D90B31C2BD62B0600D75E7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D885BC72BD802C700924D71 /* RentViewController.swift */,
 				8D11084F2BD614C200598B16 /* ViewController.swift */,
+
 				7176FDA52BD67936005185F9 /* MapController.swift */,
 				719DA2F42BD875500076BA1F /* FloatingTabBar.swift */,
+
+				CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */,
+				CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */,
+				CAABBC812BD75F3600D9FC3D /* SignupVC.swift */,
+
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,9 +195,14 @@
 			files = (
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				8D1108502BD614C200598B16 /* ViewController.swift in Sources */,
+				CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */,
+				CAABBC802BD75A7B00D9FC3D /* NextViewController.swift in Sources */,
+				CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */,
+				CAEE6C352BD63CFC0053A261 /* AccountInfo.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
 				719DA2F52BD875500076BA1F /* FloatingTabBar.swift in Sources */,
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
+				8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +352,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bean-scooter-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -330,6 +370,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.task.Bean-scooter-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,8 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bean-scooter-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -357,6 +400,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.task.Bean-scooter-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
