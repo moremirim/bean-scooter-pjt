@@ -16,6 +16,9 @@
 		8D1108552BD614C300598B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108542BD614C300598B16 /* Assets.xcassets */; };
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
 
+		B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */; };
+
+
 		8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D885BC72BD802C700924D71 /* RentViewController.swift */; };
 
 		CAABBC802BD75A7B00D9FC3D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */; };
@@ -37,12 +40,16 @@
 		8D1108572BD614C300598B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 
+		B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+
+
 		8D885BC72BD802C700924D71 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RentViewController.swift; path = ../../RentViewController.swift; sourceTree = "<group>"; };
 
 		CAABBC7F2BD75A7B00D9FC3D /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		CAABBC812BD75F3600D9FC3D /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CAEE6C342BD63CFC0053A261 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heela'sVC.swift"; sourceTree = "<group>"; };
+
 
 /* End PBXFileReference section */
 
@@ -96,6 +103,9 @@
 			sourceTree = "<group>";
 		};
 
+
+
+
 		8D90B31B2BD62AFA00D75E7D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +118,11 @@
 		8D90B31C2BD62B0600D75E7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+
+				B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */,
+
 				8D885BC72BD802C700924D71 /* RentViewController.swift */,
+
 				8D11084F2BD614C200598B16 /* ViewController.swift */,
 
 				7176FDA52BD67936005185F9 /* MapController.swift */,
@@ -200,7 +214,11 @@
 				CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */,
 				CAEE6C352BD63CFC0053A261 /* AccountInfo.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
+
+				B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */,
+
 				719DA2F52BD875500076BA1F /* FloatingTabBar.swift in Sources */,
+
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
 				8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */,
 			);
