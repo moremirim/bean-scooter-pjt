@@ -15,6 +15,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let mapManager = MapManager()
     
     lazy var locationManager: CLLocationManager = {
         var manager = CLLocationManager()
@@ -70,3 +71,35 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
 }
+
+extension MapViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            mapManager.fetchRequest(textString: text) { result in
+                switch result {
+                case .success(let data):
+                    if let lat = Double(data.documents[0].y), let lon = Double(data.documents[0].x) {
+                        DispatchQueue.main.async {
+                            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: lon), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                            self.mapView.setRegion(region, animated: true)
+                        }
+                        
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "에러발생", message: "데이터 통신 중 \(error.localizedDescription) 이 발생했습니다.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "확인", style: .default))
+                        self.present(alert, animated: true)
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
