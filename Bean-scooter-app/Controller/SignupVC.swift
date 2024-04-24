@@ -87,8 +87,8 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         }
         
         // 계정 정보를 배열에 추가
-        let newAccount = AccauntInfo(iD: id, passWord: password, userName: name)
-        AccountModel.accountModel.accountInfoArr.append(newAccount)
+        let newAccount = AccountInfo(iD: id, passWord: password, userName: name)
+        AccountModel.accountModel.addAccount(newAccount: newAccount) //새로운 계정 정보가 유저디폴트에 저장
         
         let alert = UIAlertController(title: "알림", message: "회원가입이 완료되었습니다. 자동으로 로그인됩니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
@@ -102,6 +102,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+
     
     //알럿
     func showAlert(message: String) {
@@ -112,42 +113,11 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    
-//    func addAccountToUserDefaults(account: AccauntInfo) {
-//        // 이전에 저장된 배열이 있는지 확인
-//        if let data = UserDefaults.standard.data(forKey: "accauntInfoArr"),
-//           var savedAccounts = try? JSONDecoder().decode([AccauntInfo].self, from: data) {
-//            // 이전에 저장된 배열이 있는 경우, 새 계정 추가
-//            savedAccounts.append(account)
-//            // 새로운 배열을 유저 디폴트에 다시 저장
-//            if let newData = try? JSONEncoder().encode(savedAccounts) {
-//                UserDefaults.standard.set(newData, forKey: "accauntInfoArr")
-//            }
-//        } else {
-//            // 이전에 저장된 배열이 없는 경우, 새 배열 생성 후 계정 추가
-//            let newArray = [account]
-//            if let newData = try? JSONEncoder().encode(newArray) {
-//                UserDefaults.standard.set(newData, forKey: "accauntInfoArr")
-//            }
-//        }
-//    }
-//
-//    
-//    // 3. 앱 시작 시 유저 디폴트에서 accauntInfoArr 불러오기
-//    func loadAccountsFromUserDefaults() -> [AccauntInfo] {
-//        if let data = UserDefaults.standard.data(forKey: "accauntInfoArr"),
-//           let savedAccounts = try? JSONDecoder().decode([AccauntInfo].self, from: data) {
-//            return savedAccounts
-//        } else {
-//            return []
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupAllTF()
-        //accauntInfoArr = loadAccountsFromUserDefaults()
+        
     }
     
     

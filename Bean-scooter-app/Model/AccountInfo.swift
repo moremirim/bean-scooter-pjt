@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct AccauntInfo: Codable {
+struct AccountInfo: Codable {
     var iD: String
     var passWord: String
     var userName: String
