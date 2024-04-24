@@ -66,10 +66,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func moveCurrentLocationBtn(_ sender: UIButton) {
-    }
-    
-    
-    
+        updateLocationMap(to: locationManager.location ?? CLLocation(), with: "현재 위치")    }
 }
 
 extension MapViewController: UISearchBarDelegate {
