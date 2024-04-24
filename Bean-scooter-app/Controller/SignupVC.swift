@@ -92,9 +92,9 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         
         let alert = UIAlertController(title: "알림", message: "회원가입이 완료되었습니다. 자동으로 로그인됩니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
-            if let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "mapVC") as? MapViewController {
+            if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
 
-                self.navigationController?.pushViewController(mapVC, animated: true)
+                self.navigationController?.pushViewController(tabVC, animated: true)
             } else {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
