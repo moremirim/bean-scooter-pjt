@@ -41,6 +41,19 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         passwordTextField.isSecureTextEntry = true //텍스트보안
     }
     
+    //텍스트필드 키보드 로직
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //리턴 버튼을 누를때 다름 텍스트필드로 이동.
+        if textField == nameTextField {
+            idTextField.becomeFirstResponder()
+        } else if textField == idTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            textField.resignFirstResponder() // 키보드 종료.
+        }
+        return false
+    }
+    
     
     //Buttons
     
@@ -60,6 +73,9 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     
     
+    
+    
+    //로그인 버튼
     @IBAction func logInButton(_ sender: UIButton) {
         // adreeButton이 선택되지 않았을 경우에만 로그인 처리를 진행
         if !isAgreed {
@@ -75,16 +91,17 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             return
         }
 
-        // 이름 중복 방지
+        
+        // 이름,id 중복 방지
         if AccountModel.accountModel.accountInfoArr.contains(where: { $0.userName == name }) {
             showAlert(message: "'\(name)'은 이미 사용중인 이름입니다.")
             return
         }
-        // id 중복 방지
         if AccountModel.accountModel.accountInfoArr.contains(where: { $0.iD == id }) {
             showAlert(message: "'\(id)'은 이미 사용중인 id입니다.")
             return
         }
+        
         
         // 계정 정보를 배열에 추가
         let newAccount = AccountInfo(iD: id, passWord: password, userName: name)

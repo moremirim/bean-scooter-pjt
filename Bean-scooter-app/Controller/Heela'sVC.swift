@@ -33,15 +33,13 @@ class HeelaVC: UIViewController {
         pwTextField.isSecureTextEntry = true //텍스트 보안
     }
     
+    //텍스트필드 키보드 로직
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // 두 개의 텍스트필드 모두 종료 (키보드 내려가기)
-        if idTextField.text != "", pwTextField.text != "" {
-            pwTextField.resignFirstResponder()
-            return true
-            // 두 번 째 텍스트필드로 넘어간다.
-        } else if idTextField.text != "" {
+        //리턴 버튼을 누를때 다름 텍스트필드로 이동.
+        if textField == idTextField {
             pwTextField.becomeFirstResponder()
-            return true
+        } else if textField == pwTextField {
+            textField.resignFirstResponder() // 키보드 종료.
         }
         return false
     }
@@ -62,9 +60,9 @@ class HeelaVC: UIViewController {
         //입력된 id가 회원가입되어있을 경우, 텍스트필드 내용을 마이페이지로 보내고 다음화면으로 이동
         if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
 
-            if let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "mapVC") as? MapViewController {
+            if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
 
-                self.navigationController?.pushViewController(mapVC, animated: true)
+                self.navigationController?.pushViewController(tabVC, animated: true)
             } else {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
