@@ -1,36 +1,51 @@
-//
-//  ProfileViewController.swift
-//  Bean-scooter-app
-//
-//  Created by 채나연 on 4/22/24.
-//
+
+// 나연의 프로필 뷰
 
 import UIKit
 
-class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+   table.register(UINib(nibName: "ProfileTableCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
+        
         table.dataSource = self
         table.delegate = self
-       
+        table.separatorStyle = .none
+        table.rowHeight = 85
     }
     
-    // array
-    
-    let array = ["주행 기록","주행 가이드","로그아웃"]
-    
+
+    // 더미 데이터
+    let dummyData: [ProfileModel] = [
+        ProfileModel(iconName: "image01", title: "주행 기록"),
+        ProfileModel(iconName: "image02", title: "주행 가이드"),
+        ProfileModel(iconName: "image03", title: "친구 추천"),
+        ProfileModel(iconName: "image04", title: "나의 쿠폰"),
+        ProfileModel(iconName: "image05", title: "로그 아웃")
+    ]
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        array.count
+        return dummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as! ProfileTableViewCell
+        let item = dummyData[indexPath.row]
+        
+    //  cell.iconImageView.image = UIImage(systemName: "scooter")
+        cell.iconImageView.image = UIImage(named: item.iconName)
+        cell.titleLabel.text = item.title
+    //  cell.selectionStyle = .gray
         
         return cell
     }
 }
+
+
+

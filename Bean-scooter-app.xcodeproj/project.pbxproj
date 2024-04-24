@@ -19,6 +19,9 @@
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
 		8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D885BC72BD802C700924D71 /* RentViewController.swift */; };
 		B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */; };
+		B9CF1A882BD8A63E00F01144 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF1A862BD8A63E00F01144 /* ProfileTableViewCell.swift */; };
+		B9CF1A892BD8A63E00F01144 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CF1A872BD8A63E00F01144 /* ProfileTableViewCell.xib */; };
+		B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */; };
 		CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC812BD75F3600D9FC3D /* SignupVC.swift */; };
 		CAEE6C372BD63E7C0053A261 /* Heela'sVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D885BC72BD802C700924D71 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RentViewController.swift; path = ../../RentViewController.swift; sourceTree = "<group>"; };
 		B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B9CF1A862BD8A63E00F01144 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		B9CF1A872BD8A63E00F01144 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CAABBC812BD75F3600D9FC3D /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CAEE6C362BD63E7C0053A261 /* Heela'sVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heela'sVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,7 @@
 			children = (
 				61910F6F2BD89AA300262B30 /* AccountInfo.swift */,
 				61910F712BD89AB500262B30 /* AccountModel.swift */,
+				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 			children = (
 				8D1108562BD614C300598B16 /* LaunchScreen.storyboard */,
 				8D1108512BD614C200598B16 /* Main.storyboard */,
+				B9CF1A862BD8A63E00F01144 /* ProfileTableViewCell.swift */,
+				B9CF1A872BD8A63E00F01144 /* ProfileTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1108552BD614C300598B16 /* Assets.xcassets in Resources */,
+				B9CF1A892BD8A63E00F01144 /* ProfileTableViewCell.xib in Resources */,
 				8D1108582BD614C300598B16 /* Base in Resources */,
 				8D1108532BD614C200598B16 /* Base in Resources */,
 			);
@@ -186,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				8D1108502BD614C200598B16 /* ViewController.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupVC.swift in Sources */,
@@ -195,6 +206,7 @@
 				61910F722BD89AB500262B30 /* AccountModel.swift in Sources */,
 				61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */,
 				719DA2F52BD875500076BA1F /* FloatingTabBar.swift in Sources */,
+				B9CF1A882BD8A63E00F01144 /* ProfileTableViewCell.swift in Sources */,
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
 				8D885BC82BD802C700924D71 /* RentViewController.swift in Sources */,
 			);
