@@ -13,8 +13,9 @@ class TabbarViewController: UITabBarController {
         super.viewDidLoad()
 
         self.selectedIndex = 0
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
     }
 
 
+    
 }

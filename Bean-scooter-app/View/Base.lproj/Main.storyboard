@@ -51,15 +51,15 @@
                     </tabBar>
                     <connections>
                         <segue destination="6B4-EL-OES" kind="relationship" relationship="viewControllers" id="5EP-dD-LDg"/>
-                        <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="viewControllers" id="aXp-7V-94e"/>
                         <segue destination="zCf-3X-2Tu" kind="relationship" relationship="viewControllers" id="BQK-iJ-Pnw"/>
+                        <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="viewControllers" id="DBO-u2-xwT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veV-nQ-hU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-190" y="411"/>
         </scene>
-        <!--지도-->
+        <!--Map-->
         <scene sceneID="C9f-Yp-d1C">
             <objects>
                 <viewController storyboardIdentifier="mapVC" id="6B4-EL-OES" customClass="MapViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,12 +68,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stb-Xg-A4i">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c8s-m3-me8">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8s-m3-me8">
                                 <rect key="frame" x="0.0" y="86" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="6B4-EL-OES" id="fuo-gZ-a3f"/>
@@ -95,10 +96,10 @@
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="-59" id="Liu-gp-t1X"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" id="Ozk-cL-9wm"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="trailing" secondItem="A2K-V0-4BQ" secondAttribute="trailing" id="bKQ-VG-GiY"/>
-                            <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" constant="34" id="shs-02-wVD"/>
+                            <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" id="shs-02-wVD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지도" id="qgW-1X-X9m"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="qgW-1X-X9m" userLabel="Map"/>
                     <connections>
                         <outlet property="mapView" destination="stb-Xg-A4i" id="020-Oh-Qbq"/>
                         <outlet property="searchBar" destination="c8s-m3-me8" id="2Bi-96-X7y"/>
@@ -106,9 +107,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzf-yu-Vzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1424" y="-42"/>
+            <point key="canvasLocation" x="1423.6641221374045" y="-42.253521126760567"/>
         </scene>
-        <!--대여-->
+        <!--Rent-->
         <scene sceneID="DY4-TN-Upc">
             <objects>
                 <viewController id="zCf-3X-2Tu" customClass="RentViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +137,7 @@
                         <viewLayoutGuide key="safeArea" id="r2L-dq-Hl3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="대여" id="RdZ-G7-Hgf"/>
+                    <tabBarItem key="tabBarItem" title="Rent" image="creditcard" catalog="system" id="RdZ-G7-Hgf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-3q-kqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +148,7 @@
             <objects>
                 <viewController id="k9H-2I-G75" customClass="HeelaVC" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcW-hw-Pem">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-K4-v5j">
@@ -309,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="3182" y="-775"/>
         </scene>
-        <!--마이페이지-->
+        <!--My Profile-->
         <scene sceneID="hX4-pw-m4Y">
             <objects>
                 <viewController id="KHc-Qy-Nxa" customClass="ProfileViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,7 +332,7 @@
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="top" secondItem="xgR-b1-gPx" secondAttribute="top" constant="258" id="vzi-SR-s5f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" id="x6r-GT-g58"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="person.crop.circle" catalog="system" id="x6r-GT-g58"/>
                     <connections>
                         <outlet property="table" destination="wRB-Nu-qCt" id="mTv-vW-vZt"/>
                     </connections>
@@ -360,12 +361,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pBY-UQ-RdS"/>
+        <segue reference="eqN-fU-FS4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BeanLogo" width="120" height="136"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

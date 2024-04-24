@@ -26,6 +26,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        
+        // 서치바 레이아웃
+        searchBar.layer.cornerRadius = 10
+        searchBar.layer.masksToBounds = true
+        
+        // 흰색 테두리 제거
+        searchBar.backgroundImage = UIImage()
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
