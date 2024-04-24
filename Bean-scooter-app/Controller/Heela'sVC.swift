@@ -94,11 +94,19 @@ class HeelaVC: UIViewController {
         self.navigationController?.pushViewController(SignupVC, animated: true)
     }
     
+    // 저장된 계정 정보를 로드하는 메서드
+    func loadAccounts() {
+        // AccountModel 인스턴스를 사용하여 계정 정보를 가져옴
+        let accountInfoArr = AccountModel.accountModel.accountInfoArr
+    }
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupidTF()
         setuppwTF()
+        // 저장된 계정 정보 로드
+        loadAccounts()
     }
 
 
