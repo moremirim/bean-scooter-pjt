@@ -88,22 +88,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, FloatingTa
     // MARK: - FloatingTabBarDelegate
     
     func didSelectTab(at index: Int) {
-//        switch index {
-//        case 0:
-//            let firstVC = storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-//            navigationController?.pushViewController(firstVC, animated: true)
-//        case 1:
-//            let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-//            navigationController?.pushViewController(secondVC, animated: true)
-//        case 2:
-//            let thirdVC = storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! SecondViewController
-//            navigationController?.pushViewController(secondVC, animated: true)
-//        case 3:
-//            let fourthVC = storyboard?.instantiateViewController(withIdentifier: "FourthViewController") as! SecondViewController
-//            navigationController?.pushViewController(secondVC, animated: true)
-//        default:
-//            break
-            print("Selected tab at index: \(index)")
-        }
+        //        switch index {
+        //        case 0:
+        //            let firstVC = storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
+        //            navigationController?.pushViewController(firstVC, animated: true)
+        //        case 1:
+        //            let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        //            navigationController?.pushViewController(secondVC, animated: true)
+        //        case 2:
+        //            let thirdVC = storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! SecondViewController
+        //            navigationController?.pushViewController(secondVC, animated: true)
+        //        case 3:
+        //            let fourthVC = storyboard?.instantiateViewController(withIdentifier: "FourthViewController") as! SecondViewController
+        //            navigationController?.pushViewController(secondVC, animated: true)
+        //        default:
+        //            break
+        print("Selected tab at index: \(index)")
     }
 }

@@ -14,7 +14,7 @@ struct AccauntInfo: Codable {
     var userName: String
 }
 
-var accauntInfoArr : [AccauntInfo] = []
+
 
 
 

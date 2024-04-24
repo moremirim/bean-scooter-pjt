@@ -60,7 +60,7 @@ class HeelaVC: UIViewController {
         }
         
         //입력된 id가 회원가입되어있을 경우, 텍스트필드 내용을 마이페이지로 보내고 다음화면으로 이동
-        if let account = accauntInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
+        if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
 
             if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "nextVC") as? NextViewController {
                 nextVC.myid = account.iD

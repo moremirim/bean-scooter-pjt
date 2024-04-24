@@ -9,9 +9,7 @@ import UIKit
 
 
 class SignupVC: UIViewController, UITextFieldDelegate {
-    
-    
-    
+
     //Labels
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -76,29 +74,27 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             showAlert(message: "모든 필드에 내용을 입력하세요.")
             return
         }
-        
+
         // 이름 중복 방지
-        if accauntInfoArr.contains(where: { $0.userName == name }) {
+        if AccountModel.accountModel.accountInfoArr.contains(where: { $0.userName == name }) {
             showAlert(message: "'\(name)'은 이미 사용중인 이름입니다.")
             return
         }
         // id 중복 방지
-        if accauntInfoArr.contains(where: { $0.iD == id }) {
+        if AccountModel.accountModel.accountInfoArr.contains(where: { $0.iD == id }) {
             showAlert(message: "'\(id)'은 이미 사용중인 id입니다.")
             return
         }
         
         // 계정 정보를 배열에 추가
         let newAccount = AccauntInfo(iD: id, passWord: password, userName: name)
-        accauntInfoArr.append(newAccount)
+        AccountModel.accountModel.accountInfoArr.append(newAccount)
         
         let alert = UIAlertController(title: "알림", message: "회원가입이 완료되었습니다. 자동으로 로그인됩니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
-            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "nextVC") as? NextViewController {
-                nextVC.myid = id
-                nextVC.myname = name
-                //self.present(nextVC, animated: true, completion: nil)
-                self.navigationController?.pushViewController(nextVC, animated: true)
+            if let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "mapVC") as? MapViewController {
+
+                self.navigationController?.pushViewController(mapVC, animated: true)
             } else {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
