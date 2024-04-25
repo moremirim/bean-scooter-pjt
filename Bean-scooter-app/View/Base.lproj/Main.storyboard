@@ -355,12 +355,42 @@
                                 <rect key="frame" x="0.0" y="258" width="393" height="560"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oia-99-gAX">
+                                <rect key="frame" x="30.000000000000007" y="104" width="111.66666666666669" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sae-Bean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g7-tl-9nY">
+                                <rect key="frame" x="110" y="173" width="172" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bean@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-7i-QPp">
+                                <rect key="frame" x="110" y="207.66666666666666" width="152" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.45597069680000002" green="0.78874686319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sb" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-Nf-hxB">
+                                <rect key="frame" x="30" y="171" width="60" height="60"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="icK-ob-Qr7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tFt-Nf-hxB" firstAttribute="leading" secondItem="icK-ob-Qr7" secondAttribute="leading" constant="30" id="29a-oj-qMj"/>
+                            <constraint firstItem="oia-99-gAX" firstAttribute="top" secondItem="icK-ob-Qr7" secondAttribute="top" constant="45" id="4Yx-YN-3wj"/>
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="bottom" secondItem="icK-ob-Qr7" secondAttribute="bottom" id="DsW-Na-fJk"/>
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="trailing" secondItem="icK-ob-Qr7" secondAttribute="trailing" id="E93-sF-085"/>
+                            <constraint firstItem="Obf-7i-QPp" firstAttribute="top" secondItem="8g7-tl-9nY" secondAttribute="bottom" constant="7" id="L4c-bU-7v2"/>
+                            <constraint firstItem="tFt-Nf-hxB" firstAttribute="top" secondItem="oia-99-gAX" secondAttribute="bottom" constant="31" id="LKG-Jt-71T"/>
+                            <constraint firstItem="8g7-tl-9nY" firstAttribute="top" secondItem="oia-99-gAX" secondAttribute="bottom" constant="33" id="M6v-6P-aAa"/>
+                            <constraint firstItem="oia-99-gAX" firstAttribute="leading" secondItem="icK-ob-Qr7" secondAttribute="leading" constant="30" id="Qze-bU-RdN"/>
+                            <constraint firstItem="Obf-7i-QPp" firstAttribute="leading" secondItem="tFt-Nf-hxB" secondAttribute="trailing" constant="20" id="WSw-6O-GSB"/>
+                            <constraint firstItem="wRB-Nu-qCt" firstAttribute="top" secondItem="tFt-Nf-hxB" secondAttribute="bottom" constant="27" id="XxX-Lr-sRu"/>
+                            <constraint firstItem="icK-ob-Qr7" firstAttribute="trailing" secondItem="Obf-7i-QPp" secondAttribute="trailing" constant="131" id="cOq-TN-NJ3"/>
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="leading" secondItem="icK-ob-Qr7" secondAttribute="leading" id="qoa-vs-fYe"/>
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="top" secondItem="xgR-b1-gPx" secondAttribute="top" constant="258" id="vzi-SR-s5f"/>
                         </constraints>
@@ -371,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVO-Y6-5Oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="-2"/>
+            <point key="canvasLocation" x="3258.7786259541986" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mZ9-Ea-GVO">
@@ -398,11 +428,12 @@
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="sb" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
