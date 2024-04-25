@@ -33,22 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-    lazy var persistentContainer: NSPersistentContainer = {
-        
-        // Pass the data model filename to the container’s initializer.
-        let container = NSPersistentContainer(name: "Scooter")
-        
-        // Load any persistent stores, which creates a store if none exists.
-        container.loadPersistentStores { _, error in
-            if let error {
-                // Handle the error appropriately. However, it's useful to use
-                // `fatalError(_:file:line:)` during development.
-                fatalError("Failed to load persistent stores: \(error.localizedDescription)")
-            }
-        }
-        return container
-    }()
     
 }
 

@@ -6,11 +6,26 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    @IBOutlet weak var myname: UILabel!
+    @IBOutlet weak var myID: UILabel!
+    
+    var myName = ""
+    var myId = ""
+    
+    func setuplabel() {
+        myname.text = myName
+        myname.textColor = .black
+        myID.text = myId
+        myID.textColor = .black
+    }
+    
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setuplabel()
 
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
 
@@ -18,6 +33,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.delegate = self
         table.separatorStyle = .none
         table.rowHeight = 85
+        
     }
     
     

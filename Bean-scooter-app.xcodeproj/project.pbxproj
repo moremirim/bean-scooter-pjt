@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		617C59C52BDA3E1600AC997E /* Scooter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 617C59C32BDA3E1600AC997E /* Scooter.xcdatamodeld */; };
 		61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F6F2BD89AA300262B30 /* AccountInfo.swift */; };
 		61910F722BD89AB500262B30 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F712BD89AB500262B30 /* AccountModel.swift */; };
 		61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F732BD8C43700262B30 /* TabbarViewController.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		617C59C42BDA3E1600AC997E /* Scooter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scooter.xcdatamodel; sourceTree = "<group>"; };
 		61910F6F2BD89AA300262B30 /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		61910F712BD89AB500262B30 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		61910F732BD8C43700262B30 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		61910F6A2BD89A2E00262B30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				617C59C32BDA3E1600AC997E /* Scooter.xcdatamodeld */,
 				61910F6F2BD89AA300262B30 /* AccountInfo.swift */,
 				61910F712BD89AB500262B30 /* AccountModel.swift */,
 				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
@@ -219,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */,
-				617C59C52BDA3E1600AC997E /* Scooter.xcdatamodeld in Sources */,
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
@@ -478,20 +474,6 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		617C59C32BDA3E1600AC997E /* Scooter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				617C59C42BDA3E1600AC997E /* Scooter.xcdatamodel */,
-			);
-			currentVersion = 617C59C42BDA3E1600AC997E /* Scooter.xcdatamodel */;
-			name = Scooter.xcdatamodeld;
-			path = "/Users/dongik/Documents/Workspace/merging/Bean-scooter-app/Model/Scooter.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8D1108402BD614C200598B16 /* Project object */;
 }
