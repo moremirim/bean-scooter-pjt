@@ -72,6 +72,7 @@ class SignInViewController: UIViewController {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
                     }
+        
         //입력된 id 정보가 가입 안되어있을 경우 안내 알럿
         else {
             showAlert(message: "ID 또는 Password가 일치하지 않습니다.")

@@ -11,8 +11,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
-        
+
+        table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
+
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .none
@@ -22,11 +23,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // 더미 데이터
     let dummyData: [ProfileModel] = [
-        ProfileModel(iconName: "image01", title: "주행 기록"),
-        ProfileModel(iconName: "image02", title: "주행 가이드"),
-        ProfileModel(iconName: "image03", title: "친구 추천"),
-        ProfileModel(iconName: "image04", title: "나의 쿠폰"),
-        ProfileModel(iconName: "image05", title: "로그 아웃")
+        ProfileModel(iconName: "Icone01", title: "Driving Record"),
+        ProfileModel(iconName: "image02", title: "Driving Guide"),
+        ProfileModel(iconName: "icon3", title: "Friend Recommendation"),
+        ProfileModel(iconName: "Icon04", title: "My Coupon"),
+        ProfileModel(iconName: "image05", title: "Log Out")
     ]
     
     
@@ -43,7 +44,35 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 다음 화면으로 전환하는 코드
+        let nextVC = SignupVC()
+    //    nextVC.selectedItem = String[indexPath.row]
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    
+    class SignupVC: UIViewController, UITextFieldDelegate {
+        
+        var selectedItem: String?
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            if let selectedItem = selectedItem {
+                
+      //          print(indexPath.row)
+            }
+        }
+    }
+    
 }
+
+
+
+
+
 
 
 
