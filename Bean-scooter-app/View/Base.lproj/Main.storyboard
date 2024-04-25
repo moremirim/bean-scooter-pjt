@@ -128,7 +128,7 @@
                         <viewLayoutGuide key="safeArea" id="r2L-dq-Hl3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rent" image="creditcard" catalog="system" id="RdZ-G7-Hgf"/>
+                    <tabBarItem key="tabBarItem" title="Pay" image="creditcard" catalog="system" id="RdZ-G7-Hgf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-3q-kqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,10 +541,10 @@
     <resources>
         <image name="Welcome" width="451" height="140"/>
         <image name="beanLogo 1" width="128" height="128"/>
-        <image name="checkmark.square" catalog="system" width="32" height="32"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="forBeanLogo" width="128" height="128"/>
-        <image name="location.fill" catalog="system" width="32" height="32"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="sb" width="60" height="60"/>
@@ -554,7 +554,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
