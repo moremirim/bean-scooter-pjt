@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HeelaVC: UIViewController {
+class SignInViewController: UIViewController {
 
     
     //텍스트필드
