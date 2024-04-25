@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gan-qk-U6f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -27,9 +27,6 @@
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Go riding a Scooter"/>
-                                <connections>
-                                    <segue destination="k9H-2I-G75" kind="show" id="eqN-fU-FS4"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,7 +35,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="-774"/>
+            <point key="canvasLocation" x="1424" y="-1569"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="B6p-yU-0Hu">
+            <objects>
+                <viewController id="Km5-PX-Yca" customClass="LaunchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0X-yA-OdA" customClass="LaunchViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LE2-6u-5l7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="Gan-qk-U6f" kind="show" id="IFO-xu-tNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evq-Mq-y5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2195" y="-1569"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="dpq-Of-9Nw">
@@ -521,8 +536,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gan-qk-U6f" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="FH4-Z3-eWV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eqd-xc-meq">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -535,9 +551,6 @@
             <point key="canvasLocation" x="1424" y="-775"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eqN-fU-FS4"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Welcome" width="451" height="140"/>
         <image name="beanLogo 1" width="128" height="128"/>
