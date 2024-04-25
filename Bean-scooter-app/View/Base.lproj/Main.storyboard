@@ -381,6 +381,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Profile" image="person.crop.circle" catalog="system" id="x6r-GT-g58"/>
                     <connections>
+                        <outlet property="myID" destination="Obf-7i-QPp" id="sLS-5F-Mu8"/>
+                        <outlet property="myname" destination="8g7-tl-9nY" id="46i-7H-dCe"/>
                         <outlet property="table" destination="wRB-Nu-qCt" id="mTv-vW-vZt"/>
                     </connections>
                 </viewController>
