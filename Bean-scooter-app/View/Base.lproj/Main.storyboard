@@ -97,22 +97,22 @@
                                     <action selector="didTapRentButton:" destination="6B4-EL-OES" eventType="touchUpInside" id="0RJ-bv-7gb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzH-pD-UtH">
-                                <rect key="frame" x="12" y="676" width="83" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwr-5x-N5p">
+                                <rect key="frame" x="254" y="559" width="110" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="TestPin생성"/>
+                                <connections>
+                                    <action selector="addPin:" destination="6B4-EL-OES" eventType="touchUpInside" id="I46-H2-qUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-oY-kiH">
+                                <rect key="frame" x="19" y="676" width="83" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="반납하기"/>
                                 <connections>
-                                    <action selector="returnScooterBtn:" destination="6B4-EL-OES" eventType="touchUpInside" id="Q0P-1y-bFB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-dW-AT0">
-                                <rect key="frame" x="279" y="558" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="addPin:" destination="6B4-EL-OES" eventType="touchUpInside" id="roB-09-VJ2"/>
+                                    <action selector="returnScooterBtn:" destination="6B4-EL-OES" eventType="touchUpInside" id="gCG-OU-gFy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,7 +129,7 @@
                     <connections>
                         <outlet property="mapView" destination="stb-Xg-A4i" id="020-Oh-Qbq"/>
                         <outlet property="rentButton" destination="r5P-OT-jjB" id="Krl-Sm-IXD"/>
-                        <outlet property="returnButton" destination="fzH-pD-UtH" id="VQc-23-OMz"/>
+                        <outlet property="returnButton" destination="t2k-oY-kiH" id="mm7-69-GK7"/>
                         <outlet property="searchBar" destination="c8s-m3-me8" id="2Bi-96-X7y"/>
                     </connections>
                 </viewController>
@@ -406,7 +406,7 @@
             <objects>
                 <viewController storyboardIdentifier="signinVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcW-hw-Pem">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-K4-v5j">
@@ -598,11 +598,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="My Profile">
                                                 <attributes>
-
-                                                    <color key="NSColor" red="0.11372549830000001" green="0.1764705926" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-
                                                     <font key="NSFont" size="30" name="Arial-BoldMT"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -671,6 +667,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVO-Y6-5Oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4185.4961832061063" y="-2.1126760563380285"/>
+        </scene>
+        <!--Record Table View Controller-->
+        <scene sceneID="cgL-WD-Lc1">
+            <objects>
+                <viewController storyboardIdentifier="recordVC" id="hFI-6F-30k" customClass="RecordTableViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="skx-lj-xJt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Wk-JwY">
+                                <rect key="frame" x="16" y="259" width="361" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WEV-AU-A0g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cqd-Wk-JwY" id="tPB-k1-GjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kt-Fg-5U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4214.5038167938928" y="704.92957746478874"/>
         </scene>
         <!--Guide View Controller-->
         <scene sceneID="5MV-Yt-99y">
@@ -855,13 +876,8 @@
         <!--My Profile-->
         <scene sceneID="QBs-t4-bwk">
             <objects>
-
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P3n-HF-mNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gan-qk-U6f" sceneMemberID="viewController">
-
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="36G-cK-coA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Profile" image="person.crop.circle" catalog="system" id="x6r-GT-g58"/>
-
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BAa-7d-0VM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -872,19 +888,11 @@
                         <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="rootViewController" id="HUc-Jp-c4j"/>
                     </connections>
                 </navigationController>
-
-
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAc-UP-Am2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-
             </objects>
             <point key="canvasLocation" x="3258.7786259541986" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-
-    <inferredMetricsTieBreakers>
-        <segue reference="pBY-UQ-RdS"/>
-    </inferredMetricsTieBreakers>
-
     <resources>
         <image name="ApplePay" width="186" height="75"/>
         <image name="Paypal" width="187" height="75"/>
@@ -905,13 +913,13 @@
         <image name="signupBG" width="375" height="385"/>
         <image name="skyscraperLogo" width="375" height="236"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
