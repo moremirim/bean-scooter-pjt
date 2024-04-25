@@ -24,7 +24,9 @@
 		8D1108532BD614C200598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108522BD614C200598B16 /* Base */; };
 		8D1108552BD614C300598B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108542BD614C300598B16 /* Assets.xcassets */; };
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
+		8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD73D862BDA4491006C508D /* PayViewController.swift */; };
 		B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */; };
+		B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */; };
 		B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */; };
 		CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */; };
 		CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */; };
@@ -50,7 +52,9 @@
 		8D1108542BD614C300598B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1108572BD614C300598B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD73D862BDA4491006C508D /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +153,15 @@
 				CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */,
 				CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */,
 				61910F732BD8C43700262B30 /* TabbarViewController.swift */,
+
 				61A699D92BDA6657005A460B /* ModalViewController.swift */,
+
+
+				8DD73D862BDA4491006C508D /* PayViewController.swift */,
+
+				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
+
+
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +247,12 @@
 				B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */,
 				61A699E12BDAD47E005A460B /* RecordSingleton.swift in Sources */,
 				61A699DA2BDA6657005A460B /* ModalViewController.swift in Sources */,
+
+
+
+				B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */,
+
+
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
@@ -244,6 +262,7 @@
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
 				CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */,
 				B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */,
+				8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */,
 				61910F722BD89AB500262B30 /* AccountModel.swift in Sources */,
 				61A699DE2BDAD391005A460B /* RecordModel.swift in Sources */,
 				61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */,

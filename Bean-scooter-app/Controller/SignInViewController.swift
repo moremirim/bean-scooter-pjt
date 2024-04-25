@@ -9,12 +9,12 @@ import UIKit
 
 
 class SignInViewController: UIViewController {
-
+    
     
     //텍스트필드
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
-
+    
     func setupidTF() {
         idTextField.placeholder = " ID를 입력하세요"
         
@@ -64,15 +64,27 @@ class SignInViewController: UIViewController {
         
         //입력된 id가 회원가입되어있을 경우, 텍스트필드 내용을 마이페이지로 보내고 다음화면으로 이동
         if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
-
+            
             if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
+
+                
+                // ProfileViewController로 데이터 전달
+                for viewController in tabVC.viewControllers ?? [] {
+                    if let profileVC = viewController as? ProfileViewController {
+                        profileVC.myName = account.userName
+                        profileVC.myId = account.iD
+                        break // 데이터를 전달한 후 반복문 종료
+                    }
+                }
+                
+
                 tabVC.modalTransitionStyle = .crossDissolve
                 tabVC.modalPresentationStyle = .fullScreen
                 self.present(tabVC, animated: true)
             } else {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
-                    }
+        }
         
         //입력된 id 정보가 가입 안되어있을 경우 안내 알럿
         else {
@@ -90,7 +102,7 @@ class SignInViewController: UIViewController {
         createAccountBT.setTitle("create account", for: .normal)
         createAccountBT.setTitleColor(mainColor, for: .normal)
     }
-
+    
     
     //알럿
     func showAlert(message: String) {
@@ -115,7 +127,7 @@ class SignInViewController: UIViewController {
         // AccountModel 인스턴스를 사용하여 계정 정보를 가져옴
         let accountInfoArr = AccountModel.accountModel.accountInfoArr
     }
-        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +137,6 @@ class SignInViewController: UIViewController {
         // 저장된 계정 정보 로드
         loadAccounts()
     }
-
-
+    
+    
 }
