@@ -16,21 +16,23 @@ class HeelaVC: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
 
     func setupidTF() {
-        idTextField.placeholder = "ID를 입력하세요"
+        idTextField.placeholder = " ID를 입력하세요"
         
         idTextField.keyboardType = UIKeyboardType.emailAddress //키보드타입
         idTextField.clearButtonMode = .always //텍스트를 입력할 때 모두 삭제할 수 있는 x아이콘
         idTextField.clearsOnBeginEditing = false //수정시 텍스트 전체삭제?
         //idTextField.returnKeyType = .continue //리턴버튼 타입 변경
         idTextField.becomeFirstResponder() //화면에서 첫번째로 이벤트 발생
+        idTextField.layer.cornerRadius = 5
     }
     func setuppwTF() {
-        pwTextField.placeholder = "Password를 입력하세요"
+        pwTextField.placeholder = " Password를 입력하세요"
         
         pwTextField.keyboardType = UIKeyboardType.emailAddress
         pwTextField.clearButtonMode = .always
         pwTextField.clearsOnBeginEditing = false
         pwTextField.isSecureTextEntry = true //텍스트 보안
+        pwTextField.layer.cornerRadius = 5
     }
     
     //텍스트필드 키보드 로직
@@ -80,10 +82,11 @@ class HeelaVC: UIViewController {
     func setupSigninBT() {
         signBT.setTitle("Sign In", for: .normal)
         signBT.setTitleColor(UIColor.white, for: .normal)
+        signBT.layer.cornerRadius = 5
         
-        let color = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
+        let mainColor = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
         createAccountBT.setTitle("create account", for: .normal)
-        createAccountBT.setTitleColor(color, for: .normal)
+        createAccountBT.setTitleColor(mainColor, for: .normal)
     }
 
     
