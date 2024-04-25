@@ -15,6 +15,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var rentButton: UIButton!
+    
     let mapManager = MapManager()
     
     lazy var locationManager: CLLocationManager = {
@@ -29,7 +31,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        
+        rentButton.isHidden = false
+        //스쿠터 데이터베이스 정보로 핀 배치
+        let scooterPin = MKPointAnnotation()
+        scooterPin.coordinate = CLLocationCoordinate2DMake(37.7882971863747, -122.4075784602224)
+        mapView.addAnnotation(scooterPin)
     }
     
     
@@ -67,6 +73,34 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func moveCurrentLocationBtn(_ sender: UIButton) {
         updateLocationMap(to: locationManager.location ?? CLLocation(), with: "현재 위치")    }
+    //대여 하기 버튼을 눌렀을 때의 동작 정의
+    //- 대여 확인 얼럿 진행, 대여 최종 완료시 대여 종료 동작인 completedRent 함수 호출
+    @IBAction func didTapRentButton(_ sender: Any) {
+        let rentProcessAlert = UIAlertController(title: "대여 진행", message: "기기의 시리얼 번호를 입력해주세요", preferredStyle: .alert)
+        
+        rentProcessAlert.addTextField() { (tf) in
+            tf.placeholder = "Serial No."}
+        
+        let rent = UIAlertAction(title: "대여하기", style: .default) { rentalProcess in
+            let confirmedRentAlert = UIAlertController(title: "대여 완료", message: "기기 대여가 완료되었습니다", preferredStyle: .alert)
+            self.completedRent()
+            //?? MKPointAnnotation 내용 업데이트
+            //대여 완료시 코어데이터 저장 및 update 플로우(기기 배열의 데이터 업데이트) 작성 필요
+            //대여 완료시 대여 버튼의 is hidden -> 다시 true로 변경
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        rentProcessAlert.addAction(cancel)
+        rentProcessAlert.addAction(rent)
+        present(rentProcessAlert, animated: true, completion: nil)
+    }
+    //대여 완료시의 동작 정의 - 핀 지우기, 대여 버튼 가리기
+    func completedRent() {
+        //핀을 모두 지워야 하나? 선택된 핀만 지워야 하겠죠...? 함수 수정 필요할듯
+        mapView.removeAnnotations(mapView.annotations)
+        self.rentButton.isHidden = true
+    }
+    
 }
 
 extension MapViewController: UISearchBarDelegate {
