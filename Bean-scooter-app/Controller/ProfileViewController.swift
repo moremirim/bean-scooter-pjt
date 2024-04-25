@@ -36,7 +36,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as! ProfileTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as? ProfileTableViewCell else {
+            return UITableViewCell ()
+            
+        }
+        
         let item = dummyData[indexPath.row]
         
         cell.iconImageView.image = UIImage(named: item.iconName)
@@ -48,24 +52,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-            //        case 0:
-            //            // 첫 번째 셀 선택 시 실행할 코드
-            //            let nextVC = DrivingRecord()
-            //            navigationController?.pushViewController(nextVC, animated: true)
+            //                    case 0:
+            //                        // 첫 번째 셀(Driving Record : 주행 기록) 선택된 경우
+            //                        let nextVC = DrivingRecord()
+            //                        navigationController?.pushViewController(nextVC, animated: true)
         case 4:
             // logOut 셀 선택 시 실행할 코드
-            let nextVC = SignupVC()
-            navigationController?.pushViewController(nextVC, animated: true)
+            let signupVC = SignupVC(nibName: "SignupViewController", bundle: nil)
+            self.navigationController?.pushViewController(signupVC, animated: true)
+            
         default:
-            // 그 외의 셀 선택 시 실행할 코드
-            let nextVC = RentViewController()
-            navigationController?.pushViewController(nextVC, animated: true)
+            break
         }
-        
     }
-    
-    
 }
-
 
 
