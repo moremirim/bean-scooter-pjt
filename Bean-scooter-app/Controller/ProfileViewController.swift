@@ -28,10 +28,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         setuplabel()
 
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
-
+        
         table.dataSource = self
         table.delegate = self
-        table.separatorStyle = .none
+        table.separatorStyle = .singleLine
         table.rowHeight = 85
         
     }
@@ -39,11 +39,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // 더미 데이터
     let dummyData: [ProfileModel] = [
-        ProfileModel(iconName: "Icone01", title: "Driving Record"),
-        ProfileModel(iconName: "image02", title: "Driving Guide"),
+        ProfileModel(iconName: "Icon01", title: "Driving Record"),
+        ProfileModel(iconName: "iconkick", title: "Driving Guide"),
         ProfileModel(iconName: "icon3", title: "Friend Recommendation"),
         ProfileModel(iconName: "Icon04", title: "My Coupon"),
-        ProfileModel(iconName: "image05", title: "Log Out")
+        ProfileModel(iconName: "logout", title: "Log Out")
     ]
     
     
@@ -52,7 +52,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as! ProfileTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as? ProfileTableViewCell else {
+            return UITableViewCell ()
+            
+        }
+        
         let item = dummyData[indexPath.row]
         
         cell.iconImageView.image = UIImage(named: item.iconName)
@@ -63,32 +67,20 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // 다음 화면으로 전환하는 코드
-        let nextVC = SignupVC()
-    //    nextVC.selectedItem = String[indexPath.row]
-        navigationController?.pushViewController(nextVC, animated: true)
-    }
-    
-    
-    class SignupVC: UIViewController, UITextFieldDelegate {
-        
-        var selectedItem: String?
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            if let selectedItem = selectedItem {
-                
-      //          print(indexPath.row)
-            }
+        switch indexPath.row {
+            //                    case 0:
+            //                        // 첫 번째 셀(Driving Record : 주행 기록) 선택된 경우
+            //                        let nextVC = DrivingRecord()
+            //                        navigationController?.pushViewController(nextVC, animated: true)
+        case 4:
+            // logOut 셀 선택 시 실행할 코드
+            let signupVC = SignupVC(nibName: "SignupViewController", bundle: nil)
+            self.navigationController?.pushViewController(signupVC, animated: true)
+            
+        default:
+            break
         }
     }
-    
 }
-
-
-
-
-
-
 
 
