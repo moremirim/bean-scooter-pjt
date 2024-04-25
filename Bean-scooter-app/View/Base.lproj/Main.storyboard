@@ -357,6 +357,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sb" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-Nf-hxB">
                                 <rect key="frame" x="30" y="171" width="61" height="60"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3H-Ye-tR5">
+                                <rect key="frame" x="323" y="184" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <action selector="editButton:" destination="KHc-Qy-Nxa" eventType="touchUpInside" id="Y69-Hj-dKK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="icK-ob-Qr7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -394,7 +403,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="gWu-lI-nyZ">
             <objects>
-                <viewController id="tNn-w3-KXa" customClass="EditProfileViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileVC" id="tNn-w3-KXa" customClass="EditProfileViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ady-Ft-rqI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
