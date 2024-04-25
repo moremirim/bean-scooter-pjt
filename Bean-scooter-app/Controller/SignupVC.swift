@@ -23,7 +23,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     //All textfield set up
     func setupAllTF() {
-        nameTextField.placeholder = "닉네임을 입력하세요"
+        nameTextField.placeholder = "3~8글자 문자의 닉네임을 입력하세요 "
         nameTextField.backgroundColor = .systemGray5
         nameTextField.keyboardType = UIKeyboardType.emailAddress
         nameTextField.clearButtonMode = .always
@@ -45,6 +45,11 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //리턴 버튼을 누를때 다름 텍스트필드로 이동.
         if textField == nameTextField {
+            // 글자 수 제한 (최소 3글자, 최대 8글자)
+            if let text = nameTextField.text, text.count < 3 || text.count > 8 {
+                showAlertAndClearText()
+                return false
+            }
             idTextField.becomeFirstResponder()
         } else if textField == idTextField {
             passwordTextField.becomeFirstResponder()
@@ -54,10 +59,33 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    //name 텍스트필드 글자수제한 오류 알럿
+    func showAlertAndClearText() {
+        let alert = UIAlertController(title: "입력 오류", message: "닉네임은 최소 3글자, 최대 8글자로 입력해주세요.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
+            self.nameTextField.text = ""
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // UITextFieldDelegate 프로토콜 메서드
+    // nameTextField 에는 숫자를 입력할 수 없음.
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == nameTextField {
+            let allowedCharacters = CharacterSet.letters
+            let characterSet = CharacterSet(charactersIn: string)
+            if !allowedCharacters.isSuperset(of: characterSet) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    
     
     //Buttons
     
-    var isAgreed = false
+    var isAgreed = false//로그인버튼에서 동의 상태값을 판단할 수 있는 변수
     
     @IBAction func agreeButton(_ sender: UIButton) {
         isAgreed = !isAgreed
@@ -70,8 +98,6 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             sender.setTitleColor(.gray, for: .normal)
         }
     }
-    
-    
     
     
     
@@ -134,7 +160,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         setupAllTF()
-        
+        nameTextField.delegate = self
     }
     
     

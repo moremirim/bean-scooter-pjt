@@ -45,6 +45,9 @@ class HeelaVC: UIViewController {
     }
     
     
+    @IBOutlet weak var signBT: UIButton!
+    @IBOutlet weak var createAccountBT: UIButton!
+    
     //Sign in 버튼
     @IBAction func signinButton(_ sender: Any) {
         //idTextField에 값이 입력되어있는지 확인
@@ -71,7 +74,16 @@ class HeelaVC: UIViewController {
         else {
             showAlert(message: "ID 또는 Password가 일치하지 않습니다.")
         }
-  
+    }
+    
+    //버튼 셋업
+    func setupSigninBT() {
+        signBT.setTitle("Sign In", for: .normal)
+        signBT.setTitleColor(UIColor.white, for: .normal)
+        
+        let color = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
+        createAccountBT.setTitle("create account", for: .normal)
+        createAccountBT.setTitleColor(color, for: .normal)
     }
 
     
@@ -103,6 +115,7 @@ class HeelaVC: UIViewController {
         super.viewDidLoad()
         setupidTF()
         setuppwTF()
+        setupSigninBT()
         // 저장된 계정 정보 로드
         loadAccounts()
     }

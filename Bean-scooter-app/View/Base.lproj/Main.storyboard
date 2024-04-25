@@ -150,37 +150,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-K4-v5j">
-                                <rect key="frame" x="136.66666666666666" y="257" width="119.99999999999997" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="5bC-dm-CPr"/>
-                                    <constraint firstAttribute="width" constant="120" id="BT3-hh-PXa"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-K4-v5j">
+                                <rect key="frame" x="80" y="147" width="232" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLs-BM-MN5">
-                                <rect key="frame" x="46.666666666666657" y="433" width="300" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Lfk-wq-Hyl"/>
-                                    <constraint firstAttribute="width" constant="300" id="uiz-JY-SJQ"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLs-BM-MN5">
+                                <rect key="frame" x="46" y="383" width="301" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otg-NA-Qpu">
-                                <rect key="frame" x="51.666666666666657" y="475" width="290" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otg-NA-Qpu">
+                                <rect key="frame" x="46" y="459" width="301" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ik-oV-IKs">
-                                <rect key="frame" x="51.666666666666657" y="533" width="290" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ik-oV-IKs">
+                                <rect key="frame" x="46" y="533" width="301" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
                                 <connections>
                                     <action selector="signinButton:" destination="k9H-2I-G75" eventType="touchUpInside" id="InJ-0g-oT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-sO-fas">
-                                <rect key="frame" x="51.666666666666657" y="576" width="290" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-sO-fas">
+                                <rect key="frame" x="46" y="586" width="301" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="create account"/>
                                 <connections>
@@ -189,35 +189,19 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZVq-Hl-3re"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="GLs-BM-MN5" firstAttribute="centerX" secondItem="KcW-hw-Pem" secondAttribute="centerX" id="5Ow-Te-eQZ"/>
-                            <constraint firstItem="otg-NA-Qpu" firstAttribute="width" secondItem="GLs-BM-MN5" secondAttribute="width" multiplier="0.966667" id="7rO-Oh-xfO"/>
-                            <constraint firstItem="GLs-BM-MN5" firstAttribute="top" secondItem="xwI-K4-v5j" secondAttribute="bottom" constant="40" id="EEI-3N-9io"/>
-                            <constraint firstItem="5Ik-oV-IKs" firstAttribute="height" secondItem="GLs-BM-MN5" secondAttribute="height" multiplier="1.02941" id="KJn-8t-KiN"/>
-                            <constraint firstItem="5Ik-oV-IKs" firstAttribute="top" secondItem="otg-NA-Qpu" secondAttribute="bottom" constant="24" id="LVA-aw-MBw"/>
-                            <constraint firstItem="xwI-K4-v5j" firstAttribute="top" secondItem="ZVq-Hl-3re" secondAttribute="top" constant="154" id="Mfh-Rz-UXU"/>
-                            <constraint firstItem="otg-NA-Qpu" firstAttribute="height" secondItem="GLs-BM-MN5" secondAttribute="height" id="NAW-Ip-KmI"/>
-                            <constraint firstItem="otg-NA-Qpu" firstAttribute="centerX" secondItem="KcW-hw-Pem" secondAttribute="centerX" id="P09-fN-sWN"/>
-                            <constraint firstItem="j5S-sO-fas" firstAttribute="top" secondItem="5Ik-oV-IKs" secondAttribute="bottom" constant="8" id="Pm6-d9-jht"/>
-                            <constraint firstItem="j5S-sO-fas" firstAttribute="centerX" secondItem="KcW-hw-Pem" secondAttribute="centerX" id="Qgi-ly-duu"/>
-                            <constraint firstItem="xwI-K4-v5j" firstAttribute="centerX" secondItem="KcW-hw-Pem" secondAttribute="centerX" id="SD5-MV-wD0"/>
-                            <constraint firstItem="j5S-sO-fas" firstAttribute="width" secondItem="GLs-BM-MN5" secondAttribute="width" multiplier="0.966667" id="SG3-jf-7NS"/>
-                            <constraint firstItem="5Ik-oV-IKs" firstAttribute="centerX" secondItem="KcW-hw-Pem" secondAttribute="centerX" id="hLb-AC-bXT"/>
-                            <constraint firstItem="otg-NA-Qpu" firstAttribute="top" secondItem="GLs-BM-MN5" secondAttribute="bottom" constant="8" id="lno-9X-QN2"/>
-                            <constraint firstItem="j5S-sO-fas" firstAttribute="height" secondItem="GLs-BM-MN5" secondAttribute="height" multiplier="1.02941" id="mgy-Ig-L6u"/>
-                            <constraint firstItem="5Ik-oV-IKs" firstAttribute="width" secondItem="GLs-BM-MN5" secondAttribute="width" multiplier="0.966667" id="oJW-Zg-YAV"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="UsW-aa-8JR"/>
                     <connections>
+                        <outlet property="createAccountBT" destination="j5S-sO-fas" id="UJA-0i-Fog"/>
                         <outlet property="idTextField" destination="GLs-BM-MN5" id="3Qi-o1-x2i"/>
                         <outlet property="pwTextField" destination="otg-NA-Qpu" id="hgC-yv-uJ1"/>
+                        <outlet property="signBT" destination="5Ik-oV-IKs" id="B9b-Ga-vdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9U-qS-QDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="-775"/>
+            <point key="canvasLocation" x="2325.9541984732823" y="-775.35211267605632"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="u0s-Jv-aGN">
@@ -364,13 +348,14 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BeanLogo" width="120" height="136"/>
+        <image name="Welcome" width="451" height="140"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
