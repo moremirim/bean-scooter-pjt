@@ -56,8 +56,7 @@ class EditProfileViewController: UIViewController {
         }
         return false
     }
-    
-    
+
     //Buttons
     @IBAction func submitButton(_ sender: Any) {
         // TextField 입력된 텍스트가 빈 문자열인지 확인
@@ -75,26 +74,43 @@ class EditProfileViewController: UIViewController {
             showAlert(message: "'\(newid)'은 이미 사용중인 id입니다.")
             return
         }
-        let alert = UIAlertController(title: "알림", message: "정말 프로필을 변경하시겠습니까?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
+        //변경 확인알럿 생성
+        let alert = UIAlertController(title: "알림", message: "프로필을 변경하시겠습니까?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
             if let index = AccountModel.accountModel.accountInfoArr.firstIndex(where: { $0.userName == self.myName }) {
                 AccountModel.accountModel.accountInfoArr[index].userName = newName
                 AccountModel.accountModel.accountInfoArr[index].iD = newid
             }
+            guard let SignInVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") else {return}
+            self.navigationController?.pushViewController(SignInVC, animated: true)
         }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
         
-        // AccountModel에서 myName과 일치하는 userName을 가진 정보를 찾아서 업데이트
-
-        
-        /*구현계획
-         1. 확인 알럿 생성.
-         2. 중복 확인 (확인알럿대신 중복안내 알럿 생성)
-         3. 알럿창에서 확인버튼을 누르면 변경된 정보가 반영되고 마이페이지로 이동.
+        /*구현기능 설명
+         1. 입력값 여부 확인, 중복 확인
+         2. 1이 아닐경우 확인 알럿 생성.
+         3. 알럿창 > 확인버튼을 누르면 변경된 정보가 반영되고 signin 화면으로 이동.
          */
     }
     
     @IBAction func deleteaccountButton(_ sender: Any) {
-        /*구현계획
+        let alert = UIAlertController(title: "알림", message: "계정을 삭제하시겠습니까?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+            if let index = AccountModel.accountModel.accountInfoArr.firstIndex(where: { $0.userName == self.myName }) {
+                        AccountModel.accountModel.accountInfoArr.remove(at: index)
+                guard let SignInVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") else {return}
+                self.navigationController?.pushViewController(SignInVC, animated: true)
+                    }
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+        
+        /*구현기능 설명
          1. 확인 알럿 생성.
          2. 알럿창에서 확인버튼을 누르면 계정 삭제 후 signin 화면으로 이동.
          */
