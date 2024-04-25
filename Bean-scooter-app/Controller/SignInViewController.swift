@@ -113,7 +113,6 @@ class SignInViewController: UIViewController {
     //회원가입페이지로 이동
     @IBAction func createAccountButton(_ sender: Any) {
         guard let SignupVC = self.storyboard?.instantiateViewController(identifier: "SignupVC") else {return}
-        //self.present(SignupVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(SignupVC, animated: true)
     }
     

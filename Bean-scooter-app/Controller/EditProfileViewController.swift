@@ -19,6 +19,14 @@ class EditProfileViewController: UIViewController {
     var myName = ""
     var myID = ""
     
+    func setuplabel() {
+        let mainColor = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
+        profileNameLabel.text = myName
+        profileNameLabel.textColor = .black
+        profileIDLabel.text = myID
+        profileIDLabel.textColor = mainColor
+    }
+    
     //edit name view
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -52,17 +60,31 @@ class EditProfileViewController: UIViewController {
     
     //Buttons
     @IBAction func submitButton(_ sender: Any) {
-        // nameTextField에 입력된 텍스트가 빈 문자열인지 확인
-        guard let newName = nameTextField.text, !newName.isEmpty else {
-            showAlert(message: "이름을 입력하세요.")
+        // TextField 입력된 텍스트가 빈 문자열인지 확인
+        guard let newName = nameTextField.text, !newName.isEmpty,
+        let newid = idTextField.text, !newid.isEmpty else {
+            showAlert(message: "모든 필드에 내용을 입력하세요.")
             return
         }
-        
-        // AccountModel에서 myName과 일치하는 userName을 가진 정보를 찾음
-            if let index = AccountModel.accountModel.accountInfoArr.firstIndex(where: { $0.userName == myName }) {
-            // 찾은 인덱스의 userName을 newName으로 업데이트
-            AccountModel.accountModel.accountInfoArr[index].userName = newName
+        // 이름,id 중복 방지
+        if AccountModel.accountModel.accountInfoArr.contains(where: { $0.userName == newName }) {
+            showAlert(message: "'\(newName)'은 이미 사용중인 이름입니다.")
+            return
         }
+        if AccountModel.accountModel.accountInfoArr.contains(where: { $0.iD == newid }) {
+            showAlert(message: "'\(newid)'은 이미 사용중인 id입니다.")
+            return
+        }
+        let alert = UIAlertController(title: "알림", message: "정말 프로필을 변경하시겠습니까?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
+            if let index = AccountModel.accountModel.accountInfoArr.firstIndex(where: { $0.userName == self.myName }) {
+                AccountModel.accountModel.accountInfoArr[index].userName = newName
+                AccountModel.accountModel.accountInfoArr[index].iD = newid
+            }
+        }
+        
+        // AccountModel에서 myName과 일치하는 userName을 가진 정보를 찾아서 업데이트
+
         
         /*구현계획
          1. 확인 알럿 생성.
@@ -86,5 +108,10 @@ class EditProfileViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setuplabel()
+        setupTextField()
+    }
     
 }
