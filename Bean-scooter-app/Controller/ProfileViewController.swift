@@ -47,25 +47,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // 다음 화면으로 전환하는 코드
-        let nextVC = SignupVC()
-    //    nextVC.selectedItem = String[indexPath.row]
-        navigationController?.pushViewController(nextVC, animated: true)
+
+        
     }
     
-    
-    class SignupVC: UIViewController, UITextFieldDelegate {
-        
-        var selectedItem: String?
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            if let selectedItem = selectedItem {
-                
-      //          print(indexPath.row)
-            }
-        }
-    }
+
     
 }
 

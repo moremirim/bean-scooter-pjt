@@ -66,8 +66,9 @@ class SignInViewController: UIViewController {
         if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
 
             if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
-
-                self.navigationController?.pushViewController(tabVC, animated: true)
+                tabVC.modalTransitionStyle = .crossDissolve
+                tabVC.modalPresentationStyle = .fullScreen
+                self.present(tabVC, animated: true)
             } else {
                 print("NextViewController를 인스턴스화할 수 없습니다.")
             }
@@ -104,8 +105,9 @@ class SignInViewController: UIViewController {
     //회원가입페이지로 이동
     @IBAction func createAccountButton(_ sender: Any) {
         guard let SignupVC = self.storyboard?.instantiateViewController(identifier: "SignupVC") else {return}
-        //self.present(SignupVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(SignupVC, animated: true)
+        SignupVC.modalTransitionStyle = .crossDissolve
+        SignupVC.modalPresentationStyle = .fullScreen
+        self.present(SignupVC, animated: true)
     }
     
     // 저장된 계정 정보를 로드하는 메서드
