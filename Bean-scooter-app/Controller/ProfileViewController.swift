@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         setuplabel()
-
+        
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
         
         table.dataSource = self
@@ -76,51 +76,53 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-
-
-        
-    }
-    
-
-    
-
         switch indexPath.row {
             
-        // 첫 번째 셀(Driving Record : 주행 기록) 선택된 경우
-        //case 0:
-        
-        // 두 번째 셀(Driving Guide : 주행 가이드) 선택된 경우
+            // 첫 번째 셀(Driving Record : 주행 기록) 선택된 경우
+            case 0:
+            guard let recordVC = self.storyboard?.instantiateViewController(withIdentifier: "recordVC") as? RecordTableViewController else { return }
+            
+            self.navigationController?.pushViewController(recordVC, animated: true)
+            
+            // 두 번째 셀(Driving Guide : 주행 가이드) 선택된 경우
         case 1:
             guard let guideVC = self.storyboard?.instantiateViewController(withIdentifier: "guideVC") as? GuideViewController else {
                 return
             }
             self.navigationController?.pushViewController(guideVC, animated: true)
             
-        // 세 번째 셀(Friend Recommendation : 친구 추천) 선택된 경우
-//        case 3:
-//            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "signinVC") as? SignInViewController else {
-//                return
-//            }
-//            self.navigationController?.pushViewController(signinVC, animated: true)
-//            
+            // 세 번째 셀(Friend Recommendation : 친구 추천) 선택된 경우
+            //        case 3:
+            //            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "signinVC") as? SignInViewController else {
+            //                return
+            //            }
+            //            self.navigationController?.pushViewController(signinVC, animated: true)
+            //
             
             
-        // 다섯 번째 셀(logOut) 선택된 경우
+            // 다섯 번째 셀(logOut) 선택된 경우
         case 4:
-
+            
             guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "signinVC") as? SignInViewController else {
                 return
             }
             self.navigationController?.pushViewController(signinVC, animated: true)
-          
+            
             
             
         default:
             break
+            
+            
+            
         }
+        
+        
+        
+        
+        
     }
-
 }
+
 
 
