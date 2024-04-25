@@ -5,7 +5,10 @@
 //  Created by 박미림 on 4/22/24.
 //
 
+
+// MARK: - import 코어데이터 작업! 만약 틀렸다면...-> 37-51번째 줄에 내용 수정했습니다.
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
 }
 

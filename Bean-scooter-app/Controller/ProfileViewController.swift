@@ -6,18 +6,44 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //로그인 된 아이디 정보 레이블에 반영
+    @IBOutlet weak var myname: UILabel!
+    @IBOutlet weak var myID: UILabel!
+    
+    var myName = ""
+    var myId = ""
+    
+    func setuplabel() {
+        let mainColor = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
+        myname.text = myName
+        myname.textColor = .black
+        myID.text = myId
+        myID.textColor = mainColor
+    }
+    
+    //수정하기로 이동하는 버튼
+    @IBAction func editButton(_ sender: Any) {
+        guard let editProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as? EditProfileViewController else { return }
+        editProfileVC.myName = self.myName
+        editProfileVC.myID = self.myId
+        self.navigationController?.pushViewController(editProfileVC, animated: true)
+    }
+    
+    
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setuplabel()
+
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
         
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .singleLine
         table.rowHeight = 85
+        
     }
     
     
