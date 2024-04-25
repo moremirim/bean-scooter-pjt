@@ -11,8 +11,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
-        
+
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .none
@@ -38,10 +39,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileList", for: indexPath) as! ProfileTableViewCell
         let item = dummyData[indexPath.row]
         
-        //  cell.iconImageView.image = UIImage(systemName: "scooter")
         cell.iconImageView.image = UIImage(named: item.iconName)
         cell.titleLabel.text = item.title
-        //  cell.selectionStyle = .gray
         
         return cell
     }

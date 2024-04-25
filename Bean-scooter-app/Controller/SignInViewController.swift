@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HeelaVC: UIViewController {
+class SignInViewController: UIViewController {
 
     
     //텍스트필드
@@ -16,36 +16,39 @@ class HeelaVC: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
 
     func setupidTF() {
-        idTextField.placeholder = "ID를 입력하세요"
+        idTextField.placeholder = " ID를 입력하세요"
         
         idTextField.keyboardType = UIKeyboardType.emailAddress //키보드타입
         idTextField.clearButtonMode = .always //텍스트를 입력할 때 모두 삭제할 수 있는 x아이콘
         idTextField.clearsOnBeginEditing = false //수정시 텍스트 전체삭제?
         //idTextField.returnKeyType = .continue //리턴버튼 타입 변경
         idTextField.becomeFirstResponder() //화면에서 첫번째로 이벤트 발생
+        idTextField.layer.cornerRadius = 5
     }
     func setuppwTF() {
-        pwTextField.placeholder = "Password를 입력하세요"
+        pwTextField.placeholder = " Password를 입력하세요"
         
         pwTextField.keyboardType = UIKeyboardType.emailAddress
         pwTextField.clearButtonMode = .always
         pwTextField.clearsOnBeginEditing = false
         pwTextField.isSecureTextEntry = true //텍스트 보안
+        pwTextField.layer.cornerRadius = 5
     }
     
+    //텍스트필드 키보드 로직
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // 두 개의 텍스트필드 모두 종료 (키보드 내려가기)
-        if idTextField.text != "", pwTextField.text != "" {
-            pwTextField.resignFirstResponder()
-            return true
-            // 두 번 째 텍스트필드로 넘어간다.
-        } else if idTextField.text != "" {
+        //리턴 버튼을 누를때 다름 텍스트필드로 이동.
+        if textField == idTextField {
             pwTextField.becomeFirstResponder()
-            return true
+        } else if textField == pwTextField {
+            textField.resignFirstResponder() // 키보드 종료.
         }
         return false
     }
     
+    
+    @IBOutlet weak var signBT: UIButton!
+    @IBOutlet weak var createAccountBT: UIButton!
     
     //Sign in 버튼
     @IBAction func signinButton(_ sender: Any) {
@@ -74,7 +77,17 @@ class HeelaVC: UIViewController {
         else {
             showAlert(message: "ID 또는 Password가 일치하지 않습니다.")
         }
-  
+    }
+    
+    //버튼 셋업
+    func setupSigninBT() {
+        signBT.setTitle("Sign In", for: .normal)
+        signBT.setTitleColor(UIColor.white, for: .normal)
+        signBT.layer.cornerRadius = 5
+        
+        let mainColor = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
+        createAccountBT.setTitle("create account", for: .normal)
+        createAccountBT.setTitleColor(mainColor, for: .normal)
     }
 
     
@@ -95,11 +108,20 @@ class HeelaVC: UIViewController {
         self.navigationController?.pushViewController(SignupVC, animated: true)
     }
     
+    // 저장된 계정 정보를 로드하는 메서드
+    func loadAccounts() {
+        // AccountModel 인스턴스를 사용하여 계정 정보를 가져옴
+        let accountInfoArr = AccountModel.accountModel.accountInfoArr
+    }
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupidTF()
         setuppwTF()
+        setupSigninBT()
+        // 저장된 계정 정보 로드
+        loadAccounts()
     }
 
 
