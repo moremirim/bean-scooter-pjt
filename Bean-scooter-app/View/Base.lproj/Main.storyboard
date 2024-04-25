@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gan-qk-U6f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k9H-2I-G75">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -52,7 +52,7 @@
                     <connections>
                         <segue destination="6B4-EL-OES" kind="relationship" relationship="viewControllers" id="5EP-dD-LDg"/>
                         <segue destination="zCf-3X-2Tu" kind="relationship" relationship="viewControllers" id="t3D-aO-5mo"/>
-                        <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="viewControllers" id="6iw-fg-Rzi"/>
+                        <segue destination="36G-cK-coA" kind="relationship" relationship="viewControllers" id="6iw-fg-Rzi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veV-nQ-hU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
-                <viewController storyboardIdentifier="SignInVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signinVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcW-hw-Pem">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="3180.9160305343512" y="-775.35211267605632"/>
         </scene>
-        <!--My Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="hX4-pw-m4Y">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="KHc-Qy-Nxa" customClass="ProfileViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -389,7 +389,7 @@
                             <constraint firstItem="wRB-Nu-qCt" firstAttribute="top" secondItem="xgR-b1-gPx" secondAttribute="top" constant="258" id="vzi-SR-s5f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" image="person.crop.circle" catalog="system" id="x6r-GT-g58"/>
+                    <navigationItem key="navigationItem" id="Ksy-9i-oND"/>
                     <connections>
                         <outlet property="myID" destination="Obf-7i-QPp" id="sLS-5F-Mu8"/>
                         <outlet property="myname" destination="8g7-tl-9nY" id="46i-7H-dCe"/>
@@ -398,7 +398,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVO-Y6-5Oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3258.7786259541986" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="4185.4961832061063" y="-2.1126760563380285"/>
+        </scene>
+        <!--Guide View Controller-->
+        <scene sceneID="5MV-Yt-99y">
+            <objects>
+                <viewController storyboardIdentifier="guideVC" id="p48-RJ-9sS" customClass="GuideViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pav-RB-fHk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-45-rmJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="153.66666666666666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Nh-tYK">
+                                        <rect key="frame" x="28" y="92" width="197" height="34"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Driving Guide">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5411764979" green="0.80000001190000003" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="top" secondItem="WpM-45-rmJ" secondAttribute="top" constant="92" id="2NS-og-yBc"/>
+                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="leading" secondItem="WpM-45-rmJ" secondAttribute="leading" constant="28" id="VgL-sv-5DQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5dX-iX-Mxb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WpM-45-rmJ" firstAttribute="trailing" secondItem="5dX-iX-Mxb" secondAttribute="trailing" id="OfP-Lu-zac"/>
+                            <constraint firstItem="WpM-45-rmJ" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" id="Qd7-b0-v1q"/>
+                            <constraint firstItem="WpM-45-rmJ" firstAttribute="top" secondItem="pav-RB-fHk" secondAttribute="top" id="Vlv-Nz-4Lb"/>
+                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="bottom" secondItem="WpM-45-rmJ" secondAttribute="bottom" constant="664.33333333333337" id="u8s-7P-6Kr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcA-39-qgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4982.4427480916029" y="-2.1126760563380285"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="gWu-lI-nyZ">
@@ -528,28 +574,26 @@
             </objects>
             <point key="canvasLocation" x="2325.9541984732823" y="1416.9014084507044"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mZ9-Ea-GVO">
+        <!--My Profile-->
+        <scene sceneID="QBs-t4-bwk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gan-qk-U6f" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="36G-cK-coA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Profile" image="person.crop.circle" catalog="system" id="x6r-GT-g58"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eqd-xc-meq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BAa-7d-0VM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="k9H-2I-G75" kind="relationship" relationship="rootViewController" id="pBY-UQ-RdS"/>
+                        <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="rootViewController" id="HUc-Jp-c4j"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P3n-HF-mNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAc-UP-Am2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1424" y="-775"/>
+            <point key="canvasLocation" x="3258.7786259541986" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eqN-fU-FS4"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Welcome" width="451" height="140"/>
         <image name="beanLogo 1" width="128" height="128"/>
@@ -566,7 +610,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
