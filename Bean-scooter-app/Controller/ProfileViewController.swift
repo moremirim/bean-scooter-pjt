@@ -77,6 +77,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+
+
+        
+    }
+    
+
+    
+
         switch indexPath.row {
             
         // 첫 번째 셀(Driving Record : 주행 기록) 선택된 경우
@@ -112,6 +120,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             break
         }
     }
+
 }
 
 
