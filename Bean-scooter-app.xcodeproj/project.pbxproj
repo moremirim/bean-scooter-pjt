@@ -34,6 +34,7 @@
 		B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */; };
 		B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */; };
 		CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */; };
+		CAA9D8852BDB9A0D00ABE3BA /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D8842BDB9A0D00ABE3BA /* InviteFriendsViewController.swift */; };
 		CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */; };
 		CAEE6C372BD63E7C0053A261 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6C362BD63E7C0053A261 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		CAA9D8842BDB9A0D00ABE3BA /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CAEE6C362BD63E7C0053A261 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
 				616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */,
 				61823C072BDB731B0018AC15 /* LaunchViewController.swift */,
+				CAA9D8842BDB9A0D00ABE3BA /* InviteFriendsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				CAEE6C372BD63E7C0053A261 /* SignInViewController.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
 				CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */,
+				CAA9D8852BDB9A0D00ABE3BA /* InviteFriendsViewController.swift in Sources */,
 				B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */,
 				8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */,
 				61910F722BD89AB500262B30 /* AccountModel.swift in Sources */,
