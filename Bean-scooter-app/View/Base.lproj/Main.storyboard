@@ -163,11 +163,41 @@
                                     <constraint firstAttribute="height" constant="150" id="VtQ-wm-LWs"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-kU-FIb">
+                                <rect key="frame" x="20" y="182" width="353" height="253"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.11372549830000001" green="0.1764705926" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forFeeBg" translatesAutoresizingMaskIntoConstraints="NO" id="qRy-vw-fma">
                                 <rect key="frame" x="20" y="182" width="353" height="253"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -197,7 +227,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-fC-6IC">
+                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-fC-6IC">
                                 <rect key="frame" x="36.666666666666657" y="480" width="320" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ApplePay" translatesAutoresizingMaskIntoConstraints="NO" id="ZcT-0J-h2W">
@@ -225,7 +255,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-37-VaI">
+                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-37-VaI">
                                 <rect key="frame" x="36.666666666666657" y="535" width="320" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Paypal" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-pY-KK1">
@@ -253,7 +283,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dMn-XH-fii">
+                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dMn-XH-fii">
                                 <rect key="frame" x="36.666666666666657" y="590" width="320" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="PF6-SR-Cu2">
@@ -281,7 +311,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Foi-Ai-NiG">
+                            <view autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="4" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Foi-Ai-NiG">
                                 <rect key="frame" x="36.666666666666657" y="645" width="320" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SamsungPay" translatesAutoresizingMaskIntoConstraints="NO" id="s5x-ht-uXs">
@@ -317,6 +347,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="payNowButton"/>
+                                <connections>
+                                    <action selector="didTapPayNowButton:" destination="zCf-3X-2Tu" eventType="touchUpInside" id="ZZS-Jh-bZc"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scooter" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="23h-Xy-ZPI">
                                 <rect key="frame" x="60" y="300" width="100" height="98.333333333333314"/>
@@ -365,22 +398,27 @@
                             <constraint firstItem="yhl-Zm-99A" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="3cL-zA-8HZ"/>
                             <constraint firstItem="DOC-6q-cyV" firstAttribute="trailing" secondItem="r2L-dq-Hl3" secondAttribute="trailing" id="44d-lP-HOg"/>
                             <constraint firstItem="r2L-dq-Hl3" firstAttribute="trailing" secondItem="dW5-59-EUt" secondAttribute="trailing" constant="65" id="4Mr-GQ-9Qc"/>
+                            <constraint firstItem="Wvr-kU-FIb" firstAttribute="top" secondItem="DOC-6q-cyV" secondAttribute="bottom" constant="32" id="8ko-s3-ff6"/>
                             <constraint firstItem="DOC-6q-cyV" firstAttribute="top" secondItem="wFN-DA-kZt" secondAttribute="top" id="9id-VU-kAJ"/>
                             <constraint firstItem="qRy-vw-fma" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="AQM-gU-jZe"/>
                             <constraint firstItem="qRy-vw-fma" firstAttribute="leading" secondItem="r2L-dq-Hl3" secondAttribute="leading" constant="20" id="BIC-On-O5K"/>
+                            <constraint firstItem="Wvr-kU-FIb" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="CP3-xh-sd0"/>
                             <constraint firstItem="KwH-37-VaI" firstAttribute="top" secondItem="Cyb-fC-6IC" secondAttribute="bottom" constant="10" id="EdY-fM-Ofm"/>
                             <constraint firstItem="yhl-Zm-99A" firstAttribute="top" secondItem="DOC-6q-cyV" secondAttribute="bottom" constant="65" id="H0l-uP-oUH"/>
+                            <constraint firstItem="Cyb-fC-6IC" firstAttribute="top" secondItem="Wvr-kU-FIb" secondAttribute="bottom" constant="45" id="IeG-nS-ft6"/>
                             <constraint firstItem="23h-Xy-ZPI" firstAttribute="leading" secondItem="r2L-dq-Hl3" secondAttribute="leading" constant="60" id="MjW-vv-Iye"/>
                             <constraint firstItem="5Zt-IA-5wy" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="OQD-J1-Qix"/>
                             <constraint firstItem="r2L-dq-Hl3" firstAttribute="trailing" secondItem="qRy-vw-fma" secondAttribute="trailing" constant="20" id="Rua-rI-GXz"/>
                             <constraint firstItem="r2L-dq-Hl3" firstAttribute="bottom" secondItem="5Zt-IA-5wy" secondAttribute="bottom" constant="3" id="TGL-fO-Kf4"/>
                             <constraint firstItem="Cyb-fC-6IC" firstAttribute="top" secondItem="qRy-vw-fma" secondAttribute="bottom" constant="45" id="U8A-EP-ySk"/>
                             <constraint firstItem="Foi-Ai-NiG" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="Uiu-2l-9hS"/>
+                            <constraint firstItem="r2L-dq-Hl3" firstAttribute="trailing" secondItem="Wvr-kU-FIb" secondAttribute="trailing" constant="20" id="XF0-2N-33e"/>
                             <constraint firstItem="r2L-dq-Hl3" firstAttribute="trailing" secondItem="PYy-Fm-0Fr" secondAttribute="trailing" constant="65" id="a7Q-gg-EdW"/>
                             <constraint firstItem="23h-Xy-ZPI" firstAttribute="top" secondItem="yhl-Zm-99A" secondAttribute="bottom" constant="50" id="hTF-yP-9u4"/>
                             <constraint firstItem="KwH-37-VaI" firstAttribute="centerX" secondItem="wFN-DA-kZt" secondAttribute="centerX" id="mVD-Vr-kYQ"/>
                             <constraint firstItem="Foi-Ai-NiG" firstAttribute="top" secondItem="dMn-XH-fii" secondAttribute="bottom" constant="10" id="nCA-ax-5cO"/>
                             <constraint firstItem="qRy-vw-fma" firstAttribute="top" secondItem="DOC-6q-cyV" secondAttribute="bottom" constant="32" id="nEg-mE-NPu"/>
+                            <constraint firstItem="Wvr-kU-FIb" firstAttribute="leading" secondItem="r2L-dq-Hl3" secondAttribute="leading" constant="20" id="ngl-80-YM0"/>
                             <constraint firstItem="DOC-6q-cyV" firstAttribute="leading" secondItem="r2L-dq-Hl3" secondAttribute="leading" id="osX-CW-h5h"/>
                             <constraint firstItem="PYy-Fm-0Fr" firstAttribute="top" secondItem="yhl-Zm-99A" secondAttribute="bottom" constant="60" id="q3F-NC-FWR"/>
                             <constraint firstItem="5Zt-IA-5wy" firstAttribute="top" secondItem="Foi-Ai-NiG" secondAttribute="bottom" constant="10" id="slR-8m-feE"/>
@@ -391,10 +429,42 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pay" image="creditcard" catalog="system" id="RdZ-G7-Hgf"/>
+                    <connections>
+                        <outlet property="applePay" destination="Cyb-fC-6IC" id="cux-m0-Yez"/>
+                        <outlet property="distanceLabel" destination="PYy-Fm-0Fr" id="QkF-XA-QCy"/>
+                        <outlet property="mastercard" destination="dMn-XH-fii" id="cei-C1-hqF"/>
+                        <outlet property="payNowButton" destination="5Zt-IA-5wy" id="lgP-CH-sCB"/>
+                        <outlet property="payPal" destination="KwH-37-VaI" id="3h4-Ay-tfI"/>
+                        <outlet property="priceLabel" destination="dW5-59-EUt" id="2CZ-WF-Rd4"/>
+                        <outlet property="samsungPay" destination="Foi-Ai-NiG" id="bM0-Lf-S7f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0z-3q-kqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="1141"/>
+            <point key="canvasLocation" x="1368.7022900763359" y="1140.8450704225352"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xLl-RT-Dek">
+            <objects>
+                <viewController id="OGz-KV-sJn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CUP-sa-t4I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-LB-SO7">
+                                <rect key="frame" x="46" y="481" width="303" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ApplePay"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q01-xf-mvg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jim-HO-pMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2222" y="1140"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
@@ -920,8 +990,8 @@
         <image name="editicon" width="34" height="34"/>
         <image name="forBeanLogo" width="128" height="128"/>
         <image name="forFeeBg" width="120" height="120"/>
-        <image name="location.fill" catalog="system" width="128" height="119"/>
-        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="location.fill" catalog="system" width="32" height="32"/>
+        <image name="map" catalog="system" width="32" height="32"/>
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -931,7 +1001,7 @@
         <image name="signupBG" width="375" height="385"/>
         <image name="skyscraperLogo" width="375" height="236"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
