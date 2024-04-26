@@ -66,6 +66,15 @@ class SignInViewController: UIViewController {
         if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
 
             if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
+                
+                // ProfileViewController로 데이터 전달
+                for viewController in tabVC.viewControllers ?? [] {
+                    if let profileVC = viewController as? ProfileViewController {
+                        profileVC.myName = account.userName
+                        profileVC.myId = account.iD
+                        break // 데이터를 전달한 후 반복문 종료
+                    }
+                }
 
                 self.navigationController?.pushViewController(tabVC, animated: true)
             } else {
@@ -104,7 +113,6 @@ class SignInViewController: UIViewController {
     //회원가입페이지로 이동
     @IBAction func createAccountButton(_ sender: Any) {
         guard let SignupVC = self.storyboard?.instantiateViewController(identifier: "SignupVC") else {return}
-        //self.present(SignupVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(SignupVC, animated: true)
     }
     
