@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I1B-46-D9C">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Km5-PX-Yca">
+
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -17,28 +19,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-a7-Fkk">
-                                <rect key="frame" x="76" y="362" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Dj-qaF">
-                                <rect key="frame" x="111" y="686" width="171" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Dj-qaF">
+                                <rect key="frame" x="141" y="498" width="119" height="35"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
+
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Let's">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="LiGothicMed"/>
+                                                <font key="NSOriginalFont" size="12" name="AppleColorEmoji"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="LiGothicMed"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Ride!">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="LiGothicMed"/>
+                                                <font key="NSOriginalFont" size="12" name="AppleColorEmoji"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.45882352941176469" green="0.80730015040000003" blue="0.91179531810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+
                                 <buttonConfiguration key="configuration" style="filled" title="Go riding a Scooter"/>
                                 <connections>
                                     <segue destination="I1B-46-D9C" kind="show" id="eqN-fU-FS4"/>
                                 </connections>
+
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-a7-Fkk">
+                                <rect key="frame" x="137" y="374" width="128" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="HFd-3C-ZYy"/>
+                                    <constraint firstAttribute="width" constant="120" id="r65-Pu-XqL"/>
+                                    <constraint firstAttribute="height" constant="120" id="vJf-nO-u7o"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.45993506909999998" green="0.80651575330000003" blue="0.91469925640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9bb-a7-Fkk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="N6c-WL-gNp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fye-Dj-qaF" secondAttribute="bottom" constant="285" id="QRu-rl-nj3"/>
+                            <constraint firstItem="Fye-Dj-qaF" firstAttribute="top" secondItem="9bb-a7-Fkk" secondAttribute="bottom" constant="4" id="Zh5-gI-zD0"/>
+                            <constraint firstItem="9bb-a7-Fkk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkH-vu-aVO"/>
+                            <constraint firstItem="Fye-Dj-qaF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="hBJ-Cu-Nby"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fye-Dj-qaF" secondAttribute="trailing" constant="142" id="xs3-J2-2dT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+
+            <point key="canvasLocation" x="1317" y="-1596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B6p-yU-0Hu">
+            <objects>
+                <viewController id="Km5-PX-Yca" customClass="ViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0X-yA-OdA" customClass="LaunchViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-Vq-1oX">
+                                <rect key="frame" x="0.0" y="585" width="393" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RZJ-1W-E70">
+                                <rect key="frame" x="132" y="366" width="128" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LE2-6u-5l7"/>
+                        <color key="backgroundColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView1" destination="RZJ-1W-E70" id="LSR-2D-hPl"/>
+                        <segue destination="Gan-qk-U6f" kind="show" id="IFO-xu-tNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evq-Mq-y5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2195" y="-1569"/>
+
             <point key="canvasLocation" x="1239" y="-975"/>
+
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="dpq-Of-9Nw">
@@ -404,7 +478,9 @@
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
-                <viewController storyboardIdentifier="signinVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+
+                <viewController storyboardIdentifier="SignInVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="KcW-hw-Pem">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -879,8 +955,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1B-46-D9C" sceneMemberID="viewController">
                     <toolbarItems/>
+
                     <navigationItem key="navigationItem" id="qMN-tj-7zu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VN2-fp-UVf">
+
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
