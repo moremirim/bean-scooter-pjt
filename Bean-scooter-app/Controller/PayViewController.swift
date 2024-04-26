@@ -32,10 +32,12 @@ class PayViewController: UIViewController {
         mastercard.addGestureRecognizer(chosen3)
         samsungPay.addGestureRecognizer(chosen4)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         var totalDistance = RecordSingleton.shared.array.map{ $0.distance }.reduce(0, +)
         distanceLabel.text = "\(totalDistance) m"
         priceLabel.text = "\(Int(Double(totalDistance) * 1.8)) 원"
-        
     }
     
     @objc func tapApplePay() {
