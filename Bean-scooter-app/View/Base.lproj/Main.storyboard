@@ -852,10 +852,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-45-rmJ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="153.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="154.33333333333334"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Nh-tYK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Nh-tYK">
                                         <rect key="frame" x="28" y="92" width="197" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Driving Guide">
                                                 <attributes>
@@ -869,25 +870,66 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5411764979" green="0.80000001190000003" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="top" secondItem="WpM-45-rmJ" secondAttribute="top" constant="92" id="2NS-og-yBc"/>
-                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="leading" secondItem="WpM-45-rmJ" secondAttribute="leading" constant="28" id="VgL-sv-5DQ"/>
-                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-34-i0v">
+                                <rect key="frame" x="20" y="177" width="114" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="이용">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <font key="NSOriginalFont" size="20" name="AppleSymbols"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="방법">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <font key="NSOriginalFont" size="20" name="AppleSymbols"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wlc-i1-e9V">
+                                <rect key="frame" x="0.0" y="265" width="393" height="533"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="rQV-e3-yPb"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5dX-iX-Mxb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="trailing" secondItem="5dX-iX-Mxb" secondAttribute="trailing" id="OfP-Lu-zac"/>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" id="Qd7-b0-v1q"/>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="top" secondItem="pav-RB-fHk" secondAttribute="top" id="Vlv-Nz-4Lb"/>
-                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="bottom" secondItem="WpM-45-rmJ" secondAttribute="bottom" constant="664.33333333333337" id="u8s-7P-6Kr"/>
+                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="trailing" secondItem="mAE-34-i0v" secondAttribute="trailing" constant="298" id="3c1-4p-Kv8"/>
+                            <constraint firstItem="mAE-34-i0v" firstAttribute="top" secondItem="WpM-45-rmJ" secondAttribute="bottom" constant="27.333333333333343" id="59X-fJ-HSf"/>
+                            <constraint firstItem="WpM-45-rmJ" firstAttribute="top" secondItem="pav-RB-fHk" secondAttribute="topMargin" constant="-59" id="7fz-Hh-gtK"/>
+                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="bottom" secondItem="wlc-i1-e9V" secondAttribute="bottom" constant="20" id="J8s-ya-yBb"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="trailing" secondItem="5dX-iX-Mxb" secondAttribute="trailing" id="O0b-3V-PUD"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="leading" secondItem="WpM-45-rmJ" secondAttribute="leading" id="f09-lj-c5p"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="trailing" secondItem="WpM-45-rmJ" secondAttribute="trailing" id="pZ8-cG-wyC"/>
+                            <constraint firstItem="mAE-34-i0v" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" constant="20" id="pav-6P-PB1"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="top" secondItem="mAE-34-i0v" secondAttribute="bottom" constant="60" id="uDb-bR-G6B"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" id="ygw-2y-4yn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GuideTable" destination="wlc-i1-e9V" id="IKb-Wx-Ykr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcA-39-qgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="446"/>
+            <point key="canvasLocation" x="2226.7175572519081" y="445.77464788732397"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="gWu-lI-nyZ">
@@ -1039,6 +1081,111 @@
             </objects>
             <point key="canvasLocation" x="4240" y="446"/>
         </scene>
+        <!--Invite Friends View Controller-->
+        <scene sceneID="Gp0-Io-TzK">
+            <objects>
+                <viewController id="Dik-sH-4U0" customClass="InviteFriendsViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMf-hY-JXv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPa-01-KHV" userLabel="topView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-lA-UQ5">
+                                        <rect key="frame" x="20" y="99" width="212" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Invite Friends">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45993506909999998" green="0.80651575330000003" blue="0.91469925640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="invite01" translatesAutoresizingMaskIntoConstraints="NO" id="LQw-06-hPS">
+                                <rect key="frame" x="62" y="225" width="272" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="추천 코드로 친구에게 ₩2,000의 BEAN크레딧을 선물해보세요. 친구가 첫 주행을 완료하면 여러분 에게도 ₩2,000 크레딧이 지급됩니다!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIc-0C-NZR">
+                                <rect key="frame" x="31" y="471" width="330" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-Zz-CQU">
+                                <rect key="frame" x="31" y="666" width="330" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.45882352939999999" green="0.80784313730000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share with Friends"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="Dik-sH-4U0" eventType="touchUpInside" id="Iq1-FZ-iDV"/>
+                                    <action selector="submitButton:" destination="tNn-w3-KXa" eventType="touchUpInside" id="0nk-wb-gza"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-fT-Mcm">
+                                <rect key="frame" x="31" y="558" width="330" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mycode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbB-UH-iCJ">
+                                        <rect key="frame" x="8" y="32" width="114" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLd-NW-Dsi">
+                                        <rect key="frame" x="250" y="26" width="70" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="COPY"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내 추천코드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ud-4K-3cj">
+                                        <rect key="frame" x="10" y="12" width="74" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" red="0.45882352939999999" green="0.80651575330000003" blue="0.91469925640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.80651575330000003" blue="0.91469925640000005" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="친구에게 BEAN을 알려주세요 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4L-kL-YFC">
+                                <rect key="frame" x="31" y="448" width="330" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gLl-Xf-hOh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="ShareButton" destination="xys-Zz-CQU" id="Byp-it-EXz"/>
+                        <outlet property="codeInfoLabel" destination="8ud-4K-3cj" id="u7s-yC-0Vz"/>
+                        <outlet property="codeLabel" destination="BbB-UH-iCJ" id="R4G-dG-QtV"/>
+                        <outlet property="copyButton" destination="rLd-NW-Dsi" id="wEp-hx-3s9"/>
+                        <outlet property="infoLabel" destination="A4L-kL-YFC" id="7NO-5w-iq9"/>
+                        <outlet property="infoSubLabel" destination="gIc-0C-NZR" id="ME5-VH-NCX"/>
+                        <outlet property="mainImage" destination="LQw-06-hPS" id="EXt-i2-2Xo"/>
+                        <outlet property="titleLabel" destination="9Fv-lA-UQ5" id="UqY-Re-2hR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc9-xj-XTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4238.9312977099235" y="1140.1408450704225"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="B74-2x-4v0">
             <objects>
@@ -1069,8 +1216,9 @@
         <image name="editicon" width="34" height="34"/>
         <image name="forBeanLogo" width="128" height="128"/>
         <image name="forFeeBg" width="120" height="120"/>
-        <image name="location.fill" catalog="system" width="128" height="119"/>
-        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="invite01" width="246" height="205"/>
+        <image name="location.fill" catalog="system" width="32" height="32"/>
+        <image name="map" catalog="system" width="32" height="32"/>
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -1084,6 +1232,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
