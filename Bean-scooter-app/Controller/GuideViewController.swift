@@ -40,6 +40,7 @@ class GuideViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         GuideTable.register(UINib(nibName: "GuideTableViewCell", bundle: nil), forCellReuseIdentifier: "guideList")
         

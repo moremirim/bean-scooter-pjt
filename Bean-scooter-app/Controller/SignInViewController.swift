@@ -72,6 +72,7 @@ class SignInViewController: UIViewController {
                     if let profileVC = viewController as? ProfileViewController {
                         profileVC.myName = account.userName
                         profileVC.myId = account.iD
+                        
                         break // 데이터를 전달한 후 반복문 종료
                     }
                 }
@@ -130,6 +131,9 @@ class SignInViewController: UIViewController {
         setupSigninBT()
         // 저장된 계정 정보 로드
         loadAccounts()
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
     }
 
 

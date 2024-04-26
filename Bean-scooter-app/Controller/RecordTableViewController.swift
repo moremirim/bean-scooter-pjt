@@ -14,15 +14,18 @@ class RecordTableViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
         self.navigationController?.isNavigationBarHidden = false
-       
+        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 100
         tableView.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "recordCell")
-        
+
+
     }
-    
+
 
 
 }
@@ -38,7 +41,7 @@ extension RecordTableViewController: UITableViewDelegate, UITableViewDataSource 
         
         let time =  RecordSingleton.shared.array[indexPath.row].time
         let distance = RecordSingleton.shared.array[indexPath.row].distance
-        let price = Int(distance * 10)
+        let price = Int(Double(distance) * 1.8)
         
         cell.dateLabel.text = "날짜: \(time)m"
         cell.distanceLabel.text = "주행거리: \(distance)"
@@ -46,7 +49,6 @@ extension RecordTableViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
-    
-    
+
     
 }

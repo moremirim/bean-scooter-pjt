@@ -6,6 +6,24 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var myImage: UIImageView!
+    
+    func setupmyImage() {
+        if let currentUser = AccountModel.accountModel.accountInfoArr.first(where: { $0.userName == myName }),
+           let imageData = currentUser.profileImage,
+           let profileImage = UIImage(data: imageData) {
+            print("가져옴", profileImage)
+            myImage.image = profileImage
+        } else {
+            myImage.image = UIImage(named: "profile")
+        }
+        
+        myImage.layer.cornerRadius = myImage.frame.height/2
+        myImage.layer.borderWidth = 1
+        myImage.clipsToBounds = true
+        myImage.layer.borderColor = UIColor.clear.cgColor
+    }
+    
     //로그인 된 아이디 정보 레이블에 반영
     @IBOutlet weak var myname: UILabel!
     @IBOutlet weak var myID: UILabel!
@@ -36,6 +54,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         setuplabel()
+
+        setupmyImage()
+
         
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
         
@@ -44,6 +65,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.separatorStyle = .singleLine
         table.rowHeight = 85
         
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -98,6 +124,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             //            }
             //            self.navigationController?.pushViewController(signinVC, animated: true)
             //
+            
+        case 3:
+            guard let couponVC = self.storyboard?.instantiateViewController(withIdentifier: "couponVC") as? CouponViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(couponVC, animated: true)
             
             
             // 다섯 번째 셀(logOut) 선택된 경우
