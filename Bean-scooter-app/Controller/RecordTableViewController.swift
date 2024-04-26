@@ -18,7 +18,7 @@ class RecordTableViewController: UIViewController {
   
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 100
+        tableView.rowHeight = 150
         tableView.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "recordCell")
 
         self.navigationController?.isNavigationBarHidden = false
@@ -42,9 +42,9 @@ extension RecordTableViewController: UITableViewDelegate, UITableViewDataSource 
         let distance = RecordSingleton.shared.array[indexPath.row].distance
         let price = Int(Double(distance) * 1.8)
         
-        cell.dateLabel.text = "날짜: \(time)m"
-        cell.distanceLabel.text = "주행거리: \(distance)"
-        cell.priceLabel.text = "금액: \(price)원"
+        cell.dateLabel.text = " \(time) m"
+        cell.distanceLabel.text = " \(distance)"
+        cell.priceLabel.text = " \(price)원"
         
         return cell
     }
