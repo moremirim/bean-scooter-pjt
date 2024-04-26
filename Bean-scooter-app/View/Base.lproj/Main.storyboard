@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -618,6 +619,10 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sb" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-Nf-hxB">
                                 <rect key="frame" x="30" y="171" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="ZZ4-06-oaO"/>
+                                    <constraint firstAttribute="height" constant="60" id="yNz-6v-fk3"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3H-Ye-tR5">
                                 <rect key="frame" x="323" y="184" width="54" height="35"/>
@@ -655,6 +660,7 @@
                     <navigationItem key="navigationItem" id="Ksy-9i-oND"/>
                     <connections>
                         <outlet property="myID" destination="Obf-7i-QPp" id="sLS-5F-Mu8"/>
+                        <outlet property="myImage" destination="tFt-Nf-hxB" id="NhE-JF-de3"/>
                         <outlet property="myname" destination="8g7-tl-9nY" id="46i-7H-dCe"/>
                         <outlet property="table" destination="wRB-Nu-qCt" id="mTv-vW-vZt"/>
                     </connections>
@@ -747,13 +753,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enl-bo-3AS">
-                                        <rect key="frame" x="20" y="99" width="152" height="36"/>
+                                        <rect key="frame" x="20" y="99" width="212" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Edit Profile">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.11372549830000001" green="0.1764705926" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <font key="NSFont" metaFont="system" size="30"/>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -766,7 +773,7 @@
                                 <rect key="frame" x="49" y="217" width="297" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-lG-dYd">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-lG-dYd">
                                         <rect key="frame" x="88" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -784,6 +791,20 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTd-sy-tjA">
+                                        <rect key="frame" x="172" y="84" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="editicon" symbolScale="large"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -834,8 +855,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="submit"/>
                                 <connections>
-                                    <action selector="logInButton:" destination="pt1-af-VdR" eventType="touchUpInside" id="PHi-u5-NbO"/>
-                                    <action selector="submitButton:" destination="tNn-w3-KXa" eventType="touchUpInside" id="HMJ-T3-hsJ"/>
+                                    <action selector="submitButton:" destination="tNn-w3-KXa" eventType="touchUpInside" id="df1-80-UXk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK4-S0-XLi">
@@ -845,8 +865,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete account"/>
                                 <connections>
-                                    <action selector="deleteaccountButton:" destination="tNn-w3-KXa" eventType="touchUpInside" id="bYY-JC-JR1"/>
-                                    <action selector="logInButton:" destination="pt1-af-VdR" eventType="touchUpInside" id="kyx-0G-wPo"/>
+                                    <action selector="deleteaccountButton:" destination="tNn-w3-KXa" eventType="touchUpInside" id="hPw-O6-ADC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -854,6 +873,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="delete" destination="AK4-S0-XLi" id="IcT-iC-yWO"/>
+                        <outlet property="editProfileImageButton" destination="qTd-sy-tjA" id="zhi-qb-6xL"/>
                         <outlet property="idLabel" destination="2D5-lH-cMj" id="xIq-bB-2xZ"/>
                         <outlet property="idTextField" destination="QXz-gN-mbJ" id="p1N-zf-DUG"/>
                         <outlet property="nameLabel" destination="w6u-vz-HCh" id="bWX-Il-4j1"/>
@@ -861,6 +882,7 @@
                         <outlet property="profileIDLabel" destination="xDG-CS-oY3" id="36A-Jm-CFI"/>
                         <outlet property="profileImageView" destination="Y7G-lG-dYd" id="xWN-79-cKY"/>
                         <outlet property="profileNameLabel" destination="JDo-Ja-NUj" id="RMs-YB-6Bz"/>
+                        <outlet property="submit" destination="BEg-3W-cTk" id="WqB-8J-DoN"/>
                         <outlet property="titleLabel" destination="enl-bo-3AS" id="oGr-8b-Wy6"/>
                     </connections>
                 </viewController>
@@ -895,6 +917,7 @@
         <image name="beanLogo 1" width="128" height="128"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
+        <image name="editicon" width="34" height="34"/>
         <image name="forBeanLogo" width="128" height="128"/>
         <image name="forFeeBg" width="120" height="120"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
@@ -902,6 +925,7 @@
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="profile" width="120" height="120"/>
         <image name="sb" width="60" height="60"/>
         <image name="scooter" catalog="system" width="128" height="94"/>
         <image name="signupBG" width="375" height="385"/>
@@ -911,6 +935,10 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
