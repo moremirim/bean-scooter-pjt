@@ -65,6 +65,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.separatorStyle = .singleLine
         table.rowHeight = 85
         
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -119,6 +124,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             //            }
             //            self.navigationController?.pushViewController(signinVC, animated: true)
             //
+            
+        case 3:
+            guard let couponVC = self.storyboard?.instantiateViewController(withIdentifier: "couponVC") as? CouponViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(couponVC, animated: true)
             
             
             // 다섯 번째 셀(logOut) 선택된 경우

@@ -184,6 +184,9 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         setuplabel()
         setupTextField()
+
+        self.navigationController?.isNavigationBarHidden = false
+
         setupImageView()
         setupEditButton()
         setupButton()
@@ -191,6 +194,7 @@ class EditProfileViewController: UIViewController {
         self.imagePicker.sourceType = .photoLibrary // 앨범에서 가져옴
         self.imagePicker.allowsEditing = true // 수정 가능 여부
         self.imagePicker.delegate = self // picker delegate
+
     }
     
 }
