@@ -20,16 +20,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var returnButton: UIButton!
     
     let mapManager = MapManager()
-    
+    let coordGenerater = CoordGenerator()
     
     var selectedAnnotation: MKPointAnnotation? // 선택된 Pin
     var isUsed: Bool = false
-    var id: Int = 0
+    var serialNumber: String = ""
     
     var locations: [CLLocationCoordinate2D] = [] // 거리 계산용 배열
     var modalViewController = ModalViewController() // 새로 보여줄 VC
     var dimmingView: UIView? // 어둡게 할 배경
-    
+        
+    var dummyArray = [PinModel]()
+
     lazy var locationManager: CLLocationManager = {
         var manager = CLLocationManager()
         manager.distanceFilter = 10
@@ -51,6 +53,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         addDimmingView()
         
+        dummyArray = coordGenerater.makingDummyArray()
+        makingDummy()
+    }
+    
+    // MARK: - Making Dummy pins
+    func makingDummy() {
+        for i in dummyArray.indices {
+            let coordinate = CLLocationCoordinate2D(latitude: dummyArray[i].y, longitude: dummyArray[i].x)
+            addMark(coordinate: coordinate, serial: dummyArray[i].id)
+        }
     }
     
     // MARK: - Method for showing or hiding buttons
@@ -97,19 +109,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     // MARK: - Methods for Features (Rent, Return)
-    
-    @IBAction func addPin(_ sender: UIButton) {
-        DispatchQueue.global().async { [weak self] in
-            if CLLocationManager.locationServicesEnabled() {
-                self?.locationManager.requestWhenInUseAuthorization()
-                let currentLocation = self?.locationManager.location
-                
-                self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406))
-                
-            }
-        }
-    }
-    
+
     @IBAction func moveCurrentLocationBtn(_ sender: UIButton) {
         updateLocationMap(to: locationManager.location ?? CLLocation(), with: "현재 위치")    }
     
@@ -119,7 +119,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let rentProcessAlert = UIAlertController(title: "대여 진행", message: "기기의 시리얼 번호를 입력해주세요", preferredStyle: .alert)
         
         rentProcessAlert.addTextField() { (tf) in
-            tf.placeholder = "Serial No."}
+            tf.placeholder = "Serial No."
+            
+            if let inputSerial = tf.text {
+                self.serialNumber = inputSerial
+            }
+        }
         
         let rent = UIAlertAction(title: "대여하기", style: .default) { _ in
             self.completedRent(didSelect: self.selectedAnnotation!)
@@ -153,7 +158,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     // pin 추가.
-    func addMark(coordinate: CLLocationCoordinate2D) {
+    func addMark(coordinate: CLLocationCoordinate2D, serial: String) {
         
         let pin = MKPointAnnotation()
         let address = CLGeocoder.init()
@@ -163,13 +168,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             
             guard let address = placeMark else { return }
             
-            pin.title = "기기번호: \(self.id)"
+            pin.title = "기기번호: \(serial)"
             pin.subtitle = "현재위치: \(address.thoroughfare ?? "Apple Store")"
             
             pin.coordinate = coordinate
             self.mapView.addAnnotation(pin)
         }
-        id += 1
+
     }
     
     // 반납 버튼
@@ -179,7 +184,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 self?.locationManager.requestWhenInUseAuthorization()
                 let currentLocation = self?.locationManager.location
                 
-                self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406))
+                self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406), serial: self?.serialNumber ?? "1D1Fvfvt3455")
                 self?.locations.append(currentLocation!.coordinate)
             }
             
@@ -225,7 +230,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         let modalVC = self.modalViewController
         modalVC.addressLabel.text = selectedAnnotation?.subtitle
-        //modalVC.serialLabel
+        modalVC.serialLabel.text = selectedAnnotation?.title
         
         
         // 사이드 메뉴 뷰 컨트롤러를 자식으로 추가하고 뷰 계층 구조에 추가.
@@ -369,6 +374,11 @@ extension MapViewController: MKMapViewDelegate {
                 self.present(alert, animated: true)
             }
         }
+        
+        if isUsed {
+            rentButton.isHidden = true
+        }
+        
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
