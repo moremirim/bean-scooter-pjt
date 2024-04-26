@@ -6,6 +6,24 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var myImage: UIImageView!
+    
+    func setupmyImage() {
+        if let currentUser = AccountModel.accountModel.accountInfoArr.first(where: { $0.userName == myName }),
+           let imageData = currentUser.profileImage,
+           let profileImage = UIImage(data: imageData) {
+            print("가져옴", profileImage)
+            myImage.image = profileImage
+        } else {
+            myImage.image = UIImage(named: "profile")
+        }
+        
+        myImage.layer.cornerRadius = myImage.frame.height/2
+        myImage.layer.borderWidth = 1
+        myImage.clipsToBounds = true
+        myImage.layer.borderColor = UIColor.clear.cgColor
+    }
+    
     //로그인 된 아이디 정보 레이블에 반영
     @IBOutlet weak var myname: UILabel!
     @IBOutlet weak var myID: UILabel!
@@ -36,6 +54,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         setuplabel()
+
+        setupmyImage()
+
         
         table.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileList")
         
