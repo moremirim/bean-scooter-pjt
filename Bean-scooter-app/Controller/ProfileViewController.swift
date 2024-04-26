@@ -120,6 +120,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             //            self.navigationController?.pushViewController(signinVC, animated: true)
             //
             
+        case 3:
+            guard let couponVC = self.storyboard?.instantiateViewController(withIdentifier: "couponVC") as? CouponViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(couponVC, animated: true)
+            
             
             // 다섯 번째 셀(logOut) 선택된 경우
         case 4:
