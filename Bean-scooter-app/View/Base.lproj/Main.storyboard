@@ -1207,7 +1207,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xMl-d4-eRp"/>
-              https://github.com/moremirim/bean-scooter-pjt/pull/33/conflict?name=Bean-scooter-app%252FView%252FBase.lproj%252FMain.storyboard&ancestor_oid=c6734df2b9559edec42a0eae634d3a1deb9eaf6d&base_oid=20f40f9709901cd3074b0677698b58fb3a03b9eb&head_oid=0e9ff1f946a69e40de87b29b7c15f9882ecb9f43      </connections>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ov7-gu-rdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
