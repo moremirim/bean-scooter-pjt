@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Km5-PX-Yca">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CJg-ZK-6Iu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -11,108 +9,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Dj-qaF">
-                                <rect key="frame" x="141" y="498" width="119" height="35"/>
-                                <color key="tintColor" systemColor="tintColor"/>
-                                <state key="normal" title="Button"/>
-
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Let's">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="LiGothicMed"/>
-                                                <font key="NSOriginalFont" size="12" name="AppleColorEmoji"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="LiGothicMed"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Ride!">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="LiGothicMed"/>
-                                                <font key="NSOriginalFont" size="12" name="AppleColorEmoji"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.45882352941176469" green="0.80730015040000003" blue="0.91179531810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-
-                                <buttonConfiguration key="configuration" style="filled" title="Go riding a Scooter"/>
-                                <connections>
-                                    <segue destination="I1B-46-D9C" kind="show" id="eqN-fU-FS4"/>
-                                </connections>
-
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-a7-Fkk">
-                                <rect key="frame" x="137" y="374" width="128" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="HFd-3C-ZYy"/>
-                                    <constraint firstAttribute="width" constant="120" id="r65-Pu-XqL"/>
-                                    <constraint firstAttribute="height" constant="120" id="vJf-nO-u7o"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-a7-Fkk">
+                                <rect key="frame" x="76" y="362" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="9bb-a7-Fkk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="N6c-WL-gNp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fye-Dj-qaF" secondAttribute="bottom" constant="285" id="QRu-rl-nj3"/>
-                            <constraint firstItem="Fye-Dj-qaF" firstAttribute="top" secondItem="9bb-a7-Fkk" secondAttribute="bottom" constant="4" id="Zh5-gI-zD0"/>
-                            <constraint firstItem="9bb-a7-Fkk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkH-vu-aVO"/>
-                            <constraint firstItem="Fye-Dj-qaF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="hBJ-Cu-Nby"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fye-Dj-qaF" secondAttribute="trailing" constant="142" id="xs3-J2-2dT"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.45993506909999998" green="0.80651575330000003" blue="0.91469925640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Iz4-ai-mLZ"/>
+                    <connections>
+                        <outlet property="imageView1" destination="9bb-a7-Fkk" id="4Kr-5i-EZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="1317" y="-1596"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="B6p-yU-0Hu">
-            <objects>
-                <viewController id="Km5-PX-Yca" customClass="ViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a0X-yA-OdA" customClass="LaunchViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-Vq-1oX">
-                                <rect key="frame" x="0.0" y="585" width="393" height="267"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forBeanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RZJ-1W-E70">
-                                <rect key="frame" x="132" y="366" width="128" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="LE2-6u-5l7"/>
-                        <color key="backgroundColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="imageView1" destination="RZJ-1W-E70" id="LSR-2D-hPl"/>
-                        <segue destination="Gan-qk-U6f" kind="show" id="IFO-xu-tNU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="evq-Mq-y5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2195" y="-1569"/>
-
-            <point key="canvasLocation" x="1239" y="-975"/>
-
+            <point key="canvasLocation" x="2165.6488549618321" y="-975.35211267605644"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="dpq-Of-9Nw">
@@ -214,7 +134,7 @@
         <!--Pay-->
         <scene sceneID="DY4-TN-Upc">
             <objects>
-                <viewController id="zCf-3X-2Tu" userLabel="Pay" customClass="RentViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zCf-3X-2Tu" userLabel="Pay" customClass="PayViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFN-DA-kZt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,11 +398,9 @@
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
-
-                <viewController storyboardIdentifier="SignInVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
-
+                <viewController storyboardIdentifier="SigninVC" id="k9H-2I-G75" customClass="SignInViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcW-hw-Pem">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-K4-v5j">
@@ -537,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9U-qS-QDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3295" y="-975"/>
+            <point key="canvasLocation" x="4220.6106870229005" y="-975.35211267605644"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="u0s-Jv-aGN">
@@ -651,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUX-Jq-iGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4337" y="-975"/>
+            <point key="canvasLocation" x="5263.3587786259541" y="-975.35211267605644"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="hX4-pw-m4Y">
@@ -948,28 +866,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcx-0R-zZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450" y="1141"/>
+            <point key="canvasLocation" x="4240" y="446"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="NTe-P8-YHN">
+        <scene sceneID="B74-2x-4v0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1B-46-D9C" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CJg-ZK-6Iu" sceneMemberID="viewController">
                     <toolbarItems/>
-
-                    <navigationItem key="navigationItem" id="qMN-tj-7zu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VN2-fp-UVf">
-
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wjn-pQ-RQC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="k9H-2I-G75" kind="relationship" relationship="rootViewController" id="oez-sR-2kI"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xMl-d4-eRp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P2b-Bl-hws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ov7-gu-rdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-975"/>
+            <point key="canvasLocation" x="1238.9312977099237" y="-975.35211267605644"/>
         </scene>
     </scenes>
     <resources>
@@ -992,13 +907,10 @@
         <image name="signupBG" width="375" height="385"/>
         <image name="skyscraperLogo" width="375" height="236"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

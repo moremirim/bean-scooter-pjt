@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="B5f-Ri-Ghq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="B5f-Ri-Ghq">
                                 <rect key="frame" x="0.0" y="585" width="393" height="267"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="393" id="F2u-aL-53g"/>
@@ -33,6 +33,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.45993506909999998" green="0.80651575330000003" blue="0.91469925640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="B5f-Ri-Ghq" firstAttribute="top" secondItem="77I-aY-dah" secondAttribute="bottom" constant="99" id="2tG-i9-9cq"/>
                             <constraint firstItem="77I-aY-dah" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="307" id="7eT-WJ-imP"/>
                             <constraint firstItem="77I-aY-dah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132.5" id="SJf-0P-PlI"/>
                             <constraint firstItem="B5f-Ri-Ghq" firstAttribute="centerX" secondItem="77I-aY-dah" secondAttribute="centerX" id="fFu-8d-YIy"/>

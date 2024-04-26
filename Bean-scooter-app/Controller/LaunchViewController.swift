@@ -2,32 +2,28 @@
 //  LaunchViewController.swift
 //  Bean-scooter-app
 //
-//  Created by 박중권 on 4/25/24.
+//  Created by Dongik Song on 4/26/24.
 //
 
-import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-    
+class LaunchViewController: UIViewController {
+
     @IBOutlet weak var imageView1: UIImageView!
-    
-    //이미지 삽입
-//    private let imageView: UIImageView = {
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 120))
-//        imageView.image = UIImage(named: "forBeanLogo")
-//        return imageView
-//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView1)
-        
+
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         imageView1.center = view.center
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         //애니메이션 몇 초 후에 나오게 할 건지 설정
         DispatchQueue.main.asyncAfter(deadline: .now()+1.5, execute: self.animate)
@@ -56,18 +52,16 @@ class ViewController: UIViewController {
             
         }, completion: { done in
             if done {
-                guard let viewController = self.storyboard?.instantiateViewController(identifier: "SignInVC") as? SignInViewController else {
+                guard let viewController = self.storyboard?.instantiateViewController(identifier: "SigninVC") as? SignInViewController else {
                     return
                 }
-                viewController.modalTransitionStyle = .crossDissolve
-                viewController.modalPresentationStyle = .fullScreen
-                self.present(viewController, animated: true)
+
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
         })
         
         
         
     }
+
 }
-
-

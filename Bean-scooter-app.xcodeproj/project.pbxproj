@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		616E24672BDADBD50060EDC2 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */; };
 		616E246A2BDADC210060EDC2 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */; };
 		616E246B2BDADC210060EDC2 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */; };
-
+		61823C082BDB731B0018AC15 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61823C072BDB731B0018AC15 /* LaunchViewController.swift */; };
 		61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F6F2BD89AA300262B30 /* AccountInfo.swift */; };
 		61910F722BD89AB500262B30 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F712BD89AB500262B30 /* AccountModel.swift */; };
 		61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F732BD8C43700262B30 /* TabbarViewController.swift */; };
@@ -20,14 +19,10 @@
 		61910F842BD8D7E500262B30 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 61910F832BD8D7E500262B30 /* Alamofire */; };
 		61910F872BD8D83A00262B30 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F862BD8D83A00262B30 /* MapModel.swift */; };
 		61910F892BD8D84B00262B30 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F882BD8D84B00262B30 /* MapManager.swift */; };
-
-		713C87722BDA4C30005E4750 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C87712BDA4C30005E4750 /* LaunchViewController.swift */; };
-		713C877A2BDA5751005E4750 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 713C87792BDA5751005E4750 /* AlamofireDynamic */; };
-
 		61A699DA2BDA6657005A460B /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A699D92BDA6657005A460B /* ModalViewController.swift */; };
 		61A699DE2BDAD391005A460B /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A699DD2BDAD391005A460B /* RecordModel.swift */; };
 		61A699E12BDAD47E005A460B /* RecordSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A699E02BDAD47E005A460B /* RecordSingleton.swift */; };
-
+		713C877A2BDA5751005E4750 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 713C87792BDA5751005E4750 /* AlamofireDynamic */; };
 		7176FDA62BD67936005185F9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FDA52BD67936005185F9 /* MapController.swift */; };
 		8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084B2BD614C200598B16 /* AppDelegate.swift */; };
 		8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11084D2BD614C200598B16 /* SceneDelegate.swift */; };
@@ -44,11 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
-
+		61823C072BDB731B0018AC15 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		61910F6F2BD89AA300262B30 /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		61910F712BD89AB500262B30 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		61910F732BD8C43700262B30 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
@@ -56,13 +50,9 @@
 		61910F7F2BD8C74100262B30 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		61910F862BD8D83A00262B30 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		61910F882BD8D84B00262B30 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
-
-		713C87712BDA4C30005E4750 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-
 		61A699D92BDA6657005A460B /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		61A699DD2BDAD391005A460B /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		61A699E02BDAD47E005A460B /* RecordSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSingleton.swift; sourceTree = "<group>"; };
-
 		7176FDA52BD67936005185F9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		8D1108482BD614C200598B16 /* Bean-scooter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean-scooter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D11084B2BD614C200598B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,14 +165,11 @@
 				CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */,
 				CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */,
 				61910F732BD8C43700262B30 /* TabbarViewController.swift */,
-
-				713C87712BDA4C30005E4750 /* LaunchViewController.swift */,
-
 				61A699D92BDA6657005A460B /* ModalViewController.swift */,
 				8DD73D862BDA4491006C508D /* PayViewController.swift */,
 				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
 				616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */,
-
+				61823C072BDB731B0018AC15 /* LaunchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,15 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */,
-
-				713C87722BDA4C30005E4750 /* LaunchViewController.swift in Sources */,
-
 				61A699E12BDAD47E005A460B /* RecordSingleton.swift in Sources */,
 				616E246B2BDADC210060EDC2 /* RecordTableViewCell.swift in Sources */,
 				61A699DA2BDA6657005A460B /* ModalViewController.swift in Sources */,
+				61823C082BDB731B0018AC15 /* LaunchViewController.swift in Sources */,
 				B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */,
 				616E24672BDADBD50060EDC2 /* RecordTableViewController.swift in Sources */,
-
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
@@ -536,14 +520,11 @@
 			package = 61910F822BD8D7E500262B30 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-
 		713C87792BDA5751005E4750 /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61910F822BD8D7E500262B30 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
 		};
-
-
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D1108402BD614C200598B16 /* Project object */;
