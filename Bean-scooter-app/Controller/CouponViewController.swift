@@ -32,6 +32,8 @@ class CouponViewController: UIViewController {
         
         // Observe coupon tapped notification
         NotificationCenter.default.addObserver(self, selector: #selector(handleCouponTapped(_:)), name: Notification.Name("CouponTapped"), object: nil)
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
     deinit {
         // Remove observer when view controller is deallocated

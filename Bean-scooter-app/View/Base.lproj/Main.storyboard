@@ -23,7 +23,6 @@
                                 <rect key="frame" x="132.66666666666666" y="366" width="128" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="OYI-FW-a5W">
                                 <rect key="frame" x="0.0" y="585" width="393" height="267"/>
                                 <constraints>
@@ -32,7 +31,6 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="393" id="scN-rf-hc6"/>
                                     <constraint firstAttribute="height" constant="267" id="ymm-3p-xxL"/>
                                 </constraints>
-
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,15 +105,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="대여하기"/>
                                 <connections>
                                     <action selector="didTapRentButton:" destination="6B4-EL-OES" eventType="touchUpInside" id="0RJ-bv-7gb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwr-5x-N5p">
-                                <rect key="frame" x="254" y="559" width="110" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="TestPin생성"/>
-                                <connections>
-                                    <action selector="addPin:" destination="6B4-EL-OES" eventType="touchUpInside" id="I46-H2-qUd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-oY-kiH">
@@ -1080,8 +1069,8 @@
         <image name="editicon" width="34" height="34"/>
         <image name="forBeanLogo" width="128" height="128"/>
         <image name="forFeeBg" width="120" height="120"/>
-        <image name="location.fill" catalog="system" width="32" height="32"/>
-        <image name="map" catalog="system" width="32" height="32"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -1091,14 +1080,10 @@
         <image name="signupBG" width="375" height="385"/>
         <image name="skyscraperLogo" width="375" height="236"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

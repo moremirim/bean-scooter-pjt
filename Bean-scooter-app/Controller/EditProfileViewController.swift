@@ -126,7 +126,7 @@ class EditProfileViewController: UIViewController {
                 AccountModel.accountModel.accountInfoArr[index].userName = newName
                 AccountModel.accountModel.accountInfoArr[index].iD = newid
             }
-            guard let signinVC = self.storyboard?.instantiateViewController(identifier: "signinVC") else {return}
+            guard let signinVC = self.storyboard?.instantiateViewController(identifier: "SigninVC") else {return}
             self.navigationController?.pushViewController(signinVC, animated: true)
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -146,7 +146,7 @@ class EditProfileViewController: UIViewController {
         let okAction = UIAlertAction(title: "확인", style: .default) { _ in
             if let index = AccountModel.accountModel.accountInfoArr.firstIndex(where: { $0.userName == self.myName }) {
                         AccountModel.accountModel.accountInfoArr.remove(at: index)
-                guard let signinVC = self.storyboard?.instantiateViewController(identifier: "signinVC") else {return}
+                guard let signinVC = self.storyboard?.instantiateViewController(identifier: "SigninVC") else {return}
                 self.navigationController?.pushViewController(signinVC, animated: true)
                     }
         }

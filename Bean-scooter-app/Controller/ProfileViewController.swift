@@ -135,7 +135,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             // 다섯 번째 셀(logOut) 선택된 경우
         case 4:
             
-            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "signinVC") as? SignInViewController else {
+            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SigninVC") as? SignInViewController else {
                 return
             }
             self.navigationController?.pushViewController(signinVC, animated: true)
