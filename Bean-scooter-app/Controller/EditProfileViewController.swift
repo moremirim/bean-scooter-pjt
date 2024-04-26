@@ -128,6 +128,7 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         setuplabel()
         setupTextField()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
 }

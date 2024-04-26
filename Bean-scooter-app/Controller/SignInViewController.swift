@@ -131,6 +131,7 @@ class SignInViewController: UIViewController {
         // 저장된 계정 정보 로드
         loadAccounts()
         
+        self.navigationController?.isNavigationBarHidden = true
         
     }
 
