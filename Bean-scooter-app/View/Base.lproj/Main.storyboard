@@ -703,10 +703,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-45-rmJ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="153.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="154.33333333333334"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Nh-tYK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Nh-tYK">
                                         <rect key="frame" x="28" y="92" width="197" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Driving Guide">
                                                 <attributes>
@@ -720,37 +721,66 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5411764979" green="0.80000001190000003" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="top" secondItem="WpM-45-rmJ" secondAttribute="top" constant="92" id="2NS-og-yBc"/>
-                                    <constraint firstItem="ZbI-Nh-tYK" firstAttribute="leading" secondItem="WpM-45-rmJ" secondAttribute="leading" constant="28" id="VgL-sv-5DQ"/>
-                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이용 방법" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-34-i0v">
-                                <rect key="frame" x="25" y="179" width="75" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-34-i0v">
+                                <rect key="frame" x="20" y="177" width="114" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="이용">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <font key="NSOriginalFont" size="20" name="AppleSymbols"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="방법">
+                                        <attributes>
+                                            <color key="NSColor" red="0.019770408163265252" green="0.019770408163265252" blue="0.019770408163265252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-ExtraBold"/>
+                                            <font key="NSOriginalFont" size="20" name="AppleSymbols"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wlc-i1-e9V">
-                                <rect key="frame" x="16" y="219" width="361" height="599"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wlc-i1-e9V">
+                                <rect key="frame" x="0.0" y="265" width="393" height="533"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="rQV-e3-yPb"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5dX-iX-Mxb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="trailing" secondItem="5dX-iX-Mxb" secondAttribute="trailing" id="OfP-Lu-zac"/>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" id="Qd7-b0-v1q"/>
-                            <constraint firstItem="WpM-45-rmJ" firstAttribute="top" secondItem="pav-RB-fHk" secondAttribute="top" id="Vlv-Nz-4Lb"/>
-                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="bottom" secondItem="WpM-45-rmJ" secondAttribute="bottom" constant="664.33333333333337" id="u8s-7P-6Kr"/>
+                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="trailing" secondItem="mAE-34-i0v" secondAttribute="trailing" constant="298" id="3c1-4p-Kv8"/>
+                            <constraint firstItem="mAE-34-i0v" firstAttribute="top" secondItem="WpM-45-rmJ" secondAttribute="bottom" constant="27.333333333333343" id="59X-fJ-HSf"/>
+                            <constraint firstItem="WpM-45-rmJ" firstAttribute="top" secondItem="pav-RB-fHk" secondAttribute="topMargin" constant="-59" id="7fz-Hh-gtK"/>
+                            <constraint firstItem="5dX-iX-Mxb" firstAttribute="bottom" secondItem="wlc-i1-e9V" secondAttribute="bottom" constant="20" id="J8s-ya-yBb"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="trailing" secondItem="5dX-iX-Mxb" secondAttribute="trailing" id="O0b-3V-PUD"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="leading" secondItem="WpM-45-rmJ" secondAttribute="leading" id="f09-lj-c5p"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="trailing" secondItem="WpM-45-rmJ" secondAttribute="trailing" id="pZ8-cG-wyC"/>
+                            <constraint firstItem="mAE-34-i0v" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" constant="20" id="pav-6P-PB1"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="top" secondItem="mAE-34-i0v" secondAttribute="bottom" constant="60" id="uDb-bR-G6B"/>
+                            <constraint firstItem="wlc-i1-e9V" firstAttribute="leading" secondItem="5dX-iX-Mxb" secondAttribute="leading" id="ygw-2y-4yn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GuideTable" destination="wlc-i1-e9V" id="IKb-Wx-Ykr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcA-39-qgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2449.6183206106871" y="445.77464788732397"/>
+            <point key="canvasLocation" x="2226.7175572519081" y="445.77464788732397"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="gWu-lI-nyZ">
