@@ -23,6 +23,7 @@
                                 <rect key="frame" x="132.66666666666666" y="366" width="128" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyscraperLogo" translatesAutoresizingMaskIntoConstraints="NO" id="OYI-FW-a5W">
                                 <rect key="frame" x="0.0" y="585" width="393" height="267"/>
                                 <constraints>
@@ -31,6 +32,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="393" id="scN-rf-hc6"/>
                                     <constraint firstAttribute="height" constant="267" id="ymm-3p-xxL"/>
                                 </constraints>
+
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -65,6 +65,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.separatorStyle = .singleLine
         table.rowHeight = 85
         
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     

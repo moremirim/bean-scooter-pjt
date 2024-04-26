@@ -14,15 +14,17 @@ class RecordTableViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-       
+        
+  
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 100
         tableView.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "recordCell")
+
         self.navigationController?.isNavigationBarHidden = false
+
     }
-    
+
 
 
 }
@@ -46,7 +48,6 @@ extension RecordTableViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
-    
-    
+
     
 }
