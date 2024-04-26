@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CouponCollectionViewCell" id="gTV-IL-0wX" customClass="CouponCollectionViewCell" customModule="Bean_scooter_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-Xa-bd6">
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="112"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon007" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-Tu-bMf">
+                        <rect key="frame" x="36" y="20" width="70" height="70"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mi-z1-yFx">
+                        <rect key="frame" x="145" y="71" width="167" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMU-x2-z4C">
+                        <rect key="frame" x="145" y="39" width="167" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dSG-Xa-bd6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AuI-Cv-YMu"/>
+                <constraint firstItem="dSG-Xa-bd6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="haB-Zx-5XD"/>
+                <constraint firstAttribute="bottom" secondItem="dSG-Xa-bd6" secondAttribute="bottom" id="o3H-2b-S0T"/>
+                <constraint firstAttribute="trailing" secondItem="dSG-Xa-bd6" secondAttribute="trailing" id="zqO-RH-Wiq"/>
+            </constraints>
+            <size key="customSize" width="362" height="112"/>
+            <connections>
+                <outlet property="dateLabel" destination="8mi-z1-yFx" id="5hb-Mb-QJt"/>
+                <outlet property="discountRateLabel" destination="fMU-x2-z4C" id="0fB-rD-M6c"/>
+                <outlet property="imageView" destination="GgA-Tu-bMf" id="DMK-vI-zIH"/>
+            </connections>
+            <point key="canvasLocation" x="271.75572519083971" y="62.676056338028175"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="coupon" width="348" height="110"/>
+        <image name="icon007" width="200" height="200"/>
+    </resources>
+</document>
