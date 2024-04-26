@@ -14,14 +14,15 @@ class RecordTableViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+        self.navigationController?.isNavigationBarHidden = false
         
-  
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 100
         tableView.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "recordCell")
 
-        self.navigationController?.isNavigationBarHidden = false
 
     }
 

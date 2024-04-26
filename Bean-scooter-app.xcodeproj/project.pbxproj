@@ -35,6 +35,9 @@
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
 		8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD73D862BDA4491006C508D /* PayViewController.swift */; };
 		B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */; };
+		B9B3CEF62BDB6B8A0000BB8B /* GuideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */; };
+		B9B3CEF72BDB6B8A0000BB8B /* GuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */; };
+		B9B3CEF92BDB9EC70000BB8B /* GuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */; };
 		B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */; };
 		B9CF1A8B2BD8A75300F01144 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */; };
 		CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */; };
@@ -72,6 +75,9 @@
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD73D862BDA4491006C508D /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideTableViewCell.swift; sourceTree = "<group>"; };
+		B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideTableViewCell.xib; sourceTree = "<group>"; };
+		B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideModel.swift; sourceTree = "<group>"; };
 		B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +107,11 @@
 				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
 				61910F862BD8D83A00262B30 /* MapModel.swift */,
 				61A699DD2BDAD391005A460B /* RecordModel.swift */,
+
+				B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */,
+
 				71D5D1A92BDB901D0058F23C /* CouponModel.swift */,
+
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +171,8 @@
 				8D1108512BD614C200598B16 /* Main.storyboard */,
 				61910F7E2BD8C74100262B30 /* ProfileTableViewCell.swift */,
 				61910F7F2BD8C74100262B30 /* ProfileTableViewCell.xib */,
+				B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */,
+				B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */,
 				616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */,
 				616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */,
 				71D5D1AB2BDB91FF0058F23C /* CouponCollectionViewCell.swift */,
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */,
+				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
 				7176FDA52BD67936005185F9 /* MapController.swift */,
 				CAEE6C362BD63E7C0053A261 /* SignInViewController.swift */,
 				CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */,
@@ -180,7 +193,6 @@
 				61910F732BD8C43700262B30 /* TabbarViewController.swift */,
 				61A699D92BDA6657005A460B /* ModalViewController.swift */,
 				8DD73D862BDA4491006C508D /* PayViewController.swift */,
-				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
 				616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */,
 				61823C072BDB731B0018AC15 /* LaunchViewController.swift */,
 
@@ -263,6 +275,7 @@
 				616E246A2BDADC210060EDC2 /* RecordTableViewCell.xib in Resources */,
 				71D5D1AD2BDB91FF0058F23C /* CouponCollectionViewCell.xib in Resources */,
 				8D1108532BD614C200598B16 /* Base in Resources */,
+				B9B3CEF62BDB6B8A0000BB8B /* GuideTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +300,9 @@
 				61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */,
 				61910F872BD8D83A00262B30 /* MapModel.swift in Sources */,
 				CAEE6C372BD63E7C0053A261 /* SignInViewController.swift in Sources */,
+				B9B3CEF92BDB9EC70000BB8B /* GuideModel.swift in Sources */,
 				8D11084C2BD614C200598B16 /* AppDelegate.swift in Sources */,
+				B9B3CEF72BDB6B8A0000BB8B /* GuideTableViewCell.swift in Sources */,
 				CA38A31E2BDA02D500A8D4EB /* EditProfileViewController.swift in Sources */,
 				CAA9D8852BDB9A0D00ABE3BA /* InviteFriendsViewController.swift in Sources */,
 				B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */,
