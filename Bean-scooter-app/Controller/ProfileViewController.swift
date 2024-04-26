@@ -49,11 +49,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // 더미 데이터
     let dummyData: [ProfileModel] = [
-        ProfileModel(iconName: "Icon01", title: "Driving Record"),
+        ProfileModel(iconName: "icon1", title: "Driving Record"),
         ProfileModel(iconName: "iconkick", title: "Driving Guide"),
         ProfileModel(iconName: "icon3", title: "Friend Recommendation"),
-        ProfileModel(iconName: "Icon04", title: "My Coupon"),
-        ProfileModel(iconName: "logout", title: "Log Out")
+        ProfileModel(iconName: "icon4", title: "My Coupon"),
+        ProfileModel(iconName: "icon5", title: "Log Out")
     ]
     
     
