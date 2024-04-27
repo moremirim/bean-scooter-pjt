@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6148C5E32BDD03BE00A94055 /* PinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E12BDD03BE00A94055 /* PinModel.xcdatamodeld */; };
-		6148C5E52BDD0C2F00A94055 /* savedPinSington.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */; };
+		6148C5E52BDD0C2F00A94055 /* SavedPinSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E42BDD0C2F00A94055 /* SavedPinSingleton.swift */; };
 		614BDF862BDC97C9003E1A29 /* ScooterManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */; };
 		614BDF8B2BDCAC32003E1A29 /* ScooterManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */; };
 		614BDF8C2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */; };
@@ -16,7 +16,6 @@
 		616E246A2BDADC210060EDC2 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */; };
 		616E246B2BDADC210060EDC2 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */; };
 		61814FA62BDBE0B900B169D9 /* CoordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61814FA52BDBE0B900B169D9 /* CoordGenerator.swift */; };
-		61814FA82BDBEFED00B169D9 /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61814FA72BDBEFED00B169D9 /* PinModel.swift */; };
 		61823C082BDB731B0018AC15 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61823C072BDB731B0018AC15 /* LaunchViewController.swift */; };
 		61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F6F2BD89AA300262B30 /* AccountInfo.swift */; };
 		61910F722BD89AB500262B30 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61910F712BD89AB500262B30 /* AccountModel.swift */; };
@@ -55,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		6148C5E22BDD03BE00A94055 /* PinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinModel.xcdatamodel; sourceTree = "<group>"; };
-		6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = savedPinSington.swift; sourceTree = "<group>"; };
+		6148C5E42BDD0C2F00A94055 /* SavedPinSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPinSingleton.swift; sourceTree = "<group>"; };
 		614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageViewController.swift; sourceTree = "<group>"; };
 		614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageTableViewCell.swift; sourceTree = "<group>"; };
 		614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScooterManageTableViewCell.xib; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
 		61814FA52BDBE0B900B169D9 /* CoordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordGenerator.swift; sourceTree = "<group>"; };
-		61814FA72BDBEFED00B169D9 /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
 		61823C072BDB731B0018AC15 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		61910F6F2BD89AA300262B30 /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		61910F712BD89AB500262B30 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -113,17 +111,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6148C5E62BDD25F100A94055 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				71D5D1AB2BDB91FF0058F23C /* CouponCollectionViewCell.swift */,
+				71D5D1AC2BDB91FF0058F23C /* CouponCollectionViewCell.xib */,
+				B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */,
+				B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */,
+				61910F7E2BD8C74100262B30 /* ProfileTableViewCell.swift */,
+				61910F7F2BD8C74100262B30 /* ProfileTableViewCell.xib */,
+				616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */,
+				616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */,
+				614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */,
+				614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		61910F6A2BD89A2E00262B30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				61910F6F2BD89AA300262B30 /* AccountInfo.swift */,
 				61910F712BD89AB500262B30 /* AccountModel.swift */,
-				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
-				61910F862BD8D83A00262B30 /* MapModel.swift */,
-				61A699DD2BDAD391005A460B /* RecordModel.swift */,
-				B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */,
 				71D5D1A92BDB901D0058F23C /* CouponModel.swift */,
-				61814FA72BDBEFED00B169D9 /* PinModel.swift */,
+				B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */,
+				61910F862BD8D83A00262B30 /* MapModel.swift */,
+				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
+				61A699DD2BDAD391005A460B /* RecordModel.swift */,
 				6148C5E12BDD03BE00A94055 /* PinModel.xcdatamodeld */,
 			);
 			path = Model;
@@ -132,19 +146,19 @@
 		61910F852BD8D82600262B30 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				61910F882BD8D84B00262B30 /* MapManager.swift */,
 				61814FA52BDBE0B900B169D9 /* CoordGenerator.swift */,
+				61910F882BD8D84B00262B30 /* MapManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		61A699DF2BDAD46F005A460B /* Sington */ = {
+		61A699DF2BDAD46F005A460B /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */,
 				61A699E02BDAD47E005A460B /* RecordSingleton.swift */,
+				6148C5E42BDD0C2F00A94055 /* SavedPinSingleton.swift */,
 			);
-			path = Sington;
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		8D11083F2BD614C200598B16 = {
@@ -166,11 +180,11 @@
 		8D11084A2BD614C200598B16 /* Bean-scooter-app */ = {
 			isa = PBXGroup;
 			children = (
-				61A699DF2BDAD46F005A460B /* Sington */,
+				61A699DF2BDAD46F005A460B /* Singleton */,
 				61910F852BD8D82600262B30 /* Service */,
 				61910F6A2BD89A2E00262B30 /* Model */,
-				8D90B31C2BD62B0600D75E7D /* Controller */,
 				8D90B31B2BD62AFA00D75E7D /* View */,
+				8D90B31C2BD62B0600D75E7D /* Controller */,
 				8D11084B2BD614C200598B16 /* AppDelegate.swift */,
 				8D11084D2BD614C200598B16 /* SceneDelegate.swift */,
 				8D1108542BD614C300598B16 /* Assets.xcassets */,
@@ -182,18 +196,9 @@
 		8D90B31B2BD62AFA00D75E7D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6148C5E62BDD25F100A94055 /* Cell */,
 				8D1108562BD614C300598B16 /* LaunchScreen.storyboard */,
 				8D1108512BD614C200598B16 /* Main.storyboard */,
-				61910F7E2BD8C74100262B30 /* ProfileTableViewCell.swift */,
-				61910F7F2BD8C74100262B30 /* ProfileTableViewCell.xib */,
-				B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */,
-				B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */,
-				616E24682BDADC210060EDC2 /* RecordTableViewCell.swift */,
-				616E24692BDADC210060EDC2 /* RecordTableViewCell.xib */,
-				71D5D1AB2BDB91FF0058F23C /* CouponCollectionViewCell.swift */,
-				71D5D1AC2BDB91FF0058F23C /* CouponCollectionViewCell.xib */,
-				614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */,
-				614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,20 +206,20 @@
 		8D90B31C2BD62B0600D75E7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */,
+				71D5D1A72BDB88990058F23C /* CouponViewController.swift */,
+				CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */,
 				B9C7ECA72BDA88DD00AC3F8B /* GuideViewController.swift */,
+				CAA9D8842BDB9A0D00ABE3BA /* InviteFriendsViewController.swift */,
+				61823C072BDB731B0018AC15 /* LaunchViewController.swift */,
 				7176FDA52BD67936005185F9 /* MapController.swift */,
+				61A699D92BDA6657005A460B /* ModalViewController.swift */,
+				B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */,
+				616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */,
+				614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */,
 				CAEE6C362BD63E7C0053A261 /* SignInViewController.swift */,
 				CAABBC812BD75F3600D9FC3D /* SignupViewController.swift */,
-				CA38A31D2BDA02D500A8D4EB /* EditProfileViewController.swift */,
 				61910F732BD8C43700262B30 /* TabbarViewController.swift */,
-				61A699D92BDA6657005A460B /* ModalViewController.swift */,
 				8DD73D862BDA4491006C508D /* PayViewController.swift */,
-				616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */,
-				61823C072BDB731B0018AC15 /* LaunchViewController.swift */,
-				CAA9D8842BDB9A0D00ABE3BA /* InviteFriendsViewController.swift */,
-				71D5D1A72BDB88990058F23C /* CouponViewController.swift */,
-				614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,7 +318,7 @@
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				6148C5E32BDD03BE00A94055 /* PinModel.xcdatamodeld in Sources */,
-				6148C5E52BDD0C2F00A94055 /* savedPinSington.swift in Sources */,
+				6148C5E52BDD0C2F00A94055 /* SavedPinSingleton.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
 				61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */,
 				61910F872BD8D83A00262B30 /* MapModel.swift in Sources */,
@@ -334,7 +339,6 @@
 				61A699DE2BDAD391005A460B /* RecordModel.swift in Sources */,
 				61910F702BD89AA300262B30 /* AccountInfo.swift in Sources */,
 				61910F802BD8C74100262B30 /* ProfileTableViewCell.swift in Sources */,
-				61814FA82BDBEFED00B169D9 /* PinModel.swift in Sources */,
 				8D11084E2BD614C200598B16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
