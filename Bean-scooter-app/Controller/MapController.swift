@@ -411,11 +411,11 @@ extension MapViewController: MKMapViewDelegate {
             fatalError("Can't get distance from Pin")
         }
         
-        if distance > 100.0 {
+        if distance > 150.0 {
             rentButton.isHidden = true
             DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "구역 외 킥보드 접근", message: "100m 를 넘어선 킥보드는 이용이 불가합니다.\n선택한 킥보드와의 거리는 \(Int(distance))m 입니다", preferredStyle: .alert)
+                let alert = UIAlertController(title: "구역 외 킥보드 접근", message: "150m 를 넘어선 킥보드는 이용이 불가합니다.\n선택한 킥보드와의 거리는 \(Int(distance))m 입니다", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .default))
                 self.present(alert, animated: true)
             }
