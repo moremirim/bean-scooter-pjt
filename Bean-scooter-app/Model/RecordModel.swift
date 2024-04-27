@@ -10,6 +10,6 @@ import MapKit
 struct RecordModel {
     
     var distance: Int
-    var time: Date
+    var time: String
     
 }

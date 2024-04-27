@@ -43,8 +43,8 @@ extension RecordTableViewController: UITableViewDelegate, UITableViewDataSource 
         let distance = RecordSingleton.shared.array[indexPath.row].distance
         let price = Int(Double(distance) * 1.8)
         
-        cell.dateLabel.text = " \(time) m"
-        cell.distanceLabel.text = " \(distance)"
+        cell.dateLabel.text = " \(time)"
+        cell.distanceLabel.text = " \(distance) m"
         cell.priceLabel.text = " \(price)원"
         
         return cell

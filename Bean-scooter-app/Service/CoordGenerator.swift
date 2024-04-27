@@ -12,7 +12,7 @@ class CoordGenerator {
     func makingDummyArray() -> [PinModel] {
         var list = [PinModel]()
         
-        for _ in 0 ... 20 {
+        for _ in 0 ... 9 {
             let model = PinModel(x: lonlatGenerator().0, y: lonlatGenerator().1, id: serialGenerator())
             list.append(model)
         }

@@ -21,7 +21,7 @@ class PayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let chosen1 = UITapGestureRecognizer(target: self, action: #selector(tapApplePay))
         let chosen2 = UITapGestureRecognizer(target: self, action: #selector(tapPayPal))
         let chosen3 = UITapGestureRecognizer(target: self, action: #selector(tapMastercard))
@@ -35,7 +35,7 @@ class PayViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var totalDistance = RecordSingleton.shared.array.map{ $0.distance }.reduce(0, +)
+        let totalDistance = RecordSingleton.shared.array.map{ $0.distance }.reduce(0, +)
         distanceLabel.text = "\(totalDistance) m"
         priceLabel.text = "\(Int(Double(totalDistance) * 1.8)) 원"
     }
@@ -75,6 +75,9 @@ class PayViewController: UIViewController {
         let okAction = UIAlertAction(title: "결제", style: .default) { _ in
             let confirmationAlert = UIAlertController(title: "결제 완료", message: "결제가 정상 처리 되었습니다", preferredStyle: .alert)
             let checkAction = UIAlertAction(title: "확인", style: .default)
+            self.distanceLabel.text = "0 m"
+            self.priceLabel.text = "0 원"
+            
             confirmationAlert.addAction(checkAction)
             self.present(confirmationAlert, animated: true)
             self.applePay.layer.borderWidth = 0.5
@@ -84,13 +87,13 @@ class PayViewController: UIViewController {
         }
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
-    
+        
         paymentAlert.addAction(cancelAction)
         paymentAlert.addAction(okAction)
         present(paymentAlert, animated: true)
     }
     
-
+    
 }
 
 extension UIView {

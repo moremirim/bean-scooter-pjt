@@ -63,6 +63,7 @@
                         <segue destination="6B4-EL-OES" kind="relationship" relationship="viewControllers" id="5EP-dD-LDg"/>
                         <segue destination="zCf-3X-2Tu" kind="relationship" relationship="viewControllers" id="t3D-aO-5mo"/>
                         <segue destination="KHc-Qy-Nxa" kind="relationship" relationship="viewControllers" id="8cW-mI-teV"/>
+                        <segue destination="rQV-iT-QcP" kind="relationship" relationship="viewControllers" id="qz2-Q0-t2r"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veV-nQ-hU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -463,6 +464,89 @@
             </objects>
             <point key="canvasLocation" x="1368.7022900763359" y="1140.8450704225352"/>
         </scene>
+
+
+        <!--Manage-->
+        <scene sceneID="9nh-20-WhG">
+            <objects>
+                <viewController storyboardIdentifier="manageVC" id="rQV-iT-QcP" customClass="ScooterManageViewController" customModule="Bean_scooter_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DY1-lH-GXX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-Nz-HFH" userLabel="head">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY6-p4-2wY" userLabel="Pay">
+                                        <rect key="frame" x="26" y="92" width="112" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Manage">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.11372549019607843" green="0.1764705882352941" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Io-HV-RCU">
+                                        <rect key="frame" x="323" y="108" width="50" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="addPinData:" destination="rQV-iT-QcP" eventType="touchUpInside" id="rem-5a-7kZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="DrE-GP-fy3"/>
+                                <color key="backgroundColor" red="0.5411764979" green="0.80000001190000003" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0AG-Jg-l12">
+                                <rect key="frame" x="0.0" y="158" width="393" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qTy-0C-EjY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Manage" image="scooter" catalog="system" id="NLx-ke-YkU"/>
+                    <connections>
+                        <outlet property="tableView" destination="0AG-Jg-l12" id="dDw-62-8Wa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIA-4n-gXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397.709923664122" y="2000.7042253521129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xLl-RT-Dek">
+            <objects>
+                <viewController id="OGz-KV-sJn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CUP-sa-t4I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-LB-SO7">
+                                <rect key="frame" x="46" y="481" width="303" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ApplePay"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q01-xf-mvg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jim-HO-pMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2222" y="1140"/>
+        </scene>
+
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
@@ -773,8 +857,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Wk-JwY">
                                 <rect key="frame" x="16" y="182" width="361" height="620"/>
+
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-cl-XMS" userLabel="head">
@@ -1282,6 +1368,7 @@
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="profile" width="120" height="120"/>
         <image name="return" width="295" height="49"/>
         <image name="sb" width="60" height="60"/>

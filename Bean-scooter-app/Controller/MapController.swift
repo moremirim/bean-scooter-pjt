@@ -21,6 +21,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let mapManager = MapManager()
     let coordGenerater = CoordGenerator()
+    let dateFormatter = DateFormatter()
     
     var selectedAnnotation: MKPointAnnotation? // 선택된 Pin
     var isUsed: Bool = false
@@ -29,9 +30,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locations: [CLLocationCoordinate2D] = [] // 거리 계산용 배열
     var modalViewController = ModalViewController() // 새로 보여줄 VC
     var dimmingView: UIView? // 어둡게 할 배경
-        
-    var dummyArray = [PinModel]()
-
+    
+    
     lazy var locationManager: CLLocationManager = {
         var manager = CLLocationManager()
         manager.distanceFilter = 10
@@ -42,6 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -51,19 +52,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rentButton.isHidden = true
         returnButton.isHidden = true
         
+        
         addDimmingView()
         
-        dummyArray = coordGenerater.makingDummyArray()
+        PinSingleton.shared.array = coordGenerater.makingDummyArray()
         makingDummy()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        refreshPinData()
     }
     
     // MARK: - Making Dummy pins
     func makingDummy() {
-        for i in dummyArray.indices {
-            let coordinate = CLLocationCoordinate2D(latitude: dummyArray[i].y, longitude: dummyArray[i].x)
-            addMark(coordinate: coordinate, serial: dummyArray[i].id)
+        for i in PinSingleton.shared.array.indices {
+            let coordinate = CLLocationCoordinate2D(latitude: PinSingleton.shared.array[i].y, longitude: PinSingleton.shared.array[i].x)
+            addMark(coordinate: coordinate, serial: PinSingleton.shared.array[i].id)
         }
     }
+    
+    // MARK: - Refresh Dummy Data
+    func refreshPinData () {
+        //if PinSingleton.shared.array.chan
+        mapView.removeAnnotations(mapView.annotations)
+        makingDummy()
+    }
+    
     
     // MARK: - Method for showing or hiding buttons
     // 대여의 상태를 보고 버튼을 숨기거나 보여줌
@@ -109,7 +123,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     // MARK: - Methods for Features (Rent, Return)
-
+    
     @IBAction func moveCurrentLocationBtn(_ sender: UIButton) {
         updateLocationMap(to: locationManager.location ?? CLLocation(), with: "현재 위치")    }
     
@@ -132,7 +146,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             if let coordinate = self.selectedAnnotation?.coordinate {
                 self.locations.append(coordinate)
             }
-           
+            
             DispatchQueue.main.async {
                 
                 self.isUsed = true
@@ -174,7 +188,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             pin.coordinate = coordinate
             self.mapView.addAnnotation(pin)
         }
-
+        
     }
     
     // 반납 버튼
@@ -196,7 +210,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: "확인", style: .default))
         self.present(alert, animated: true)
         let distance = calculateTripDistance()
-        let finTime = Date.now
+        let finTime = dateFormatter.string(from: Date())
         RecordSingleton.shared.array.append(RecordModel(distance: distance, time: finTime))
         locations.removeAll() // 거리 계산후 배열 초기화.
     }
@@ -211,7 +225,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             let distance = getDistance(from: start, to: end)
             total += distance
         }
-       
+        
         return Int(total)
     }
     
@@ -384,5 +398,5 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         self.selectedAnnotation = view.annotation as? MKPointAnnotation
     }
-
+    
 }
