@@ -40,6 +40,7 @@
 		8D1108582BD614C300598B16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D1108572BD614C300598B16 /* Base */; };
 		8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD73D862BDA4491006C508D /* PayViewController.swift */; };
 		B98DBE4B2BD6452800035AAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */; };
+		B9A634E22BDD48BA00BCA669 /* PinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9A634E02BDD48B900BCA669 /* PinModel.xcdatamodeld */; };
 		B9B3CEF62BDB6B8A0000BB8B /* GuideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */; };
 		B9B3CEF72BDB6B8A0000BB8B /* GuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */; };
 		B9B3CEF92BDB9EC70000BB8B /* GuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */; };
@@ -87,6 +88,7 @@
 		8D1108592BD614C300598B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD73D862BDA4491006C508D /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		B98DBE4A2BD6452800035AAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B9A634E12BDD48B900BCA669 /* PinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinModel.xcdatamodel; sourceTree = "<group>"; };
 		B9B3CEF42BDB6B8A0000BB8B /* GuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideTableViewCell.swift; sourceTree = "<group>"; };
 		B9B3CEF52BDB6B8A0000BB8B /* GuideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideTableViewCell.xib; sourceTree = "<group>"; };
 		B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideModel.swift; sourceTree = "<group>"; };
@@ -140,8 +142,10 @@
 				61910F862BD8D83A00262B30 /* MapModel.swift */,
 				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
 				61A699DD2BDAD391005A460B /* RecordModel.swift */,
+
 				CA84A2872BDD2FDF00868B92 /* Scooter.xcdatamodeld */,
 				CA84A28A2BDD300400868B92 /* PinModel.xcdatamodeld */,
+
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,7 +325,9 @@
 				71D5D1AE2BDB91FF0058F23C /* CouponCollectionViewCell.swift in Sources */,
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
+
 				CA84A28C2BDD300500868B92 /* PinModel.xcdatamodeld in Sources */,
+
 				6148C5E52BDD0C2F00A94055 /* SavedPinSingleton.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
 				61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */,
@@ -596,6 +602,7 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+
 		CA84A2872BDD2FDF00868B92 /* Scooter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
@@ -615,6 +622,7 @@
 			currentVersion = CA84A28B2BDD300400868B92 /* PinModel.xcdatamodel */;
 			name = PinModel.xcdatamodeld;
 			path = "/Users/t2023-m0114/Github/Bean7/bean-scooter-pjt/Bean-scooter-app/Model/PinModel.xcdatamodeld";
+
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

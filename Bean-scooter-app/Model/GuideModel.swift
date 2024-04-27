@@ -11,5 +11,6 @@ struct GuideModel {
  
     var imageName: String
     var title: String
+    var addedLine: String
     
 }

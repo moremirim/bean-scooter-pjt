@@ -11,11 +11,12 @@ class GuideTableViewCell: UITableViewCell {
     
     
     
-    @IBOutlet weak var GuideImage: UIImageView!
+    @IBOutlet weak var guideImage: UIImageView!
     
-    @IBOutlet weak var GuideText: UILabel!
+    @IBOutlet weak var guideText: UILabel!
     
-
+    @IBOutlet weak var guideBody: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
