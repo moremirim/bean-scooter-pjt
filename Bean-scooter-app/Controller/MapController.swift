@@ -72,7 +72,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             makingDummy()
         }
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        self.navigationController?.isNavigationBarHidden = true
         
     }
     

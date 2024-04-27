@@ -32,6 +32,7 @@ class PayViewController: UIViewController {
         mastercard.addGestureRecognizer(chosen3)
         samsungPay.addGestureRecognizer(chosen4)
         
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

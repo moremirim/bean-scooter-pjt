@@ -160,7 +160,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         let alert = UIAlertController(title: "알림", message: "회원가입이 완료되었습니다. 자동으로 로그인됩니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인했습니다", style: .default) { _ in
             if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
-                
+                tabVC.myID = id
                 // ProfileViewController로 데이터 전달
                 for viewController in tabVC.viewControllers ?? [] {
                     if let profileVC = viewController as? ProfileViewController {

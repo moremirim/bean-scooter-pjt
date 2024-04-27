@@ -25,6 +25,7 @@ class ScooterManageViewController: UIViewController {
         tableView.register(UINib(nibName: "ScooterManageTableViewCell", bundle: nil), forCellReuseIdentifier: "manageCell")
         tableView.reloadData()
         
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +87,7 @@ extension ScooterManageViewController: UITableViewDelegate, UITableViewDataSourc
         cell.serialLabel.text = "\(indexPath.row + 1)호기 Serial Number: \(savedPinSington.shared.array[indexPath.row].id ?? "1A2B3C4D5E")"
         cell.delteBtn.tag = indexPath.row
         cell.delteBtn.addTarget(self, action: #selector(deleteEvent), for: .touchUpInside)
+        cell.selectionStyle = .none
         
         return cell
     }

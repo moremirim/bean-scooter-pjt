@@ -9,7 +9,6 @@ import UIKit
 
 class TabbarViewController: UITabBarController {
     
-    var myName = ""
     var myID = ""
     
     override func viewDidLoad() {
@@ -20,13 +19,9 @@ class TabbarViewController: UITabBarController {
         
         self.tabBar.backgroundColor = .white
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         if myID != "admin" {
-            print("user is not admin")
             self.viewControllers?.remove(at: 3)
         }
     }
-    
+
 }
