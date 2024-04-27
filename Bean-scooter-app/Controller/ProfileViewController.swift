@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var myName = ""
     var myId = ""
+    var myCode = ""
     
     func setuplabel() {
         let mainColor = UIColor(red: 0x75 / 255.0, green: 0xCE / 255.0, blue: 0xE9 / 255.0, alpha: 1.0)
@@ -117,14 +118,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             self.navigationController?.pushViewController(guideVC, animated: true)
             
-            // 세 번째 셀(Friend Recommendation : 친구 추천) 선택된 경우
-            //        case 3:
-            //            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "signinVC") as? SignInViewController else {
-            //                return
-            //            }
-            //            self.navigationController?.pushViewController(signinVC, animated: true)
-            //
+            //세 번째 셀(Friend Recommendation : 친구 추천) 선택된 경우
+        case 2:
+            guard let InviteFriendsVC = self.storyboard?.instantiateViewController(withIdentifier: "InviteFriendsVC") as? InviteFriendsViewController else {
+                return
+            }
+            InviteFriendsVC.mycode = myCode // 코드 정보 연동
+            self.navigationController?.pushViewController(InviteFriendsVC, animated: true)
             
+            //네 번째 셀(Coupon : 쿠폰) 선택된 경우
         case 3:
             guard let couponVC = self.storyboard?.instantiateViewController(withIdentifier: "couponVC") as? CouponViewController else {
                 return

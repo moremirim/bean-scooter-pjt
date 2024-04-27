@@ -72,7 +72,7 @@ class SignInViewController: UIViewController {
                     if let profileVC = viewController as? ProfileViewController {
                         profileVC.myName = account.userName
                         profileVC.myId = account.iD
-                        
+                        profileVC.myCode = account.mycode
                         break // 데이터를 전달한 후 반복문 종료
                     }
                 }

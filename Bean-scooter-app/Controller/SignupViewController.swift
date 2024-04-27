@@ -135,9 +135,26 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             showAlert(message: "'\(id)'은 이미 사용중인 id입니다.")
             return
         }
+       
+        //랜덤으로 마이코드 생성 (친구추천용 코드)
+        var code = generateRandomCode()
+        
+        func generateRandomCode() -> String {
+            let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            let codeLength = 5
+            var randomCode = ""
+            
+            for _ in 0..<codeLength {
+                let randomIndex = Int(arc4random_uniform(UInt32(letters.count)))
+                let randomCharacter = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
+                randomCode.append(randomCharacter)
+            }
+            
+            return randomCode
+        }
         
         // 계정 정보를 배열에 추가
-        let newAccount = AccountInfo(iD: id, passWord: password, userName: name)
+        let newAccount = AccountInfo(iD: id, passWord: password, userName: name, mycode: code)
         AccountModel.accountModel.addAccount(newAccount: newAccount) //새로운 계정 정보가 유저디폴트에 저장
         
         let alert = UIAlertController(title: "알림", message: "회원가입이 완료되었습니다. 자동으로 로그인됩니다.", preferredStyle: .alert)
@@ -149,9 +166,11 @@ class SignupVC: UIViewController, UITextFieldDelegate {
                     if let profileVC = viewController as? ProfileViewController {
                         profileVC.myName = name
                         profileVC.myId = id
+                        profileVC.myCode = code
                         break // 데이터를 전달한 후 반복문 종료
                     }
                 }
+                
                 
                 self.navigationController?.pushViewController(tabVC, animated: true)
                 
