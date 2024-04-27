@@ -66,7 +66,7 @@ class SignInViewController: UIViewController {
         if let account = AccountModel.accountModel.accountInfoArr.first(where: { $0.iD == idText && $0.passWord == pwText }) {
 
             if let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "tapVC") as? TabbarViewController {
-                
+                tabVC.myID = account.iD
                 // ProfileViewController로 데이터 전달
                 for viewController in tabVC.viewControllers ?? [] {
                     if let profileVC = viewController as? ProfileViewController {
