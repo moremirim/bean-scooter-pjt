@@ -464,8 +464,6 @@
             </objects>
             <point key="canvasLocation" x="1368.7022900763359" y="1140.8450704225352"/>
         </scene>
-
-
         <!--Manage-->
         <scene sceneID="9nh-20-WhG">
             <objects>
@@ -523,30 +521,6 @@
             </objects>
             <point key="canvasLocation" x="1397.709923664122" y="2000.7042253521129"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xLl-RT-Dek">
-            <objects>
-                <viewController id="OGz-KV-sJn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CUP-sa-t4I">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-LB-SO7">
-                                <rect key="frame" x="46" y="481" width="303" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ApplePay"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Q01-xf-mvg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jim-HO-pMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2222" y="1140"/>
-        </scene>
-
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
@@ -857,10 +831,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Wk-JwY">
                                 <rect key="frame" x="16" y="182" width="361" height="620"/>
-
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-cl-XMS" userLabel="head">

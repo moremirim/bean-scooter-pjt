@@ -6,18 +6,26 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
 class CoordGenerator {
     
-    func makingDummyArray() -> [PinModel] {
-        var list = [PinModel]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func makingDummyArray() {
         
         for _ in 0 ... 9 {
-            let model = PinModel(x: lonlatGenerator().0, y: lonlatGenerator().1, id: serialGenerator())
-            list.append(model)
+            let newItem = PinData(context: context)
+            newItem.id = serialGenerator()
+            newItem.x = lonlatGenerator().0
+            newItem.y = lonlatGenerator().1
+            do {
+                try context.save()
+            } catch {
+            }
         }
-        
-        return list
+    
     }
     
     // 10자리의 랜덤한 SerialNumber를 만들어줌

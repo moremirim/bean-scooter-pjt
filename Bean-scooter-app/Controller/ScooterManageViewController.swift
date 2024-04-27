@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
 class ScooterManageViewController: UIViewController {
 
+    let appDelegate =  (UIApplication.shared.delegate as! AppDelegate)
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     @IBOutlet weak var tableView: UITableView!
-    
-    
     
     override func viewDidLoad() {
         
@@ -52,7 +54,19 @@ class ScooterManageViewController: UIViewController {
             x = Double(alert.textFields?[1].text ?? "0.0")!
             y = Double(alert.textFields?[2].text ?? "0.0")!
             
-            PinSingleton.shared.array.append(PinModel(x: x, y: y, id: serialNumber))
+            let newItem = PinData(context: self.context)
+            newItem.id = serialNumber
+            newItem.x = x
+            newItem.y = y
+            savedPinSington.shared.array.append(newItem)
+            do {
+                try self.context.save()
+            } catch {
+                let alert = UIAlertController(title: "에러 발생", message: "데이터 추가 중 오류가 발생했습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                self.present(alert, animated: true)
+            }
+            
             self.tableView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "취소", style: .cancel))
@@ -62,14 +76,14 @@ class ScooterManageViewController: UIViewController {
 
 extension ScooterManageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        PinSingleton.shared.array.count
+        savedPinSington.shared.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "manageCell", for: indexPath) as? ScooterManageTableViewCell else {
             return UITableViewCell() }
         
-        cell.serialLabel.text = "\(indexPath.row + 1)호기 Serial Number: \(PinSingleton.shared.array[indexPath.row].id)"
+        cell.serialLabel.text = "\(indexPath.row + 1)호기 Serial Number: \(savedPinSington.shared.array[indexPath.row].id ?? "1A2B3C4D5E")"
         cell.delteBtn.tag = indexPath.row
         cell.delteBtn.addTarget(self, action: #selector(deleteEvent), for: .touchUpInside)
         
@@ -81,7 +95,9 @@ extension ScooterManageViewController: UITableViewDelegate, UITableViewDataSourc
         let alert = UIAlertController(title: "삭제하시겠습니까?", message: "삭제를 하시면 등록된 킥보드 정보가 삭제가 됩니다.\n해당 정보는 되돌릴 수 없습니다.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "취소", style: .default))
         alert.addAction(UIAlertAction(title: "확인", style: .destructive, handler: { _ in
-            PinSingleton.shared.array.remove(at: sender.tag)
+            self.context.delete(savedPinSington.shared.array[sender.tag])
+            savedPinSington.shared.array.remove(at: sender.tag)
+            self.appDelegate.saveContext()
             self.tableView.reloadData()
         }))
         
