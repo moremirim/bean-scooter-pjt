@@ -64,6 +64,7 @@ class InviteFriendsViewController: UIViewController {
         print("🐶", mycode)
         setuplabel()
         // Do any additional setup after loading the view.
+        self.navigationController?.isNavigationBarHidden = false
     }
     
 }

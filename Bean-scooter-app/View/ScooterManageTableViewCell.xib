@@ -17,13 +17,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tla-8t-55n">
-                        <rect key="frame" x="262.66666666666669" y="5" width="52.333333333333314" height="34"/>
+                        <rect key="frame" x="252.66666666666666" y="5" width="52.333333333333343" height="34"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" image="minus.diamond.fill" catalog="system"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbM-Xs-hzV">
-                        <rect key="frame" x="16" y="11" width="245" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbM-Xs-hzV">
+                        <rect key="frame" x="15.000000000000004" y="5" width="41.333333333333343" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,8 +30,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="tla-8t-55n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2jS-aj-oti"/>
+                    <constraint firstAttribute="bottom" secondItem="BbM-Xs-hzV" secondAttribute="bottom" constant="5" id="85O-4D-WZd"/>
                     <constraint firstAttribute="bottom" secondItem="tla-8t-55n" secondAttribute="bottom" constant="5" id="OrR-pj-LOO"/>
-                    <constraint firstAttribute="trailing" secondItem="tla-8t-55n" secondAttribute="trailing" constant="5" id="i7O-DS-Gd3"/>
+                    <constraint firstItem="BbM-Xs-hzV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Uci-nK-pl8"/>
+                    <constraint firstAttribute="trailing" secondItem="tla-8t-55n" secondAttribute="trailing" constant="15" id="i7O-DS-Gd3"/>
+                    <constraint firstItem="BbM-Xs-hzV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rSf-K3-7Mz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
