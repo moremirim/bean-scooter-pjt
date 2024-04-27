@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5P-OT-jjB" userLabel="rentButton">
-                                <rect key="frame" x="70" y="699" width="253" height="35"/>
+                                <rect key="frame" x="66.666666666666686" y="699" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="1o5-BR-QjX"/>
                                     <constraint firstAttribute="width" constant="260" id="NMq-CV-qhG"/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-oY-kiH">
-                                <rect key="frame" x="70" y="701" width="253" height="35"/>
+                                <rect key="frame" x="66.666666666666686" y="701" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="DZ5-zv-jkA"/>
                                     <constraint firstAttribute="height" constant="35" id="tnh-HT-eGc"/>
@@ -131,14 +131,10 @@
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="top" secondItem="A2K-V0-4BQ" secondAttribute="top" constant="-59" id="Liu-gp-t1X"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" id="Ozk-cL-9wm"/>
                             <constraint firstItem="A2K-V0-4BQ" firstAttribute="bottom" secondItem="r5P-OT-jjB" secondAttribute="bottom" constant="35" id="XnJ-Tw-Lhd"/>
-                            <constraint firstItem="A2K-V0-4BQ" firstAttribute="trailing" secondItem="t2k-oY-kiH" secondAttribute="trailing" constant="70" id="YLp-F3-39s"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="trailing" secondItem="A2K-V0-4BQ" secondAttribute="trailing" id="bKQ-VG-GiY"/>
-                            <constraint firstItem="A2K-V0-4BQ" firstAttribute="trailing" secondItem="r5P-OT-jjB" secondAttribute="trailing" constant="70" id="i5e-tg-YuJ"/>
-                            <constraint firstItem="r5P-OT-jjB" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" constant="70" id="lEd-e8-kFb"/>
                             <constraint firstItem="A2K-V0-4BQ" firstAttribute="bottom" secondItem="t2k-oY-kiH" secondAttribute="bottom" constant="33" id="mCK-iK-42E"/>
                             <constraint firstItem="t2k-oY-kiH" firstAttribute="centerX" secondItem="iy7-NU-Irx" secondAttribute="centerX" id="mO8-yi-57N"/>
                             <constraint firstItem="stb-Xg-A4i" firstAttribute="bottom" secondItem="A2K-V0-4BQ" secondAttribute="bottom" id="shs-02-wVD"/>
-                            <constraint firstItem="t2k-oY-kiH" firstAttribute="leading" secondItem="A2K-V0-4BQ" secondAttribute="leading" constant="70" id="tsY-F9-7xX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="qgW-1X-X9m"/>
@@ -464,8 +460,6 @@
             </objects>
             <point key="canvasLocation" x="1368.7022900763359" y="1140.8450704225352"/>
         </scene>
-
-
         <!--Manage-->
         <scene sceneID="9nh-20-WhG">
             <objects>
@@ -546,7 +540,6 @@
             </objects>
             <point key="canvasLocation" x="2222" y="1140"/>
         </scene>
-
         <!--Sign In View Controller-->
         <scene sceneID="QQU-iV-VyN">
             <objects>
@@ -857,10 +850,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Wk-JwY">
                                 <rect key="frame" x="16" y="182" width="361" height="620"/>
-
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-cl-XMS" userLabel="head">
@@ -1363,8 +1354,8 @@
         <image name="forBeanLogo" width="128" height="128"/>
         <image name="forFeeBg" width="120" height="120"/>
         <image name="invite01" width="246" height="205"/>
-        <image name="location.fill" catalog="system" width="128" height="119"/>
-        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="location.fill" catalog="system" width="32" height="32"/>
+        <image name="map" catalog="system" width="32" height="32"/>
         <image name="mastercard" width="187" height="75"/>
         <image name="payNowButton" width="369" height="55"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -1378,7 +1369,7 @@
         <image name="skyscraperLogo" width="375" height="236"/>
         <image name="twitter" width="56" height="56"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
