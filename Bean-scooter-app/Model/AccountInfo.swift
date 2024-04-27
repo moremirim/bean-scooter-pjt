@@ -12,6 +12,7 @@ struct AccountInfo: Codable {
     var iD: String
     var passWord: String
     var userName: String
+    var mycode: String
     var profileImage: Data?
 }
 
