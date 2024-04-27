@@ -124,6 +124,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: - Methods for Features (Rent, Return)
     
+    //현재 위치로 이동 버튼
     @IBAction func moveCurrentLocationBtn(_ sender: UIButton) {
         updateLocationMap(to: locationManager.location ?? CLLocation(), with: "현재 위치")    }
     

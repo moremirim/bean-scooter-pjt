@@ -12,7 +12,7 @@ class CouponCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        // Add tap gesture recognizer to the cell
+        // Cell에 탭 제스쳐레컨나이저 적용
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
         contentView.addGestureRecognizer(tapGesture)
     }
@@ -26,7 +26,8 @@ class CouponCollectionViewCell: UICollectionViewCell {
 
     @objc func handleTapGesture() {
         guard let coupon = couponModel else { return }
-        // Notify the delegate (CouponViewController) that a coupon was tapped
+
+        // Delegate (CouponViewController)에게 쿠폰이 탭 됨을 알림
         NotificationCenter.default.post(name: Notification.Name("CouponTapped"), object: nil, userInfo: ["coupon": coupon])
     }
 }
