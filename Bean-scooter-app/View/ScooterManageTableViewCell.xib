@@ -16,9 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tla-8t-55n">
-                        <rect key="frame" x="269" y="5" width="43" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tla-8t-55n">
+                        <rect key="frame" x="262.66666666666669" y="5" width="52.333333333333314" height="34"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" image="minus.diamond.fill" catalog="system"/>
                     </button>
@@ -30,6 +29,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="tla-8t-55n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2jS-aj-oti"/>
+                    <constraint firstAttribute="bottom" secondItem="tla-8t-55n" secondAttribute="bottom" constant="5" id="OrR-pj-LOO"/>
+                    <constraint firstAttribute="trailing" secondItem="tla-8t-55n" secondAttribute="trailing" constant="5" id="i7O-DS-Gd3"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

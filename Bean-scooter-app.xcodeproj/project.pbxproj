@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6148C5E32BDD03BE00A94055 /* PinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E12BDD03BE00A94055 /* PinModel.xcdatamodeld */; };
+		6148C5E52BDD0C2F00A94055 /* savedPinSington.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */; };
 		614BDF862BDC97C9003E1A29 /* ScooterManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */; };
-		614BDF882BDCAA96003E1A29 /* PinSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF872BDCAA96003E1A29 /* PinSingleton.swift */; };
 		614BDF8B2BDCAC32003E1A29 /* ScooterManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */; };
 		614BDF8C2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */; };
 		616E24672BDADBD50060EDC2 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */; };
@@ -53,8 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6148C5E22BDD03BE00A94055 /* PinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinModel.xcdatamodel; sourceTree = "<group>"; };
+		6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = savedPinSington.swift; sourceTree = "<group>"; };
 		614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageViewController.swift; sourceTree = "<group>"; };
-		614BDF872BDCAA96003E1A29 /* PinSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSingleton.swift; sourceTree = "<group>"; };
 		614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageTableViewCell.swift; sourceTree = "<group>"; };
 		614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScooterManageTableViewCell.xib; sourceTree = "<group>"; };
 		616E24662BDADBD50060EDC2 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				B9B3CEF82BDB9EC70000BB8B /* GuideModel.swift */,
 				71D5D1A92BDB901D0058F23C /* CouponModel.swift */,
 				61814FA72BDBEFED00B169D9 /* PinModel.swift */,
+				6148C5E12BDD03BE00A94055 /* PinModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,8 +141,8 @@
 		61A699DF2BDAD46F005A460B /* Sington */ = {
 			isa = PBXGroup;
 			children = (
+				6148C5E42BDD0C2F00A94055 /* savedPinSington.swift */,
 				61A699E02BDAD47E005A460B /* RecordSingleton.swift */,
-				614BDF872BDCAA96003E1A29 /* PinSingleton.swift */,
 			);
 			path = Sington;
 			sourceTree = "<group>";
@@ -306,10 +309,11 @@
 				61823C082BDB731B0018AC15 /* LaunchViewController.swift in Sources */,
 				B9C7ECA82BDA88DD00AC3F8B /* GuideViewController.swift in Sources */,
 				616E24672BDADBD50060EDC2 /* RecordTableViewController.swift in Sources */,
-				614BDF882BDCAA96003E1A29 /* PinSingleton.swift in Sources */,
 				71D5D1AE2BDB91FF0058F23C /* CouponCollectionViewCell.swift in Sources */,
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
+				6148C5E32BDD03BE00A94055 /* PinModel.xcdatamodeld in Sources */,
+				6148C5E52BDD0C2F00A94055 /* savedPinSington.swift in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
 				61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */,
 				61910F872BD8D83A00262B30 /* MapModel.swift in Sources */,
@@ -582,6 +586,20 @@
 			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6148C5E12BDD03BE00A94055 /* PinModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6148C5E22BDD03BE00A94055 /* PinModel.xcdatamodel */,
+			);
+			currentVersion = 6148C5E22BDD03BE00A94055 /* PinModel.xcdatamodel */;
+			name = PinModel.xcdatamodeld;
+			path = "/Users/dongik/Documents/Workspace/done/Bean-scooter-app/Model/PinModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D1108402BD614C200598B16 /* Project object */;
 }

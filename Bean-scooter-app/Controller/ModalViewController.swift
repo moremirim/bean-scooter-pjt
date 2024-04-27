@@ -44,14 +44,17 @@ class ModalViewController: UIViewController {
         return view
     }()
     
+    var serialText: String = ""
+    var addressText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
-        serialLabel.text = "기기번호: 1245512"
-        //addressLabel.text = "주소: 서울특별시 종로구 효자로 12"
-        batteryLabel.text = "배터리 잔량: 100%"
+        serialLabel.text = serialText
+        addressLabel.text = addressText
+        batteryLabel.text = "100%"
         
         applyConstraints()
     }

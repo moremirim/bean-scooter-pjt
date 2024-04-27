@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -22,6 +23,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let mapManager = MapManager()
     let coordGenerater = CoordGenerator()
     let dateFormatter = DateFormatter()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let request: NSFetchRequest<PinData> = PinData.fetchRequest()
     
     var selectedAnnotation: MKPointAnnotation? // 선택된 Pin
     var isUsed: Bool = false
@@ -30,7 +33,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locations: [CLLocationCoordinate2D] = [] // 거리 계산용 배열
     var modalViewController = ModalViewController() // 새로 보여줄 VC
     var dimmingView: UIView? // 어둡게 할 배경
-    
     
     lazy var locationManager: CLLocationManager = {
         var manager = CLLocationManager()
@@ -52,12 +54,28 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rentButton.isHidden = true
         returnButton.isHidden = true
         
+        mapView.delegate = self
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(refreshUI))
+        self.mapView.addGestureRecognizer(gesture)
         
         addDimmingView()
         
-        PinSingleton.shared.array = coordGenerater.makingDummyArray()
-        makingDummy()
+        getDummy()
+        
+        if savedPinSington.shared.array.count == 0 {
+            coordGenerater.makingDummyArray()
+            getDummy()
+            makingDummy()
+        } else {
+            getDummy()
+            makingDummy()
+        }
+        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         refreshPinData()
@@ -65,15 +83,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: - Making Dummy pins
     func makingDummy() {
-        for i in PinSingleton.shared.array.indices {
-            let coordinate = CLLocationCoordinate2D(latitude: PinSingleton.shared.array[i].y, longitude: PinSingleton.shared.array[i].x)
-            addMark(coordinate: coordinate, serial: PinSingleton.shared.array[i].id)
+        for i in savedPinSington.shared.array.indices {
+            let coordinate = CLLocationCoordinate2D(latitude: savedPinSington.shared.array[i].y, longitude: savedPinSington.shared.array[i].x)
+            let serial = savedPinSington.shared.array[i].id ?? "1A2B3C4D5E"
+            addMark(coordinate: coordinate, serial: serial)
+        }
+    }
+    
+    func getDummy() {
+        do {
+            savedPinSington.shared.array = try context.fetch(request)
+        } catch {
+            let alert = UIAlertController(title: "에러 발생", message: "데이터를 로드 하던 중 오류가 발생했습니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default))
+            self.present(alert, animated: true)
         }
     }
     
     // MARK: - Refresh Dummy Data
     func refreshPinData () {
-        //if PinSingleton.shared.array.chan
         mapView.removeAnnotations(mapView.annotations)
         makingDummy()
     }
@@ -131,16 +159,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     //대여 하기 버튼을 눌렀을 때의 동작 정의
     //대여 확인 얼럿 진행, 대여 최종 완료시 대여 종료 동작인 completedRent 함수 호출
     @IBAction func didTapRentButton(_ sender: Any) {
-        let rentProcessAlert = UIAlertController(title: "대여 진행", message: "기기의 시리얼 번호를 입력해주세요", preferredStyle: .alert)
-        
-        rentProcessAlert.addTextField() { (tf) in
-            tf.placeholder = "Serial No."
-            
-            if let inputSerial = tf.text {
-                self.serialNumber = inputSerial
-            }
-        }
-        
+        let rentProcessAlert = UIAlertController(title: "대여 진행", message: "해당 킥보드를 이용하시겠습니까?", preferredStyle: .alert)
+   
         let rent = UIAlertAction(title: "대여하기", style: .default) { _ in
             self.completedRent(didSelect: self.selectedAnnotation!)
             
@@ -199,8 +219,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 self?.locationManager.requestWhenInUseAuthorization()
                 let currentLocation = self?.locationManager.location
                 
-                self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406), serial: self?.serialNumber ?? "1D1Fvfvt3455")
-                self?.locations.append(currentLocation!.coordinate)
+                if let serial = self?.serialNumber {
+                    let slicedSerial = String(serial.suffix(10))
+                    self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406), serial: slicedSerial)
+                    self?.locations.append(currentLocation!.coordinate)
+                }
+                
             }
             
         }
@@ -241,11 +265,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rentButton.isHidden = false
     }
     
+    @objc func refreshUI(){
+        setbuttonHidden(isStatus: isUsed)
+    }
+    
     @objc func showView() {
         
         let modalVC = self.modalViewController
-        modalVC.addressLabel.text = selectedAnnotation?.subtitle
-        modalVC.serialLabel.text = selectedAnnotation?.title
+        if let serialText = selectedAnnotation?.title, let addressText = selectedAnnotation?.subtitle {
+            modalVC.addressText = addressText
+            modalVC.serialText = serialText
+            
+        }
+        
         
         
         // 사이드 메뉴 뷰 컨트롤러를 자식으로 추가하고 뷰 계층 구조에 추가.
@@ -398,6 +430,7 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         self.selectedAnnotation = view.annotation as? MKPointAnnotation
+        self.serialNumber = (view.annotation?.title!)!
     }
     
 }
