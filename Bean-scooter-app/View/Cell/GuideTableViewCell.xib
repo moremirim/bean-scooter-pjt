@@ -12,70 +12,137 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="guideList" rowHeight="132" id="KGk-i7-Jjw" customClass="GuideTableViewCell" customModule="Bean_scooter_app" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="463" height="132"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="GuideTableViewCell" customModule="Bean_scooter_app" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="GuideTableViewCell" customModule="Bean_scooter_app" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="463" height="132"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iET-Yy-eGr">
-                        <rect key="frame" x="142" y="21" width="204" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <attributedString key="attributedText">
-                            <fragment content="오늘">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
-                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" ">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="점심은">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
-                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" ">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="파스타">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
-                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-ay-cnz">
-                        <rect key="frame" x="10" y="5" width="90" height="90"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cJU-gc-EB4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-ay-cnz">
+                                <rect key="frame" x="20" y="5" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Clw-Uf-I9z"/>
+                                    <constraint firstAttribute="height" constant="90" id="aVh-F0-v0Q"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Br1-rq-TKa">
+                                <rect key="frame" x="125" y="5" width="245" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iET-Yy-eGr">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="245" id="4hn-SE-ihQ"/>
+                                            <constraint firstAttribute="height" constant="20" id="cga-70-l3M"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="오늘">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="점심은">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="파스타">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Bold"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-ap-X98">
+                                        <rect key="frame" x="0.0" y="25" width="245" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="245" id="5sS-M5-xvO"/>
+                                            <constraint firstAttribute="height" constant="60" id="FPK-ef-ZSQ"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="오늘">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="점심은">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="파스타">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.031588807397959218" green="0.031588807397959218" blue="0.031588807397959218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                    <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="90" id="Clw-Uf-I9z"/>
-                            <constraint firstAttribute="height" constant="90" id="aVh-F0-v0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Br1-rq-TKa" secondAttribute="bottom" constant="5" id="2Rn-Zs-IzA"/>
+                            <constraint firstItem="0EX-ay-cnz" firstAttribute="top" secondItem="cJU-gc-EB4" secondAttribute="top" constant="5" id="4xV-Za-zZv"/>
+                            <constraint firstAttribute="bottom" secondItem="0EX-ay-cnz" secondAttribute="bottom" constant="5" id="EqE-Yh-wfg"/>
+                            <constraint firstItem="0EX-ay-cnz" firstAttribute="leading" secondItem="cJU-gc-EB4" secondAttribute="leading" constant="20" id="feZ-3p-wkp"/>
+                            <constraint firstAttribute="trailing" secondItem="Br1-rq-TKa" secondAttribute="trailing" constant="5" id="gxq-Yn-tTy"/>
+                            <constraint firstItem="Br1-rq-TKa" firstAttribute="top" secondItem="cJU-gc-EB4" secondAttribute="top" constant="5" id="lNZ-fT-YUS"/>
+                            <constraint firstItem="Br1-rq-TKa" firstAttribute="leading" secondItem="0EX-ay-cnz" secondAttribute="trailing" constant="15" id="ldo-Qv-nV6"/>
                         </constraints>
-                    </imageView>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="0EX-ay-cnz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Tnd-Hi-C5y"/>
-                    <constraint firstItem="0EX-ay-cnz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="k9b-7u-gwI"/>
-                    <constraint firstAttribute="bottom" secondItem="0EX-ay-cnz" secondAttribute="bottom" constant="5" id="uaG-yn-kpt"/>
+                    <constraint firstItem="cJU-gc-EB4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6nD-dY-95k"/>
+                    <constraint firstAttribute="bottom" secondItem="cJU-gc-EB4" secondAttribute="bottom" id="ZrB-NK-2ym"/>
+                    <constraint firstAttribute="trailing" secondItem="cJU-gc-EB4" secondAttribute="trailing" id="d5B-Hz-fob"/>
+                    <constraint firstItem="cJU-gc-EB4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zwC-zp-j9A"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="GuideImage" destination="0EX-ay-cnz" id="bpr-I6-QDj"/>
-                <outlet property="GuideText" destination="iET-Yy-eGr" id="gyY-Le-lxm"/>
+                <outlet property="guideBody" destination="6QB-ap-X98" id="4H8-o2-96E"/>
+                <outlet property="guideImage" destination="0EX-ay-cnz" id="bpr-I6-QDj"/>
+                <outlet property="guideText" destination="iET-Yy-eGr" id="gyY-Le-lxm"/>
             </connections>
-            <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
+            <point key="canvasLocation" x="22" y="15"/>
         </tableViewCell>
     </objects>
 </document>
