@@ -63,12 +63,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         getDummy()
         
-        if savedPinSington.shared.array.count == 0 {
+        if SavedPinSingleton.shared.array.count == 0 {
             coordGenerater.makingDummyArray()
             getDummy()
             makingDummy()
         } else {
-            getDummy()
             makingDummy()
         }
         
@@ -83,16 +82,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: - Making Dummy pins
     func makingDummy() {
-        for i in savedPinSington.shared.array.indices {
-            let coordinate = CLLocationCoordinate2D(latitude: savedPinSington.shared.array[i].y, longitude: savedPinSington.shared.array[i].x)
-            let serial = savedPinSington.shared.array[i].id ?? "1A2B3C4D5E"
+        for i in SavedPinSingleton.shared.array.indices {
+            let coordinate = CLLocationCoordinate2D(latitude: SavedPinSingleton.shared.array[i].y, longitude: SavedPinSingleton.shared.array[i].x)
+            let serial = SavedPinSingleton.shared.array[i].id ?? "1A2B3C4D5E"
             addMark(coordinate: coordinate, serial: serial)
         }
     }
     
     func getDummy() {
         do {
-            savedPinSington.shared.array = try context.fetch(request)
+            SavedPinSingleton.shared.array = try context.fetch(request)
         } catch {
             let alert = UIAlertController(title: "에러 발생", message: "데이터를 로드 하던 중 오류가 발생했습니다.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .default))

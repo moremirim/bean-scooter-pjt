@@ -7,9 +7,9 @@
 
 import Foundation
 
-class savedPinSington {
+class SavedPinSingleton {
     
-    static let shared = savedPinSington()
+    static let shared = SavedPinSingleton()
     
     var array: [PinData] = [PinData]()
 
