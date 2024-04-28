@@ -1,11 +1,11 @@
 # Table of Contents
-1. [Description]
-2. [Demo]
-3. [Features]
-4. [Requirements]
-5. [Stacks]
-6. [Project Structure]
-7. [Developer]
+1. [Description] (#description)
+2. [Demo] (#demo)
+3. [Features] (#features)
+4. [Requirements] (#requirements)
+5. [Stacks] (#stacks)
+6. [ProjectStructure] (#projectStructure)
+7. [Developer] (#developer)
 
 # Bean Mobility Korea
 
@@ -44,25 +44,25 @@
 - 회원 정보 가입을 통해 로그인
 
 ### 지도
-- 유저의 현재 위치와 주변 킥보드 확인
+- 유저의 현재 위치와 주변 킥보드 확인
 
 ### 킥보드 대여
-- 대여 가능한 거리 위치한 킥보드 대여
+- 대여 가능한 거리(150m)에 위치한 킥보드 대여
 - 대여 후 반납
 
 ### 결제
-- 주행한 거리만큼 가격을 지불하는 수단
+- 주행한 거리만큼 가격을 지불
 
 ### 마이페이지
-- 개인정보
+- 회원 정보 수정
 - 주행 기록
 - 주행 가이드
 - 친구 추천
 - 쿠폰 등록
 - 로그아웃
 
-### 어드민을 통한 관리
-- 어드민으로 로그인 할 시 킥보드 등록/삭제로 관리
+### 관리자 계정을 통한 관리
+- admin으로 로그인 할 시 별도의 Manage 페이지를 통해 킥보드 등록 / 삭제 관리
 
 ## Requirements
 - App requires **iOS 17.4 or above**
@@ -75,6 +75,14 @@
 - **Language**
 
     <img src="https://img.shields.io/badge/-swift-F05138?style=flat&logo=swift&logoColor=white"/> 
+
+- **API**
+
+    <img src="https://img.shields.io/badge/-Kakao-FFCD00?style=flat&logo=Kakao&logoColor=white"/>
+
+- **Communication**
+
+    <img src="https://img.shields.io/badge/-Slack-4A154B?style=flat&logo=Slack&logoColor=white"/> <img src="https://img.shields.io/badge/-Notion-000000?style=flat&logo=Notion&logoColor=white"/>
 
 ## Project Structure
 
@@ -107,7 +115,7 @@ Bean
 │   ├── LaunchScreen.storyboard
 │   └── Main.storyboard
 │
-├── controller
+├── Controller
 │   ├── CouponViewController
 │   ├── EditProfileViewController
 │   ├── GuideViewController
@@ -130,9 +138,27 @@ Bean
 
 ## Developer
 *  **박중권** ([jungkweon93](https://github.com/jungkweon93))
-*  **박미림**
-*  **송동익**
-*  **조희라**
-*  **채나연**
-
-
+    - 애플 지도 생성
+    - 현재 위치 이동 기능
+    - Launch Screen 기능 구현
+    - 쿠폰 페이지 구현
+*  **박미림** ([moremirim](https://github.com/moremirim))
+    - Project Merge 구현
+    - 대여 기능 구현
+    - 전체적인 UI Design
+    - 결제 페이지 구현 
+*  **송동익** ([Haroldfromk](https://github.com/haroldfromk))
+    - 반납 기능 구현
+    - Annotation Pin 구현
+    - 거리 계산 로직 구현
+    - Dummy Data 생성
+*  **조희라** ([Heather-Cho](https://github.com/Heather-Cho))
+    - 로그인, 회원가입 페이지 구현
+    - 회원정보 수정 페이지 구현
+    - Userdefault를 사용한 회원 정보 저장
+    - 친구초대 페이지 구현
+*  **채나연** ([Nayeon Chae](https://github.com/NY-Chae))
+    - 마이페이지 구현
+    - 주행가이드 페이지 구현
+    - 로그아웃 기능 구현
+    - 프로젝트내 필요한 이미지 구성
