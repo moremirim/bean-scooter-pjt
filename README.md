@@ -80,16 +80,50 @@
 
 ```markdown
 Bean
+├── Singleton
+│   ├── RecordSingleton
+│   └── SavedPinSingleton
+│
+├── Service
+│   ├── CoordGenerator
+│   └── MapManager
+│
 ├── Model
-│   ├── 
-│   └── 
+│   ├── AccountInfo
+│   ├── AcountModel
+│   ├── CouponModel
+│   ├── GuideModel
+│   ├── MapModel
+│   ├── ProfileModel
+│   ├── RecordModel
+│   └── PinModel.xcdatamodeld
 │
 ├── View
-│   └── 
+│   ├── CouponCollectionViewCell
+│   ├── GuideTableViewCell
+│   ├── ProfileTableViewCell
+│   ├── RecordTableViewCell
+│   ├── ScooterManagerTableViewCell
+│   ├── LaunchScreen.storyboard
+│   └── Main.storyboard
 │
 ├── controller
-│   ├── 
-│   └── 
+│   ├── CouponViewController
+│   ├── EditProfileViewController
+│   ├── GuideViewController
+│   ├── InviteFriendsViewController
+│   ├── LaunchViewController
+│   ├── MapViewController
+│   ├── ModalViewController
+│   ├── ProfileViewController
+│   ├── RecordTableViewController
+│   ├── ScooterManageViewController
+│   ├── SignInViewController
+│   ├── SignupViewController
+│   ├── TabbarViewController
+│   └── PayViewController
+│
+├── Assets
 └ 
 ```
 
