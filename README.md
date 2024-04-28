@@ -1,11 +1,12 @@
 # Table of Contents
 1. [Description](#description)
-2. [Demo](#demo)
-3. [Features](#features)
-4. [Requirements](#requirements)
-5. [Stacks](#stacks)
-6. [ProjectStructure](#projectStructure)
-7. [Developer](#developer)
+2. [Period](#period)
+3. [Demo](#demo)
+4. [Features](#features)
+5. [Requirements](#requirements)
+6. [Stacks](#stacks)
+7. [ProjectStructure](#projectStructure)
+8. [Developer](#developer)
 
 # Bean Mobility Korea
 
@@ -14,6 +15,41 @@
 ## Description
 
 주변에 대여 가능한 킥보드를 확인하고, 대여까지! 간편한 결제 방식과 그 외에 여러 기능들을 경험해보세요!
+
+## Period
+
+- 24.04.22
+    - Project 아이디어 회의 및 기본 기능 구현
+        - 상품 표시, 담은 물품 표시
+
+- 24.04.23
+    - 각종 버튼 기능 구현 (주문하기, 문의하기, 주문취소)
+    - 추가 기능 회의
+
+- 24.04.24
+    - 기존 UI 디자인 변경 및 추가 기능 구현
+        - TabBar 추가 (홈, 상품, 마이페이지, 고객센터로 세분화)
+        - Modal View로 장바구니 화면 별도 구현
+        - Notification Badge형식 구현
+        - App Icon 등록
+
+- 24.04.25
+    - 홈 화면 기능 및 디자인
+    - 고객센터 페이지 구현
+    - 상품페이지 SearchBar 기능 구현
+      
+- 24.04.26
+    - 고객센터 내 매장찾기 기능 추가 (지도구현)
+    - 마이페이지 구현
+    - 새로 출시된 제품 구분 기능 추가
+
+- 24.04.27
+    - 제품 상세페이지 기능 구현
+    - Launch Screen 디자인
+
+- 24.04.28
+    - UI 및 기능 최종 점검 
+
 
 ## Demo
 <p float="left">
