@@ -10,6 +10,8 @@
 
 # Bean Mobility Korea
 
+<img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-17.4%2B-green"> <img src="https://img.shields.io/badge/Library-Alamofire-orange">
+
 킥보드 렌탈이 가능한 Bean App!
 
 ## Description
@@ -18,43 +20,63 @@
 
 ## Timeline
 
-- 24.04.22
-    - Project 아이디어 회의
-        - 컨셉, 역할 분담, 와이어프레임
-    - 로그인 페이지 구현
+<details>
+   <summary>24.04.22</summary>
+    <pre>● Project 아이디어 회의
+    ○ 컨셉, 역할 분담, 와이어프레임
+● 로그인 페이지 구현
+    </pre>
+</details>
 
-- 24.04.23
-    - 회원가입 페이지 구현
-    - 지도 생성
-      - SearchBar 생성 및 기능 구현
+<details>
+   <summary>24.04.23</summary>
+        <pre>● 회원가입 페이지 구현
+●  지도 생성
+    ○ SearchBar 생성 및 기능 구현
+        </pre>
+</details>
 
-- 24.04.24
-    - 계정정보 저장 기능 구현
-    - 마이페이지 생성
-    - 킥보드 거리 계산 로직 구현
-    - 기기 데이터 구성 (CoreData - Scooter, User)
+<details>
+   <summary>24.04.24</summary>
+    <pre>● 계정정보 저장 기능 구현
+● 마이페이지 생성
+● 킥보드 거리 계산 로직 구현
+● 킥보드 데이터 구성
+    </pre>
+</details>
 
-- 24.04.25
-    - 내 정보 수정 페이지 생성
-    - 로그아웃 기능 구현
-    - Annotation 생성
-    - 결제 페이지 생성
-      
-- 24.04.26
-    - 친구 초대 페이지 생성
-    - 주행 가이드 페이지 생성
-    - 앱 런치 애니메이션 생성
-    - 쿠폰 페이지 생성
-    - 유저 주행 기록 관리 로직 구현
-    - DummyData 생성
-    
-- 24.04.27
-    - 관리자 계정 로그인 시, 킥보드 등록, 삭제 기능 구현
+<details>
+   <summary>24.04.25</summary>
+   <pre>● 내 정보 수정 페이지 생성
+● 로그아웃 기능 구현
+● Annotation 생성
+● 결제 페이지 생성
+   </pre>
+</details>
 
-- 24.04.28
-    - 최종 회의 및 수정
-    - ReadMe 작성
+<details>
+   <summary>24.04.26</summary>
+   <pre>● 친구 초대 페이지 생성
+● 주행 가이드 페이지 생성
+● 앱 런치 애니메이션 생성
+● 쿠폰 페이지 생성
+● 유저 주행 기록 관리 로직 구현
+● 킥보드 관련 DummyData 생성
+   </pre>
+</details>
 
+<details>
+   <summary>24.04.27</summary>
+   <pre>● 관리자 계정 페이지 구현
+   </pre>
+</details>    
+
+<details>
+   <summary>24.04.28</summary>
+   <pre>● 최종 점검
+● ReadMe 작성
+   </pre>
+</details> 
 
 ## Demo
 <p float="left">
@@ -192,7 +214,8 @@ Bean
     - 반납 기능 구현
     - Annotation Pin 구현
     - 거리 계산 로직 구현
-    - Dummy Data 생성
+    - 관리자 페이지 구현
+    - Coredata를 사용한 킥보드 정보 저장
 *  **조희라** ([Heather-Cho](https://github.com/Heather-Cho))
     - 로그인, 회원가입 페이지 구현
     - 회원정보 수정 페이지 구현
