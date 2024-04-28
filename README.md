@@ -1,3 +1,19 @@
+# Table of Contents
+1. [Description]
+2. [Demo]
+3. [Features]
+4. [Requirements]
+5. [Stacks]
+6. [Project Structure]
+7. [Developer]
+
+# Bean Mobility Korea
+
+킥보드 렌탈이 가능한 Bean App!
+
+## Description
+
+주변에 대여 가능한 킥보드를 확인하고, 대여까지! 간편한 결제 방식과 그 외에 여러 기능들을 경험해보세요!
 
 ## Demo
 <p float="left">
@@ -22,3 +38,67 @@
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/36af0180-e963-4c4a-b4bd-ee12e99bd4d3" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/a5293592-0476-4868-81c0-c2ea4f64363a" width="200" height="430">
 </p>
+
+## Features
+### 로그인
+- 회원 정보 가입을 통해 로그인
+
+### 지도
+- 유저의 현재 위치와 주변 킥보드 확인
+
+### 킥보드 대여
+- 대여 가능한 거리 위치한 킥보드 대여
+- 대여 후 반납
+
+### 결제
+- 주행한 거리만큼 가격을 지불하는 수단
+
+### 마이페이지
+- 개인정보
+- 주행 기록
+- 주행 가이드
+- 친구 추천
+- 쿠폰 등록
+- 로그아웃
+
+### 어드민을 통한 관리
+- 어드민으로 로그인 할 시 킥보드 등록/삭제로 관리
+
+## Requirements
+- App requires **iOS 17.4 or above**
+
+## Stacks
+- **Environment**
+
+    <img src="https://img.shields.io/badge/-Xcode-147EFB?style=flat&logo=xcode&logoColor=white"/> <img src="https://img.shields.io/badge/-git-F05032?style=flat&logo=git&logoColor=white"/>
+
+- **Language**
+
+    <img src="https://img.shields.io/badge/-swift-F05138?style=flat&logo=swift&logoColor=white"/> 
+
+## Project Structure
+
+```markdown
+Bean
+├── Model
+│   ├── 
+│   └── 
+│
+├── View
+│   └── 
+│
+├── controller
+│   ├── 
+│   └── 
+└ 
+```
+
+
+## Developer
+*  **박중권** ([jungkweon93](https://github.com/jungkweon93))
+*  **박미림**
+*  **송동익**
+*  **조희라**
+*  **채나연**
+
+
