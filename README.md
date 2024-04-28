@@ -1,6 +1,6 @@
 # Table of Contents
 1. [Description](#description)
-2. [Period](#period)
+2. [Timeline](#timeline)
 3. [Demo](#demo)
 4. [Features](#features)
 5. [Requirements](#requirements)
