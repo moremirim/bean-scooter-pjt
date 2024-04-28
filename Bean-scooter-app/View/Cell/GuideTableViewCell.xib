@@ -76,7 +76,7 @@
                                         <rect key="frame" x="0.0" y="25" width="245" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="245" id="5sS-M5-xvO"/>
-                                            <constraint firstAttribute="height" constant="60" id="FPK-ef-ZSQ"/>
+                                            <constraint firstAttribute="height" constant="55" id="PRM-Mi-FKY"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="오늘">

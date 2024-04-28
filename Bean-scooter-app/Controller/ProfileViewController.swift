@@ -136,12 +136,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             // 다섯 번째 셀(logOut) 선택된 경우
         case 4:
             
-            guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SigninVC") as? SignInViewController else {
-                return
-            }
-            self.navigationController?.pushViewController(signinVC, animated: true)
-            
-            
+            let alert = UIAlertController(title: "로그아웃 하시겠습니까?", message: "로그아웃 하시면 내용은 소실 됩니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "취소", style: .default))
+            alert.addAction(UIAlertAction(title: "로그아웃", style: .destructive, handler: { _ in
+                RecordSingleton.shared.array.removeAll()
+                guard let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SigninVC") as? SignInViewController else {
+                    return
+                }
+                self.navigationController?.pushViewController(signinVC, animated: true)
+                
+            }))
+            self.present(alert, animated: true)
             
         default:
             break

@@ -66,23 +66,23 @@ class ModalViewController: UIViewController {
         view.addSubview(imageView)
 
         let serialLabelConstraints = [
-            serialLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            serialLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             serialLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10)
         ]
         
         let batteryLabelConstraints = [
             batteryLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            batteryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10)
+            batteryLabel.topAnchor.constraint(equalTo: serialLabel.bottomAnchor, constant: 15)
         ]
         
         let addressLabelConstraints = [
-            addressLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-            addressLabel.topAnchor.constraint(equalTo: serialLabel.bottomAnchor, constant: 10)
+            addressLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            addressLabel.topAnchor.constraint(equalTo: batteryLabel.bottomAnchor, constant: 15)
         ]
         
         let imageViewConstraints = [
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            imageView.topAnchor.constraint(equalTo: serialLabel.bottomAnchor, constant: 10)
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10)
         ]
         
         NSLayoutConstraint.activate(serialLabelConstraints)
