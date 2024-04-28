@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11B76B882BDE113B0052BEE0 /* PinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11B76B862BDE113B0052BEE0 /* PinModel.xcdatamodeld */; };
 		6148C5E52BDD0C2F00A94055 /* SavedPinSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E42BDD0C2F00A94055 /* SavedPinSingleton.swift */; };
-		6148C5EB2BDD84FD00A94055 /* PinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6148C5E72BDD84FD00A94055 /* PinModel.xcdatamodeld */; };
 		614BDF862BDC97C9003E1A29 /* ScooterManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */; };
 		614BDF8B2BDCAC32003E1A29 /* ScooterManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */; };
 		614BDF8C2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */; };
@@ -53,8 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B76B872BDE113B0052BEE0 /* PinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinModel.xcdatamodel; sourceTree = "<group>"; };
 		6148C5E42BDD0C2F00A94055 /* SavedPinSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPinSingleton.swift; sourceTree = "<group>"; };
-		6148C5E82BDD84FD00A94055 /* PinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinModel.xcdatamodel; sourceTree = "<group>"; };
 		614BDF852BDC97C9003E1A29 /* ScooterManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageViewController.swift; sourceTree = "<group>"; };
 		614BDF892BDCAC32003E1A29 /* ScooterManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterManageTableViewCell.swift; sourceTree = "<group>"; };
 		614BDF8A2BDCAC32003E1A29 /* ScooterManageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScooterManageTableViewCell.xib; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				61910F862BD8D83A00262B30 /* MapModel.swift */,
 				B9CF1A8A2BD8A75300F01144 /* ProfileModel.swift */,
 				61A699DD2BDAD391005A460B /* RecordModel.swift */,
-				6148C5E72BDD84FD00A94055 /* PinModel.xcdatamodeld */,
+				11B76B862BDE113B0052BEE0 /* PinModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +318,7 @@
 				61910F892BD8D84B00262B30 /* MapManager.swift in Sources */,
 				7176FDA62BD67936005185F9 /* MapController.swift in Sources */,
 				6148C5E52BDD0C2F00A94055 /* SavedPinSingleton.swift in Sources */,
+				11B76B882BDE113B0052BEE0 /* PinModel.xcdatamodeld in Sources */,
 				CAABBC822BD75F3600D9FC3D /* SignupViewController.swift in Sources */,
 				61910F742BD8C43700262B30 /* TabbarViewController.swift in Sources */,
 				61910F872BD8D83A00262B30 /* MapModel.swift in Sources */,
@@ -332,7 +333,6 @@
 				61814FA62BDBE0B900B169D9 /* CoordGenerator.swift in Sources */,
 				71D5D1A82BDB88990058F23C /* CouponViewController.swift in Sources */,
 				71D5D1AA2BDB901D0058F23C /* CouponModel.swift in Sources */,
-				6148C5EB2BDD84FD00A94055 /* PinModel.xcdatamodeld in Sources */,
 				8DD73D872BDA4491006C508D /* PayViewController.swift in Sources */,
 				614BDF8B2BDCAC32003E1A29 /* ScooterManageTableViewCell.swift in Sources */,
 				61910F722BD89AB500262B30 /* AccountModel.swift in Sources */,
@@ -592,14 +592,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		6148C5E72BDD84FD00A94055 /* PinModel.xcdatamodeld */ = {
+		11B76B862BDE113B0052BEE0 /* PinModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6148C5E82BDD84FD00A94055 /* PinModel.xcdatamodel */,
+				11B76B872BDE113B0052BEE0 /* PinModel.xcdatamodel */,
 			);
-			currentVersion = 6148C5E82BDD84FD00A94055 /* PinModel.xcdatamodel */;
+			currentVersion = 11B76B872BDE113B0052BEE0 /* PinModel.xcdatamodel */;
 			name = PinModel.xcdatamodeld;
-			path = "/Users/dongik/Documents/Workspace/xctest/Bean-scooter-app/Model/PinModel.xcdatamodeld";
+			path = "/Users/mirimpark/Documents/240428final/Bean-scooter-app/Model/PinModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
