@@ -226,10 +226,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 self.locations.append(currentLocation!.coordinate)
                 
                 do {
+                    let requestForPredicate: NSFetchRequest<PinData> = PinData.fetchRequest()
                     let predicate = NSPredicate(format: "id == %@", slicedSerial)
-                    self.request.predicate = predicate
+                    requestForPredicate.predicate = predicate
                     SavedPinSingleton.shared.array.removeAll()
-                    SavedPinSingleton.shared.array = try self.context.fetch(self.request)
+                    SavedPinSingleton.shared.array = try self.context.fetch(requestForPredicate)
                     
                     if SavedPinSingleton.shared.array.count != 0 {
                         
