@@ -135,6 +135,9 @@ class SignInViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
 }

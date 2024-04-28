@@ -12,7 +12,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let currentUser = AccountModel.accountModel.accountInfoArr.first(where: { $0.userName == myName }),
            let imageData = currentUser.profileImage,
            let profileImage = UIImage(data: imageData) {
-            print("가져옴", profileImage)
             myImage.image = profileImage
         } else {
             myImage.image = UIImage(named: "profile")

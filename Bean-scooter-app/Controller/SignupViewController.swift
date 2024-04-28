@@ -201,14 +201,10 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         setupAllTF()
         setuplogInBT()
         nameTextField.delegate = self
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
     
-    
-    
-//        if let selectedItem = selectedItem {
-//            print(selectedItem) // 선택된 행의 데이터 출력
-//            print(indexPath.row) // 선택된 행의 인덱스 출력
-//        }
 
     
     

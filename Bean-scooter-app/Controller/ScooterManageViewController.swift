@@ -51,26 +51,30 @@ class ScooterManageViewController: UIViewController {
         }
         
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
-            serialNumber = alert.textFields?[0].text ?? "코드입력을 다시 해주세요."
-            x = Double(alert.textFields?[1].text ?? "0.0")!
-            y = Double(alert.textFields?[2].text ?? "0.0")!
             
-            let newItem = PinData(context: self.context)
-            newItem.id = serialNumber
-            newItem.x = x
-            newItem.y = y
-            SavedPinSingleton.shared.array.append(newItem)
-            
-            do {
-                try self.context.save()
-            } catch {
-                let alert = UIAlertController(title: "에러 발생", message: "데이터 추가 중 오류가 발생했습니다.", preferredStyle: .alert)
+            if let serial = alert.textFields?[0].text, let lon = Double((alert.textFields?[1].text)!), let lat = Double((alert.textFields?[2].text)!) {
+                let newItem = PinData(context: self.context)
+                newItem.id = serialNumber
+                newItem.x = x
+                newItem.y = y
+                SavedPinSingleton.shared.array.append(newItem)
+                
+                do {
+                    try self.context.save()
+                } catch {
+                    let alert = UIAlertController(title: "에러 발생", message: "데이터 추가 중 오류가 발생했습니다.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default))
+                    self.present(alert, animated: true)
+                }
+                
+                self.tableView.reloadData()
+                
+            } else {
+                let alert = UIAlertController(title: "에러 발생", message: "Field에 값을 입력해 주세요.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .default))
                 self.present(alert, animated: true)
             }
-            
-            self.tableView.reloadData()
-            
+
         }))
         alert.addAction(UIAlertAction(title: "취소", style: .cancel))
         self.present(alert, animated: true)
