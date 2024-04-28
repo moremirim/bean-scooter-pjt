@@ -44,34 +44,42 @@ class ScooterManageViewController: UIViewController {
             textField.placeholder = "경도: ex) -122.030189"
         }
         alert.addTextField { textField in
-            textField.placeholder = "위도: ex)    "
+            textField.placeholder = "위도: ex) 37.331676"
         }
         
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
             
+            
             if let serial = alert.textFields?[0].text, let lon = Double((alert.textFields?[1].text)!), let lat = Double((alert.textFields?[2].text)!) {
-                let newItem = PinData(context: self.context)
-                newItem.id = serial
-                newItem.x = lon
-                newItem.y = lat
-                SavedPinSingleton.shared.array.append(newItem)
-                
-                do {
-                    try self.context.save()
-                } catch {
-                    let alert = UIAlertController(title: "에러 발생", message: "데이터 추가 중 오류가 발생했습니다.", preferredStyle: .alert)
+                if serial.count != 10 {
+                    let alert = UIAlertController(title: "에러 발생", message: "Serial Number는 반드시 10자리로 입력해 주세요.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "확인", style: .default))
                     self.present(alert, animated: true)
+                } else {
+                    let newItem = PinData(context: self.context)
+                    newItem.id = serial
+                    newItem.x = lon
+                    newItem.y = lat
+                    SavedPinSingleton.shared.array.append(newItem)
+                    
+                    do {
+                        try self.context.save()
+                    } catch {
+                        let alert = UIAlertController(title: "에러 발생", message: "데이터 추가 중 오류가 발생했습니다.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "확인", style: .default))
+                        self.present(alert, animated: true)
+                    }
+                    
+                    self.tableView.reloadData()
                 }
-                
-                self.tableView.reloadData()
-                
             } else {
                 let alert = UIAlertController(title: "에러 발생", message: "Field에 값을 입력해 주세요.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .default))
                 self.present(alert, animated: true)
             }
-
+            
+            
+            
         }))
         alert.addAction(UIAlertAction(title: "취소", style: .cancel))
         self.present(alert, animated: true)
