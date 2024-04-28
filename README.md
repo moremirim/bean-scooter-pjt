@@ -1,11 +1,11 @@
 # Table of Contents
-1. [Description] (#description)
-2. [Demo] (#demo)
-3. [Features] (#features)
-4. [Requirements] (#requirements)
-5. [Stacks] (#stacks)
-6. [ProjectStructure] (#projectStructure)
-7. [Developer] (#developer)
+1. [Description](#description)
+2. [Demo](#demo)
+3. [Features](#features)
+4. [Requirements](#requirements)
+5. [Stacks](#stacks)
+6. [ProjectStructure](#projectStructure)
+7. [Developer](#developer)
 
 # Bean Mobility Korea
 
