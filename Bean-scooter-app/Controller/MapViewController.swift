@@ -159,7 +159,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     //대여 확인 얼럿 진행, 대여 최종 완료시 대여 종료 동작인 completedRent 함수 호출
     @IBAction func didTapRentButton(_ sender: Any) {
         let rentProcessAlert = UIAlertController(title: "대여 진행", message: "해당 킥보드를 이용하시겠습니까?", preferredStyle: .alert)
-   
+        
         let rent = UIAlertAction(title: "대여하기", style: .default) { _ in
             self.completedRent(didSelect: self.selectedAnnotation!)
             
@@ -171,6 +171,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 
                 self.isUsed = true
                 self.setbuttonHidden(isStatus: self.isUsed)
+                //self.mapView.removeAnnotations(self.mapView.annotations)
             }
         }
         
@@ -213,17 +214,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // 반납 버튼
     @IBAction func returnScooterBtn(_ sender: UIButton) {
-        DispatchQueue.global().async { [weak self] in
+        DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled() {
-                self?.locationManager.requestWhenInUseAuthorization()
-                let currentLocation = self?.locationManager.location
+                self.locationManager.requestWhenInUseAuthorization()
+                let currentLocation = self.locationManager.location
                 
-                if let serial = self?.serialNumber {
-                    let slicedSerial = String(serial.suffix(10))
-                    self?.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406), serial: slicedSerial)
-                    self?.locations.append(currentLocation!.coordinate)
+                let serial = self.serialNumber
+                let slicedSerial = String(serial.suffix(10))
+                self.addMark(coordinate: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 37.503702192, longitude: currentLocation?.coordinate.longitude ?? 127.025313873406), serial: slicedSerial)
+                //self.makingDummy()
+                self.locations.append(currentLocation!.coordinate)
+                
+                do {
+                    let predicate = NSPredicate(format: "id == %@", slicedSerial)
+                    self.request.predicate = predicate
+                    SavedPinSingleton.shared.array.removeAll()
+                    SavedPinSingleton.shared.array = try self.context.fetch(self.request)
+                    
+                    if SavedPinSingleton.shared.array.count != 0 {
+                        
+                        let filteredObject = SavedPinSingleton.shared.array[0]
+                        filteredObject.setValue((currentLocation?.coordinate.longitude ?? 37.503702192), forKey: "x")
+                        filteredObject.setValue((currentLocation?.coordinate.latitude ?? 37.503702192), forKey: "y")
+                        
+                        do {
+                            try self.context.save()
+                        } catch {
+                            let alert = UIAlertController(title: "에러 발생", message: "데이터 저장 중 오류가 발생했습니다.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "확인", style: .default))
+                            self.present(alert, animated: true)
+                        }
+                    }
+                    
+                    
+                } catch {
+                    let alert = UIAlertController(title: "에러 발생", message: "데이터 저장 중 오류가 발생했습니다.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default))
+                    self.present(alert, animated: true)
                 }
-                
+                self.getDummy()
+                self.makingDummy()
             }
             
         }
@@ -237,6 +267,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let finTime = dateFormatter.string(from: Date())
         RecordSingleton.shared.array.append(RecordModel(distance: distance, time: finTime))
         locations.removeAll() // 거리 계산후 배열 초기화.
+        
     }
     
     // 거리계산 함수.

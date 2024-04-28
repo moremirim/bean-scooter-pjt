@@ -35,9 +35,6 @@ class ScooterManageViewController: UIViewController {
     }
 
     @IBAction func addPinData(_ sender: UIButton) {
-        var serialNumber: String = ""
-        var x: Double = 0.0
-        var y: Double = 0.0
         
         let alert = UIAlertController(title: "킥보드를 추가합니다.", message: "아래에 정보를 입력해주세요.", preferredStyle: .alert)
         alert.addTextField { textField in
@@ -47,16 +44,16 @@ class ScooterManageViewController: UIViewController {
             textField.placeholder = "경도: ex) -122.030189"
         }
         alert.addTextField { textField in
-            textField.placeholder = "위도: ex) 37.331676"
+            textField.placeholder = "위도: ex)    "
         }
         
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
             
             if let serial = alert.textFields?[0].text, let lon = Double((alert.textFields?[1].text)!), let lat = Double((alert.textFields?[2].text)!) {
                 let newItem = PinData(context: self.context)
-                newItem.id = serialNumber
-                newItem.x = x
-                newItem.y = y
+                newItem.id = serial
+                newItem.x = lon
+                newItem.y = lat
                 SavedPinSingleton.shared.array.append(newItem)
                 
                 do {
