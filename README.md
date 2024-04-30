@@ -89,6 +89,7 @@
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/30b3d22e-438f-47dd-afcf-2747f44e3540" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/75054b95-e74b-44d8-917f-a1c51bee3ef1" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/d7a86600-13e5-475d-b0e1-ad79b0c86880" width="200" height="430">
+<img src="https://github.com/moremirim/bean-scooter-pjt/assets/97341336/ed98c508-3755-40c0-b913-c3fecf1e054a" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/cd26f2d3-1c85-4de5-8af2-2ebf15f44701" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/22fda91e-76f3-449e-b54c-09f77ce2a9b4" width="200" height="430">
 <img src="https://github.com/moremirim/bean-scooter-pjt/assets/160707647/42eee60f-fde2-48d7-aa5e-ba55094ec40c" width="200" height="430">
