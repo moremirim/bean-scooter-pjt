@@ -201,7 +201,7 @@ Bean
 
 
 ## Developer
-*  **박중권** ([jungkweon93](https://github.com/jungkweon93))
+*  **박중권** ([jkp93](https://github.com/jkp93))
     - 애플 지도 생성
     - 현재 위치 이동 기능
     - Launch Screen 기능 구현
